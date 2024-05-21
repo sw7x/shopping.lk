@@ -22,7 +22,7 @@
                 </div><!-- End .banner -->
     
                 <div class="row row-sm">
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -36,7 +36,7 @@
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -51,7 +51,7 @@
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -66,7 +66,7 @@
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -81,7 +81,7 @@
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -96,7 +96,7 @@
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -111,7 +111,7 @@
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -126,7 +126,7 @@
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -141,7 +141,7 @@
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -156,7 +156,7 @@
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -171,7 +171,7 @@
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -186,7 +186,7 @@
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">

@@ -12,7 +12,12 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9 order-lg-last dashboard-content">
+                    
+                    <aside class="sidebar col-lg-3">
+                        <?php include 'user-menu-links.php';?>
+                    </aside>
+                    
+                    <div class="col-lg-9 dashboard-content">
                         <h2  class="step-title mb-2">My Wishlist (7)</h2>
                         
                         <div class="d-flex justify-content-between">
@@ -40,17 +45,12 @@
                             </div>
                         </div>
 
-
-
-                        <div class='wrapper h-40'>
-                            <div class='one h-10'>onw</div>
-                            <div class='two h-10'>two</div>
-                        </div>
-
+                        
 
                         <div class="product-intro row row-sm">
                             
-                            <!-- div class="entry">
+                            <!-- 
+                            <div class="entry">
                                 <div class="entry-body pb-1">
                                     
                                     <div class="entry-date">
@@ -97,12 +97,11 @@
                                     </div>
 
                                 </div>
-                            </div> -->
+                            </div> 
+                            -->
                             
-                            
-
                             <?php for ($i=0; $i < 10; $i++):?>
-                            <div class="wishlist-item">
+                            <div class="wishlist-item col-12">
                                 <div class="wishlist-item-body pb-1">
 
                                     <div class="wishlist-item-date">
@@ -114,13 +113,13 @@
                                     <div class="wishlist-item-content left-details">
                                         <div class="row">
 
-                                            <div class="col-3 col-lg-4 col-xl-3">
+                                            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                                                 <a href="product.html">
                                                     <img src="assets/images/products/product-1.jpg">
                                                 </a>    
                                             </div>
 
-                                            <div class="col-9 col-lg-8 col-xl-9 product-details">
+                                            <div class="col-12 col-sm-6 col-md-8 col-xl-9 product-details">
                                                 <div class="category-list">
                                                     <a href="category.html" class="product-category">category</a>
                                                 </div>
@@ -148,9 +147,6 @@
                                 </div>
                             </div>
                             <?php endfor;?>
-
-
-
                             
 
                             <div class="entry">
@@ -216,14 +212,7 @@
                                         <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i class="icon-cancel text-3xl"></i></a> 
                                     </div>
                                 </div>
-                            </div> 
-
-                            <!-- -->
-
-
-
-
-
+                            </div>                    
                             
                         </div>
 
@@ -245,17 +234,8 @@
                                     <a class="page-link page-link-btn" href="#"><i class="icon-angle-right"></i></a>
                                 </li>
                             </ul>
-                        </nav>
-
-
-
-
-                        
-                    </div><!-- End .col-lg-9 -->
-
-                    <aside class="sidebar col-lg-3">
-                        <?php include 'user-menu-links.php';?>
-                    </aside>
+                        </nav>                        
+                    </div>                    
                     
                 </div><!-- End .row -->
             </div><!-- End .container -->

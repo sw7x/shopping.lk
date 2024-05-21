@@ -167,3 +167,34 @@ $('.mmenu-btn').on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
 });
+
+
+
+
+
+/*============== product page sidebar Toggle when res <992 ==============*/ 
+$('.sidebar-toggle').click(function () {
+    $('main').toggleClass('sidebar-opened');
+});
+
+
+ // hide sidebar filter and sidebar overlay
+$('.sidebar-overlay').click(function (e) {
+    $('.filter-toggle').removeClass('opened');
+    $('main').removeClass('sidebar-opened');
+});
+
+
+
+/* ================================================== */
+
+
+$('.product-filter-btn').click(function (e) {
+    //alert('aaa');
+    $(this).parent().closest('.sidebar-wrapper').find('.widget-wrapper').toggleClass('show');
+    console.log($(this).parent());
+
+    //e.preventDefault();    
+});
+
+

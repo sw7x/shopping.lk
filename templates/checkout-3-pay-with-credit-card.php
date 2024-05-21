@@ -139,8 +139,8 @@
                                             </div>
 
                                             <div class="float-right">
-                                                <a href="#" class="btn btn-danger btn-sm mr-5">Reset</a>
-                                                <a href="#" class="btn btn-primary btn-sm __btn-outline-secondary btn-update-cart">Place Order</a>
+                                                <a href="#" class="btn btn-danger btn-sm mr-3">Reset</a>
+                                                <a href="#" class="btn btn-primary btn-sm __btn-outline-secondary btn-update-cart">Checkout</a>
                                             </div>
                                         </div>
                                     </div>

@@ -60,7 +60,7 @@
                                         <div class="category-list">
                                             <a href="category.html" class="product-category">category</a>
                                         </div>
-                                        <h1 class="product-title">Silver Porto Headset</h1>
+                                        <h1 class="product-title">Silver SONY Headset</h1>
                                         <div class="sold-count">
                                             <span class="mr-2">Sold : 120</span>
                                             <span>/</span>

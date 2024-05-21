@@ -38,6 +38,211 @@
 
 
 
+
+
+            <div class="mt-5 mb-5">    
+                
+                <div class="btn-wrapper mb-2">
+                    <div class="row">
+                       <div class="col-12">
+                           <a href="#" class="btn btn-primary">Add New</a>
+                       </div>
+                    </div>
+                </div>
+                
+
+
+                
+
+
+
+
+
+
+
+
+                
+                <div class="data-filter-wrapper mb-2">
+                    <div class="row justify-content-between mb-3">
+                        
+                        <div class="col-12 col-sm-3 col-md-3">
+                            
+                            <div class="toolbox-item _toolbox-show">
+                                <label>Show </label>
+                                <div class="select-custom mr-1">
+                                    <select name="count" class="form-control">
+                                        <option value="9">10</option>
+                                        <option value="20">20</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </div>
+                                <label class="ml-3 mr-0"> entries</label>
+                            </div>
+
+
+                                
+                        </div>
+                        
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="mr-1">Search : </div>
+                            <form class="search-form" action="" method="post">
+                                <input class="form-control" type="text" name="search_value" placeholder="Search here..." value="">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <nav class="toolbox _toolbox-pagination">
+                    
+                    <div class="toolbox-item _toolbox-show">
+                        <label>Show </label>
+                        <div class="select-custom mr-1">
+                            <select name="count" class="form-control">
+                                <option value="9">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <label class="ml-3 mr-0"> entries</label>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="mr-1">Search : </div>
+                        <form class="search-form" action="" method="post">
+                            <input class="form-control" type="text" name="search_value" placeholder="Search here..." value="">
+                        </form>
+                    </div>
+
+                </nav>
+
+
+
+
+
+
+
+
+
+
+                <table class="admin-table">
+                    
+                    <thead>
+                        <tr class="">
+                            <th class="cell">xFull Name</th>
+                            <th class="cell">Age</th>
+                            <th class="cell">Job Title</th>
+                            <th class="cell">Location</th>
+                        </tr>
+                    </thead>                
+
+                    <tbody>
+                        <tr class="">
+                            <td data-title="Full Name">Vincent Williamson</td>
+                            <td data-title="Age">31</td>
+                            <td data-title="Job Title">iOS Developer</td>
+                            <td data-title="Location">Washington</td>
+                        </tr>
+                        <tr class="">
+                            <td data-title="Full Name">Joseph Smith</td>
+                            <td data-title="Age">27</td>
+                            <td data-title="Job Title">Project Manager</td>
+                            <td data-title="Location">Somerville, MA</td>
+                        </tr>
+                        <tr class="">
+                            <td data-title="Full Name">Justin Black</td>
+                            <td data-title="Age">26</td>
+                            <td data-title="Job Title">Front-End Developer</td>
+                            <td data-title="Location">Los Angeles</td>
+                        </tr>
+                        <tr class="">
+                            <td data-title="Full Name">Sean Guzman</td>
+                            <td data-title="Age">25</td>
+                            <td data-title="Job Title">Web Designer</td>
+                            <td data-title="Location">San Francisco</td>
+                        </tr>
+                        <tr class="">
+                            <td data-title="Full Name">Keith Carter</td>
+                            <td data-title="Age">20</td>
+                            <td data-title="Job Title">Graphic Designer</td>
+                            <td data-title="Location">New York, NY</td>
+                        </tr>
+                        <tr class="">
+                            <td data-title="Full Name">Austin Medina</td>
+                            <td data-title="Age">32</td>
+                            <td data-title="Job Title">Photographer</td>
+                            <td data-title="Location">New York</td>
+                        </tr>
+                        <tr class="">
+                            <td data-title="Full Name">Vincent Williamson</td>
+                            <td data-title="Age">31</td>
+                            <td data-title="Job Title">iOS Developer</td>
+                            <td data-title="Location">Washington</td>
+                        </tr>
+                        <tr class="">
+                            <td data-title="Full Name">Joseph Smith</td>
+                            <td data-title="Age">27</td>
+                            <td data-title="Job Title">Project Manager</td>
+                            <td data-title="Location">Somerville, MA</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                
+
+
+                <nav class="toolbox _toolbox-pagination mt-1">
+                    <div class="toolbox-item _toolbox-show">
+                        <label>Showing 1 to 10 of 57 entries</label>                        
+                    </div>
+
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link page-link-btn" href="#"><i class="icon-angle-left"></i></a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><span class="page-link">...</span></li>
+                        <li class="page-item">
+                            <a class="page-link page-link-btn" href="#"><i class="icon-angle-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="subtitle mb-1 text-6xl"><i class="icon-cancel"></i></div>
 <div class="subtitle mb-1"><i class="icon-spin2"></i></div>
 

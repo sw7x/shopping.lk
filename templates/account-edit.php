@@ -12,7 +12,11 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9 order-lg-last dashboard-content">
+                    <aside class="sidebar col-lg-3">
+                        <?php include 'user-menu-links.php';?>
+                    </aside>
+
+                    <div class="col-lg-9 dashboard-content">
                         <div class="_checkout-payment"> 
                             <h2  class="step-title mb-2">Edit Account Information</h2>
                            
@@ -118,14 +122,7 @@
 
                             </form>
                         </div>
-                    </div>
-
-                    <aside class="sidebar col-lg-3">
-                        <?php include 'user-menu-links.php';?>
-                    </aside>
-
-
-
+                    </div>             
 
                 </div><!-- End .row -->
             </div><!-- End .container -->

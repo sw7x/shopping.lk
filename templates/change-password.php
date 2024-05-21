@@ -24,8 +24,8 @@
                             <input type="password" class="form-control" placeholder="Confirm Password" required>
                             
                             <div class="form-footer">
-                                <button type="submit" class="btn btn-primary">SUBMIT</button>
-                                <button type="reset" class="btn btn-danger">RESET</button>
+                                <button type="submit" class="btn btn-sm btn-primary">SUBMIT</button>
+                                <button type="reset" class="btn btn-sm btn-danger">RESET</button>
                             </div><!-- End .form-footer -->
                         </form>
                     </div><!-- End .col-md-6 -->

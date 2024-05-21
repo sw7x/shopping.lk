@@ -22,10 +22,10 @@
                     <div class="col-md-12">
                         
                         <div class="row">                        
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-lg-4">
                                 <img src="assets/images/products/single/extended/bg-3.jpg" alt="">
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-6 col-lg-8">
                                 <p class="">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonxcepteur sint occaecat cupidatat non. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.</p>
                                 <ul>
                                     <li><i class="icon-ok"></i>Any Product types that You want - Simple, Configurable</li>

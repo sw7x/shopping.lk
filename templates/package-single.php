@@ -75,7 +75,7 @@
                             
                             
                             <?php for ($i=0; $i < 7; $i++):?>
-                            <div class="col-12 col-sm-12 featured-horizontal-shopping-product mb-4">
+                            <div class="col-12 col-sm-12 featured-horizontal-shopping-product mb-1">
                                 <figure>
                                     <a href="product.html">
                                         <img src="assets/images/products/product-1.jpg">
@@ -106,7 +106,7 @@
 
 
 
-                            <?php for ($i=0; $i < 2; $i++):?>
+                            <?php for ($i=0; $i < 0; $i++):?>
                             <div class="col-6 col-sm-12 package-list-item mb-4">
                                 <figure>
                                     <a href="product.html">

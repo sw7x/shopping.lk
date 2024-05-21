@@ -22,21 +22,22 @@
                 </div><!-- End .banner -->
     
                 <div class="row row-sm">
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
                                     <img src="assets/images/products/product-1.jpg">
                                 </a>
                             </figure>
-                            <div class="product-details">                                <h2 class="">
+                            <div class="product-details">                                
+                                <h2 class="subHeading">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>                                
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -44,14 +45,14 @@
                                 </a>
                             </figure>
                             <div class="product-details">                                
-                                <h2 class="_product-title">
+                                <h2 class="subHeading _product-title">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>                                
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -59,14 +60,14 @@
                                 </a>
                             </figure>
                             <div class="product-details">                                
-                                <h2 class="_product-title">
+                                <h2 class="subHeading _product-title">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -74,14 +75,14 @@
                                 </a>
                             </figure>
                             <div class="product-details">                                
-                                <h2 class="_product-title">
+                                <h2 class="subHeading _product-title">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -89,14 +90,14 @@
                                 </a>
                             </figure>
                             <div class="product-details">                                
-                                <h2 class="_product-title">
+                                <h2 class="subHeading _product-title">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -104,14 +105,14 @@
                                 </a>
                             </figure>
                             <div class="product-details">                                
-                                <h2 class="_product-title">
+                                <h2 class="subHeading _product-title">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -119,14 +120,14 @@
                                 </a>
                             </figure>
                             <div class="product-details">                                
-                                <h2 class="_product-title">
+                                <h2 class="subHeading _product-title">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -134,14 +135,14 @@
                                 </a>
                             </figure>
                             <div class="product-details">                                
-                                <h2 class="_product-title">
+                                <h2 class="subHeading _product-title">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>                                
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -149,14 +150,14 @@
                                 </a>
                             </figure>
                             <div class="product-details">                                
-                                <h2 class="_product-title">
+                                <h2 class="subHeading _product-title">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>                                
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -164,14 +165,14 @@
                                 </a>
                             </figure>
                             <div class="product-details">                                
-                                <h2 class="_product-title">
+                                <h2 class="subHeading _product-title">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>                                
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -179,14 +180,14 @@
                                 </a>
                             </figure>
                             <div class="product-details">                                
-                                <h2 class="_product-title">
+                                <h2 class="subHeading _product-title">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>                                
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-xl-3 -->
 
-                    <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">
                             <figure>
                                 <a href="product.html">
@@ -194,7 +195,7 @@
                                 </a>
                             </figure>
                             <div class="product-details">                                
-                                <h2 class="_product-title">
+                                <h2 class="subHeading _product-title">
                                     <a href="product.html">Product Short Name</a>
                                 </h2>                                
                             </div><!-- End .product-details -->

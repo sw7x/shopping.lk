@@ -53,8 +53,8 @@
                             <input type="hidden" name="user_id" value="7">
 
                             <div class="form-footer">
-                                <button type="reset" class="btn btn-danger">Reset</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="reset" class="btn btn-sm btn-danger">Reset</button>
+                                <button type="submit" class="btn btn-sm btn-primary">Submit</button>
                             </div>                        
                         </form>
 
@@ -75,13 +75,13 @@
                             </div>
                             <div>
                                 <i class="icon-mail-alt"></i>
-                                <p><a href="mailto:#">porto@gmail.com</a></p>
-                                <p><a href="mailto:#">porto@portotemplate.com</a></p>
+                                <p><a href="mailto:#">shopping.lk@gmail.com</a></p>
+                                <p><a href="mailto:#">shopping.lk@shopping.lktemplate.com</a></p>
                             </div>
                             <div>
                                 <i class="icon-skype"></i>
-                                <p>porto_skype</p>
-                                <p>porto_template</p>
+                                <p>shopping.lk_skype</p>
+                                <p>shopping.lk_template</p>
                             </div>
                         </div><!-- End .contact-info -->
                     </div><!-- End .col-md-4 -->

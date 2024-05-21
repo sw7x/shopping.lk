@@ -47,9 +47,11 @@
                                                     <img src="assets/images/products/product-4.jpg" alt="product">
                                                 </a>
                                             </figure>
-                                            <h2 class="product-title text-xl">
-                                                <a href="product.html">Phillips</a>
-                                            </h2>                                           
+                                            <div class="product-name">
+                                                <h2 class="product-title text-xl">
+                                                    <a href="product.html">Phillips</a>
+                                                </h2>
+                                            </div>                                           
                                         </td>
                                         <td>
                                             <div>
@@ -80,9 +82,11 @@
                                                     <img src="assets/images/products/product-3.jpg" alt="product">
                                                 </a>
                                             </figure>
-                                            <h2 class="product-title text-xl">
-                                                <a href="product.html">Optical Mouse</a>
-                                            </h2>
+                                            <div class="product-name">
+                                                <h2 class="product-title text-xl">
+                                                    <a href="product.html">Optical Mouse</a>
+                                                </h2>
+                                            </div>
                                         </td>
                                         <td>$8.90</td>
                                         <td>
@@ -105,8 +109,8 @@
                                 <tfoot>
                                     <tr>
                                         <td colspan="5" class="clearfix">
-                                            <div class="clearfix">
-                                                <div class="float-left py-2">
+                                            <div class="clearfix w-100">
+                                                <div class="float-left py-2 d-block">
                                                     <h3 class="subtitle">Used Discount Code</h3>
                                                 </div>
                                                 <div class="float-right">
@@ -114,13 +118,13 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="clearfix mt-0">
-                                                <div class="float-right col-6 px-0">
+                                            <div class="clearfix mt-0 w-100">
+                                                <div class="float-right col-9 col-sm-6 px-0">
                                                     <form action="#" class="mb-0">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control form-control-sm" placeholder="Enter discount code"  required>
                                                         <div class="input-group-append">
-                                                            <button class="btn btn-sm btn-primary" type="submit">Apply Discount</button>
+                                                            <button class="btn btn-sm btn-primary apply-cc-btn" type="submit">Apply Discount</button>
                                                         </div>
                                                     </div><!-- End .input-group -->
                                                 </form>
@@ -185,7 +189,7 @@
                         </div>
 
                         <hr>
-                        <div class="mt-3">
+                        <div class="mt-3 mb-2">
                             <div class="clearfix">
                                 <div class="float-left">
                                     <a href="category.html" class="btn btn-sm btn-outline-secondary">Continue Shopping</a>

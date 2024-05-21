@@ -39,9 +39,9 @@
                                     <div class="required text-left mb-1">* Required Field</div>
                                 </div>
 
-                                <div class="offset-3 col-md-9">
-                                    <button type="reset" class="btn btn-danger mr-5">Clear</button>
-                                    <button type="submit" class="btn btn-primary">Reset My Password</button>
+                                <div class="offset-md-3 col-md-9">
+                                    <button type="reset" class="btn btn-sm btn-danger mr-5">Clear</button>
+                                    <button type="submit" class="btn btn-sm btn-primary">Reset My Password</button>
                                 </div>                                
                             </div>                            
                         </form>

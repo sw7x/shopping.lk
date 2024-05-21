@@ -64,7 +64,7 @@
                             <div class="widget widget-newsletter">
                                 <div class="mb-2">
                                     <a href="index.html" class="logo w-full">
-                                        <img src="assets/images/logo-light.png" alt="shopping.lk Logo" class="_w-3/5">
+                                        <img src="../assets/images/logo-light.png" alt="shopping.lk Logo" class="_w-3/5">
                                     </a>
                                 </div>
                                 <!-- <p>Get all the latest information on Events,Sales</p> -->                                
@@ -78,7 +78,7 @@
             <div class="container">
                 <div class="footer-bottom">
                     <p class="footer-copyright">Copyright &copy; 2024 Shopping.lk</p>
-                    <img src="assets/images/payments.png" alt="payment methods" class="footer-payments">
+                    <img src="../assets/images/payments.png" alt="payment methods" class="footer-payments">
 
                     <div class="social-icons">
                         <a href="#" class="social-icon" target="_blank"><i class="icon-facebook"></i></a>
@@ -210,12 +210,12 @@
     <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
 
     <!-- Plugins JS File -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/1plugins.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/1plugins.min.js"></script>
 
     <!-- Main JS File -->
-    <script src="assets/js/1main.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/1main.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

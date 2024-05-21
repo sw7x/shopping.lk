@@ -10,14 +10,14 @@
                 </div><!-- End .container -->
             </nav>
 
-            <div class="container">
-                <div class="row">
+            <div class="container-full">
+                <div class="row ml-0 mr-0">
                     
-                    <aside class="sidebar col-lg-3">
-                        <?php include 'user-menu-links.php';?>                                
+                    <aside class="sidebar col-lg-2">
+                        <?php include 'admin-user-menu-links.php';?>                                
                     </aside>
 
-                    <div class="col-lg-9 dashboard-content">
+                    <div class="dashboard-content col-lg-10">
                         <h2 class="step-title mb-2">My Orders (3)</h2>
 
                         <nav class="toolbox">

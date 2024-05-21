@@ -17,7 +17,7 @@
                         <li class="breadcrumb-item"><a href="#">Pages</a></li>
                         <li class="breadcrumb-item active" aria-current="page">About Us</li>
                     </ol>
-                </div><!-- End .container -->
+              	</div><!-- End .container -->
             </nav>
 
             <div class="text-section mb-5">

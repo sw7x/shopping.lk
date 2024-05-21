@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Shopping.lk - Shop Smart, Shop Online</title>
+    <title>Porto - Bootstrap eCommerce Template</title>
 
     <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="shopping.lk - Sri Lanka's Online Shopping Store">
+    <meta name="description" content="Porto - Bootstrap eCommerce Template">
     <meta name="author" content="SW-THEMES">
         
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/images/icons/favicon.ico">
     
     <script type="text/javascript">
         WebFontConfig = {
@@ -20,22 +20,22 @@
         };
         (function(d) {
             var wf = d.createElement('script'), s = d.scripts[0];
-            wf.src = 'assets/js/webfont.js';
+            wf.src = '../assets/js/webfont.js';
             wf.async = true;
             s.parentNode.insertBefore(wf, s);
         })(document);
     </script>
     
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 
-    <!-- <link href="assets/css/tailwind.css" type="text/css" rel="stylesheet"> -->
+    <!-- <link href="../assets/css/tailwind.css" type="text/css" rel="stylesheet"> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/custom-styles.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/custom-responsive-styles.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/custom-styles.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/custom-responsive-styles.css">
 
 </head>
 <body class="loaded">
@@ -49,18 +49,18 @@
                             <a href="#">USD</a>
                             <div class="header-menu">
                                 <ul>
-                                    <li><a href="#">LKR</a></li>
+                                    <li><a href="#">EUR</a></li>
                                     <li><a href="#">USD</a></li>
                                 </ul>
                             </div><!-- End .header-menu -->
                         </div><!-- End .header-dropown -->
 
                         <div class="header-dropdown">
-                            <a href="#"><img src="assets/images/flags/en.png" alt="England flag">ENGLISH</a>
+                            <a href="#"><img src="../assets/images/flags/en.png" alt="England flag">ENGLISH</a>
                             <div class="header-menu">
                                 <ul>
-                                    <li><a href="#"><img src="assets/images/flags/en.png" alt="England flag">ENGLISH</a></li>
-                                    <li><a href="#"><img src="assets/images/flags/fr.png" alt="France flag">FRENCH</a></li>
+                                    <li><a href="#"><img src="../assets/images/flags/en.png" alt="England flag">ENGLISH</a></li>
+                                    <li><a href="#"><img src="../assets/images/flags/fr.png" alt="France flag">FRENCH</a></li>
                                 </ul>
                             </div><!-- End .header-menu -->
                         </div><!-- End .header-dropown -->                        
@@ -86,7 +86,8 @@
                                             echo '<li><a href="register.php">Register</a></li>';
                                             echo '<li><a href="login.php" class="login-link">LOG IN</a></li>';
                                         }else{
-                                            //echo '<li><a href="my-account.html">MY ACCOUNT</a></li>';
+                                            echo '<li><a href="my-account.html">MY ACCOUNT</a></li>';
+                                            echo '<li><a href="#">MY WISHLIST</a></li>';
                                             echo '<li><a href="#">Contact Us</a></li>';
                                             echo '<li><a href="login.php" class="login-link">LOG OUT</a></li>';
                                         }
@@ -121,7 +122,7 @@
 
                     <div class="header-left">
                         <a href="index.php" class="logo">
-                            <img src="assets/images/logo.png" alt="shopping.lk Logo" class="">
+                            <img src="../assets/images/logo.png" alt="Porto Logo" class="">
                         </a>
                     </div><!-- End .headeer-center -->
                     
@@ -160,8 +161,13 @@
                     </div>
                     
                     <div class="header-right">
-                        
-
+                        <div class="my-account-icon">
+                            <!--<span>Call us now</span>
+                             <a href="tel:#"><strong>+123 5678 890</strong></a> --> 
+                            <a href="" class="text-4xl" title="My Account">
+                                <i class="fa fa-user-alt text-green-600" aria-hidden="true"></i>
+                            </a>
+                        </div><!-- End .header-contact -->
 
                         <div class="my-wishlist-icon">
                             <a href="" class="text-4xl" title="Wishlist"><i class="icon-wishlist text-green-600" aria-hidden="true"></i></a>
@@ -182,7 +188,7 @@
 
 
                         <div class="dropdown cart-dropdown">
-                            <a href="#" title="Cart" class="dropdown-toggle text-green-600">
+                            <a href="#" title="Cart" class="dropdown-toggle text-green-600" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                                 <span class="cart-count">21</span>
                             </a>
 
@@ -208,7 +214,7 @@
 
                                             <figure class="product-image-container">
                                                 <a href="product.php" class="product-image">
-                                                    <img src="assets/images/products/cart/product-1.jpg" alt="product">
+                                                    <img src="../assets/images/products/cart/product-1.jpg" alt="product">
                                                 </a>
                                                 <a href="#" class="btn-remove" title="Remove Product"><i class="icon-cancel"></i></a>
                                             </figure>
@@ -228,7 +234,7 @@
 
                                             <figure class="product-image-container">
                                                 <a href="product.php" class="product-image">
-                                                    <img src="assets/images/products/cart/product-2.jpg" alt="product">
+                                                    <img src="../assets/images/products/cart/product-2.jpg" alt="product">
                                                 </a>
                                                 <a href="#" class="btn-remove" title="Remove Product"><i class="icon-cancel"></i></a>
                                             </figure>
@@ -248,39 +254,7 @@
                             </div>
                         </div>
 
-                        <div class="my-account-icon dropdown">
-                            <a href="#" title="My Account" class="dropdown-toggle">
-                                <i class="fa fa-user-alt text-green-600" aria-hidden="true"></i>
-                            </a>
 
-                            <div class="dropdown-menu" >
-                                <div class="dropdownmenu-wrapper">
-                                    <ul class="my-account-links">
-                                        <li><a href="my-account.html">MY ACCOUNT</a></li>
-                                        <li><a href="#">MY WISHLIST</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="login.php" class="login-link">LOG OUT</a></li>                                    
-                                    </ul>
-                                </div>
-                            </div>
-
-
-                            <!-- <div class="my-account-dropdown-menu">                                
-                                <div class="my-account-dropdown-wrapper"></div>
-
-                                <ul class="my-account-links">
-                                    <li><a href="my-account.html">MY ACCOUNT</a></li>
-                                    <li><a href="#">MY WISHLIST</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="login.php" class="login-link">LOG OUT</a></li>                                    
-                                </ul>
-                            </div> -->
-
-
-
-
-
-                        </div>
 
 
                     </div><!-- End .header-right -->
@@ -410,9 +384,13 @@
                             </li>
                         </ul>
                     </nav>
-                    
                     <div class="header-right-quick-view" id="header-right-quick-view">
                         
+                        <div class="my-account-icon">
+                            <a href="" class="text-4xl" title="My Account">
+                                <i class="fa fa-user-alt text-green-600" aria-hidden="true"></i>
+                            </a>
+                        </div>
 
                         <div class="my-wishlist-icon">
                             <a href="" class="text-4xl" title="Wishlist"><i class="icon-wishlist text-green-600" aria-hidden="true"></i></a>
@@ -423,13 +401,7 @@
                             <a href="#" title="Cart" class="dropdown-toggle text-green-600" role="button">
                                 <span class="cart-count">21</span>
                             </a>                            
-                        </div>
-
-                        <div class="my-account-icon">
-                            <a href="" class="text-4xl" title="My Account">
-                                <i class="fa fa-user-alt text-green-600" aria-hidden="true"></i>
-                            </a>
-                        </div>
+                        </div>                   
 
                     </div>
 

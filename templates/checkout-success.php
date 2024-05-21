@@ -25,9 +25,10 @@
                         
                         <div class="text-section pb-5 mb-5">
 
-                            <div class="flex justify-center">
+                            <div class="flex justify-center mb-1">
                                 <i class="fas fa-check-circle text-9xl text-center text-green-500"></i>
                             </div>
+                            
                             <p class="lead">Thank you for your purchase</p>
                             <p class="lead">Your Invoice code : ABC123</p>
 

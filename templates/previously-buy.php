@@ -12,7 +12,12 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9 order-lg-last dashboard-content">
+                    
+                    <aside class="sidebar col-lg-3">
+                        <?php include 'user-menu-links.php';?>                                
+                    </aside>
+
+                    <div class="col-lg-9 dashboard-content">
                         <h2 class="step-title mb-2">Previously Buy Items (34)</h2>
                         <nav class="toolbox">
                             <div class="toolbox-left">
@@ -34,17 +39,46 @@
                             </div>
                         </nav>
 
-
-                        <div class="product-intro row row-sm">
+                        <div class="previously-buy-items row row-sm">                            
                             
-                            <article class="entry pb-3">
+                            <?php for ($i=0; $i < 6; $i++):?>
+                            <article class="entry pb-3 col-12">
                                 <div class="entry-body">
                                     <div class="entry-date">
                                         <span class="day">29</span>
                                         <span class="month">Jun</span>
                                         <span class="year">2024</span>
                                     </div>
+                                    <div class="entry-content">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 col-md-3">
+                                                <a href="product.html">
+                                                    <img src="assets/images/products/product-1.jpg">
+                                                </a>    
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-md-9">
+                                                <div class="entry-meta d-flex justify-content-between mb-1">
+                                                    <div><i class="icon-company"></i>Product : <a href="#">Product Short Name</a></div>                                                    
+                                                </div>
+                                                <p class="">Euismod atras vulputate iltricies etri Class aptent taciti sociosqu ad litora torquent 
+                                                per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue 
+                                                sed ligula. elit. nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula.</p>
+                                                <div class="text-xl font-bold mt-1">Price : $15.00</div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </article>
+                            <?php endfor;?>
 
+                            <!-- 
+                            <article class="entry pb-3 col-12">
+                                <div class="entry-body">
+                                    <div class="entry-date">
+                                        <span class="day">29</span>
+                                        <span class="month">Jun</span>
+                                        <span class="year">2024</span>
+                                    </div>
                                     <div class="entry-content">
                                         <div class="row">
                                             <div class="col-2">
@@ -65,122 +99,8 @@
                                     </div>                                    
                                 </div>
                             </article>
-
-                            <article class="entry pb-3">
-                                <div class="entry-body">
-                                    <div class="entry-date">
-                                        <span class="day">29</span>
-                                        <span class="month">Jun</span>
-                                        <span class="year">2024</span>
-                                    </div>
-
-                                    <div class="entry-content">
-                                        <div class="row">
-                                            <div class="col-2">
-                                                <a href="product.html">
-                                                    <img src="assets/images/products/product-1.jpg">
-                                                </a>    
-                                            </div>
-                                            <div class="col-10">
-                                                <div class="entry-meta d-flex justify-content-between mb-1">
-                                                    <div><i class="icon-company"></i>Product : <a href="#">Product Short Name</a></div>                                                    
-                                                </div>
-                                                <p class="">Euismod atras vulputate iltricies etri Class aptent taciti sociosqu ad litora torquent 
-                                                per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue 
-                                                sed ligula. elit. nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula.</p>
-                                                <div class="text-xl font-bold mt-1">Price : $15.00</div>
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </article>
-
-                            <article class="entry pb-3">
-                                <div class="entry-body">
-                                    <div class="entry-date">
-                                        <span class="day">29</span>
-                                        <span class="month">Jun</span>
-                                        <span class="year">2024</span>
-                                    </div>
-
-                                    <div class="entry-content">
-                                        <div class="row">
-                                            <div class="col-2">
-                                                <a href="product.html">
-                                                    <img src="assets/images/products/product-1.jpg">
-                                                </a>    
-                                            </div>
-                                            <div class="col-10">
-                                                <div class="entry-meta d-flex justify-content-between mb-1">
-                                                    <div><i class="icon-company"></i>Product : <a href="#">Product Short Name</a></div>                                                    
-                                                </div>
-                                                <p class="">Euismod atras vulputate iltricies etri Class aptent taciti sociosqu ad litora torquent 
-                                                per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue 
-                                                sed ligula. elit. nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula.</p>
-                                                <div class="text-xl font-bold mt-1">Price : $15.00</div>
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </article>
-
-                            <article class="entry pb-3">
-                                <div class="entry-body">
-                                    <div class="entry-date">
-                                        <span class="day">29</span>
-                                        <span class="month">Jun</span>
-                                        <span class="year">2024</span>
-                                    </div>
-
-                                    <div class="entry-content">
-                                        <div class="row">
-                                            <div class="col-2">
-                                                <a href="product.html">
-                                                    <img src="assets/images/products/product-1.jpg">
-                                                </a>    
-                                            </div>
-                                            <div class="col-10">
-                                                <div class="entry-meta d-flex justify-content-between mb-1">
-                                                    <div><i class="icon-company"></i>Product : <a href="#">Product Short Name</a></div>                                                    
-                                                </div>
-                                                <p class="">Euismod atras vulputate iltricies etri Class aptent taciti sociosqu ad litora torquent 
-                                                per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue 
-                                                sed ligula. elit. nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula.</p>
-                                                <div class="text-xl font-bold mt-1">Price : $15.00</div>
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </article>
-
-                            <article class="entry pb-3">
-                                <div class="entry-body">
-                                    <div class="entry-date">
-                                        <span class="day">29</span>
-                                        <span class="month">Jun</span>
-                                        <span class="year">2024</span>
-                                    </div>
-
-                                    <div class="entry-content">
-                                        <div class="row">
-                                            <div class="col-2">
-                                                <a href="product.html">
-                                                    <img src="assets/images/products/product-1.jpg">
-                                                </a>    
-                                            </div>
-                                            <div class="col-10">
-                                                <div class="entry-meta d-flex justify-content-between mb-1">
-                                                    <div><i class="icon-company"></i>Product : <a href="#">Product Short Name</a></div>                                                    
-                                                </div>
-                                                <p class="">Euismod atras vulputate iltricies etri Class aptent taciti sociosqu ad litora torquent 
-                                                per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue 
-                                                sed ligula. elit. nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula.</p>
-                                                <div class="text-xl font-bold mt-1">Price : $15.00</div>
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </article>
+                            -->
+                        
 
                             <!-- 
                             <div class="product-default left-details product-list mb-4">
@@ -204,10 +124,10 @@
                                         </div>                                                                       
                                     </div>
                                 </div>
-                            </div>
+                            </div>                            
                             -->
-                        </div>
 
+                        </div>
 
                         <nav class="toolbox toolbox-pagination">
                             <ul class="pagination">
@@ -227,38 +147,7 @@
                                 </li>
                             </ul>
                         </nav>
-
-
-
-
-                        
-                    </div><!-- End .col-lg-9 -->
-
-                    <aside class="sidebar col-lg-3">
-                        <?php include 'user-menu-links.php';?>                                
-                    </aside>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    </div>
 
                 </div><!-- End .row -->
             </div><!-- End .container -->

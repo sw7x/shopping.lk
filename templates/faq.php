@@ -21,6 +21,161 @@
             <div class="history-section">
                 <div class="container">
                     <p class="lead text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.</p>
+                
+
+
+
+                    <div class="accordion-wrapper mb-5 mt-2">
+                        <div class="accordion">
+                            <div class="accordion-heading">
+                                <div class="accordion-title">Section 1 consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</div>
+                            </div>
+                            
+                            <div class="accordion-panel">
+                                <div class="accordion-content">
+                                    <p class="">1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p>2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p>3Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p>4Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p>5Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-heading">
+                                <div class="accordion-title">Section 2</div>
+                            </div>
+                            <div class="accordion-panel">
+                                <div class="accordion-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-heading">
+                                <div class="accordion-title">Section 3</div>
+                            </div>
+                            <div class="accordion-panel">
+                                <div class="accordion-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+<style type="text/css">
+.accordion .accordion-heading {
+    /*background-color: #eee;
+    color: #444;*/
+    color: #000;
+    cursor: pointer;
+    /*padding: 18px;   */ 
+    padding: 1.2rem 1.5rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.5rem;
+    transition: 0.4s;
+    border-bottom: 1px solid #e4e4e4;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+.accordion .accordion-heading .accordion-title{
+    flex-basis: 95%;
+}
+
+.accordion .accordion:last-of-type {
+    border-bottom: 0;
+}
+
+.accordion .accordion-heading.active,
+.accordion .accordion-heading:hover {
+    /*background-color: #ccc;*/
+
+    color: #7aa93c;
+    border-color: #7aa93c;
+}
+
+.accordion .accordion-heading:after {
+    content: "\002B";
+    color: #777;
+    font-weight: 700;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion .accordion-heading.active:after {
+    content: "\2212";
+}
+
+.accordion .accordion-panel {
+    padding: 0px; 
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;    
+}
+
+
+.accordion .accordion-panel .accordion-content{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 2;
+}
+
+.accordion .accordion-panel .accordion-content p{
+    line-height: 1.75;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+</style>
+
+
+<script type="text/javascript">
+    //var acc = document.getElementsByClassName("accordion-heading");
+    var acc = document.querySelectorAll(".accordion .accordion-heading");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            
+
+            var panel = this.nextElementSibling;
+            var panelContentHeight = panel.find('.accordion-content').height();
+            console.log(panelContentHeight);
+
+
+
+
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+
+            
+        });
+    }
+</script>
+
+
+
+
+
+
+
                 </div><!-- End .container -->
 
                 

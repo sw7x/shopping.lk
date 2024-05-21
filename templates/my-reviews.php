@@ -12,9 +12,14 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9 order-lg-last dashboard-content">
-                        <h2 class="step-title mb-2">My Reviews (5)</h2>
+                    
+                    <aside class="sidebar col-lg-3">
+                        <?php include 'user-menu-links.php';?>                                
+                    </aside>
 
+                    <div class="col-lg-9 dashboard-content">
+                        <h2 class="step-title mb-2">My Reviews (5)</h2>
+                        
                         <nav class="toolbox">
                             <div class="toolbox-left">
                                 <div class="toolbox-item toolbox-sort">
@@ -35,11 +40,10 @@
                             </div>
                         </nav>
 
-
                         <div class="my-reviews row row-sm">
                             
-
-                            <article class="entry pb-3">
+                            <?php for ($i=0; $i < 5; $i++):?>
+                            <article class="entry pb-3 col-12">
                                 <div class="entry-body">
                                     <div class="entry-date">
                                         <span class="day">29</span>
@@ -49,12 +53,12 @@
 
                                     <div class="entry-content">
                                         <div class="row">
-                                            <div class="col-2">
+                                            <div class="col-12 col-sm-6 col-md-3 col-xl-3">
                                                 <a href="product.html">
                                                     <img src="assets/images/products/product-1.jpg">
                                                 </a>    
                                             </div>
-                                            <div class="col-10">
+                                            <div class="col-12 col-sm-6 col-md-9 col-xl-9">
                                                 <div class="entry-meta d-flex justify-content-between mb-1">
                                                     <!-- <div><i class="icon-calendar"></i>Date : June 29, 2018</div> -->
                                                     <div><i class="icon-company"></i>Product : <a href="#">Product Short Name</a></div>                                                    
@@ -76,9 +80,11 @@
                                     </div>                                    
                                 </div>
                             </article>
+                            <?php endfor;?>
 
 
-                            <article class="entry pb-3">
+                            <!-- 
+                            <article class="entry pb-3 col-12">
                                 <div class="entry-body">
                                     <div class="entry-date">
                                         <span class="day">29</span>
@@ -103,7 +109,7 @@
                                                 sed ligula. elit. nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula.</p>
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
-                                                        <span class="ratings" style="width:100%"></span><!-- End .ratings -->
+                                                        <span class="ratings" style="width:100%"></span>
                                                     </div>                                    
                                                 </div>
                                                 <a href="single.html" class="read-more">Read More <i class="icon-angle-double-right"></i></a>
@@ -114,154 +120,9 @@
                                     </div>                                    
                                 </div>
                             </article>
+                            -->
 
-                            <article class="entry pb-3">
-                                <div class="entry-body">
-                                    <div class="entry-date">
-                                        <span class="day">29</span>
-                                        <span class="month">Jun</span>
-                                        <span class="year">2024</span>
-                                    </div>
-
-                                    <div class="entry-content">
-                                        <div class="row">
-                                            <div class="col-2">
-                                                <a href="product.html">
-                                                    <img src="assets/images/products/product-1.jpg">
-                                                </a>    
-                                            </div>
-                                            <div class="col-10">
-                                                <div class="entry-meta d-flex justify-content-between mb-1">
-                                                    <div><i class="icon-company"></i>Product : <a href="#">Product Short Name</a></div>                                                    
-                                                </div>
-
-                                                <p class="font-italic">Euismod atras vulputate iltricies etri Class aptent taciti sociosqu ad litora torquent 
-                                                per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue 
-                                                sed ligula. elit. nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula.</p>
-                                                <div class="ratings-container">
-                                                    <div class="product-ratings">
-                                                        <span class="ratings" style="width:100%"></span><!-- End .ratings -->
-                                                    </div>                                    
-                                                </div>
-                                                <a href="single.html" class="read-more">Read More <i class="icon-angle-double-right"></i></a>
-
-                                                
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </article>
-
-                            <article class="entry pb-3">
-                                <div class="entry-body">
-                                    <div class="entry-date">
-                                        <span class="day">29</span>
-                                        <span class="month">Jun</span>
-                                        <span class="year">2024</span>
-                                    </div>
-
-                                    <div class="entry-content">
-                                        <div class="row">
-                                            <div class="col-2">
-                                                <a href="product.html">
-                                                    <img src="assets/images/products/product-1.jpg">
-                                                </a>    
-                                            </div>
-                                            <div class="col-10">
-                                                <div class="entry-meta d-flex justify-content-between mb-1">
-                                                    <div><i class="icon-company"></i>Product : <a href="#">Product Short Name</a></div>                                                    
-                                                </div>
-
-                                                <p class="font-italic">Euismod atras vulputate iltricies etri Class aptent taciti sociosqu ad litora torquent 
-                                                per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue 
-                                                sed ligula. elit. nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula.</p>
-                                                <div class="ratings-container">
-                                                    <div class="product-ratings">
-                                                        <span class="ratings" style="width:100%"></span><!-- End .ratings -->
-                                                    </div>                                    
-                                                </div>
-                                                <a href="single.html" class="read-more">Read More <i class="icon-angle-double-right"></i></a>
-
-                                                
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </article>
-
-                            <article class="entry pb-3">
-                                <div class="entry-body">
-                                    <div class="entry-date">
-                                        <span class="day">29</span>
-                                        <span class="month">Jun</span>
-                                        <span class="year">2024</span>
-                                    </div>
-
-                                    <div class="entry-content">
-                                        <div class="row">
-                                            <div class="col-2">
-                                                <a href="product.html">
-                                                    <img src="assets/images/products/product-1.jpg">
-                                                </a>    
-                                            </div>
-                                            <div class="col-10">
-                                                <div class="entry-meta d-flex justify-content-between mb-1">
-                                                    <div><i class="icon-company"></i>Product : <a href="#">Product Short Name</a></div>                                                    
-                                                </div>
-
-                                                <p class="font-italic">Euismod atras vulputate iltricies etri Class aptent taciti sociosqu ad litora torquent 
-                                                per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue 
-                                                sed ligula. elit. nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula.</p>
-                                                <div class="ratings-container">
-                                                    <div class="product-ratings">
-                                                        <span class="ratings" style="width:100%"></span><!-- End .ratings -->
-                                                    </div>                                    
-                                                </div>
-                                                <a href="single.html" class="read-more">Read More <i class="icon-angle-double-right"></i></a>
-
-                                                
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </article>
-
-                            <article class="entry pb-3">
-                                <div class="entry-body">
-                                    <div class="entry-date">
-                                        <span class="day">29</span>
-                                        <span class="month">Jun</span>
-                                        <span class="year">2024</span>
-                                    </div>
-
-                                    <div class="entry-content">
-                                        <div class="row">
-                                            <div class="col-2">
-                                                <a href="product.html">
-                                                    <img src="assets/images/products/product-1.jpg">
-                                                </a>    
-                                            </div>
-                                            <div class="col-10">
-                                                <div class="entry-meta d-flex justify-content-between mb-1">
-                                                    <div><i class="icon-company"></i>Product : <a href="#">Product Short Name</a></div>                                                    
-                                                </div>
-
-                                                <p class="font-italic">Euismod atras vulputate iltricies etri Class aptent taciti sociosqu ad litora torquent 
-                                                per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue 
-                                                sed ligula. elit. nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula.</p>
-                                                <div class="ratings-container">
-                                                    <div class="product-ratings">
-                                                        <span class="ratings" style="width:100%"></span><!-- End .ratings -->
-                                                    </div>                                    
-                                                </div>
-                                                <a href="single.html" class="read-more">Read More <i class="icon-angle-double-right"></i></a>
-
-                                                
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </article>
+                            
                                             
                         </div>
 
@@ -282,35 +143,8 @@
                                     <a class="page-link page-link-btn" href="#"><i class="icon-angle-right"></i></a>
                                 </li>
                             </ul>
-                        </nav>
-                        
-                    </div><!-- End .col-lg-9 -->
-
-                    <aside class="sidebar col-lg-3">
-                        <?php include 'user-menu-links.php';?>                                
-                    </aside>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        </nav>                        
+                    </div>                    
 
                 </div><!-- End .row -->
             </div><!-- End .container -->

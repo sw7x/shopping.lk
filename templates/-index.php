@@ -379,6 +379,7 @@
     </div>
 
     <!-- Random -->
+    <!--
     <div class="featured-section">
         <div class="container">
 
@@ -401,7 +402,7 @@
                             <h2 class="">
                                 <a href="product.html">Product Short Name</a>
                             </h2>                                
-                        </div><!-- End .product-details -->
+                        </div>
                     </div>
                 </div>
 
@@ -416,7 +417,7 @@
                             <h2 class="_product-title">
                                 <a href="product.html">Product Short Name</a>
                             </h2>                                
-                        </div><!-- End .product-details -->
+                        </div>
                     </div>
                 </div>
 
@@ -431,7 +432,7 @@
                             <h2 class="_product-title">
                                 <a href="product.html">Product Short Name</a>
                             </h2>
-                        </div><!-- End .product-details -->
+                        </div>
                     </div>
                 </div>
 
@@ -446,7 +447,7 @@
                             <h2 class="_product-title">
                                 <a href="product.html">Product Short Name</a>
                             </h2>
-                        </div><!-- End .product-details -->
+                        </div>
                     </div>
                 </div>
 
@@ -461,7 +462,7 @@
                             <h2 class="_product-title">
                                 <a href="product.html">Product Short Name</a>
                             </h2>
-                        </div><!-- End .product-details -->
+                        </div>
                     </div>
                 </div>
 
@@ -476,7 +477,7 @@
                             <h2 class="_product-title">
                                 <a href="product.html">Product Short Name</a>
                             </h2>
-                        </div><!-- End .product-details -->
+                        </div>
                     </div>
                 </div>
 
@@ -491,7 +492,7 @@
                             <h2 class="_product-title">
                                 <a href="product.html">Product Short Name</a>
                             </h2>
-                        </div><!-- End .product-details -->
+                        </div>
                     </div>
                 </div>
 
@@ -506,13 +507,14 @@
                             <h2 class="_product-title">
                                 <a href="product.html">Product Short Name</a>
                             </h2>                                
-                        </div><!-- End .product-details -->
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+    -->
 
 
 
@@ -539,7 +541,7 @@
                             <h2 class="grid-item-title">
                                 <a href="product.html">Product Short Name</a>
                             </h2>                                
-                        </div><!-- End .product-details -->
+                        </div>
                     </div>
                 </div>
                 <?php endfor;?>                
@@ -547,6 +549,9 @@
             </div>
         </div>
     </div>
+
+    
+    
 
 
 
@@ -609,60 +614,34 @@
         brands that have highest sold count x2
         brands that have highest rating x2 
     -->
-    <div class="featured-section bg-white packages-featured-section">    
+    <div class="featured-section featured-section bg-white">
         <div class="container">
+
             <div class="row">
                 <div class="col-12">
-                    <h2 class="subHeading">Shop by Brand</h2>
+                    <h2 class="subHeading text-center">SHOP BY BRAND</h2>
                 </div>
             </div>
 
-
-            <div class="_partners-carousel row">
-                <div class="col-md-3">
-                    <a href="#" class="partner">
-                        <img src="assets/images/products/product-4.jpg" alt="logo">
-                    </a>
+            <div class="row row-sm featured-grid">                
+                <?php for ($i=0; $i < 8; $i++):?>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="featured-grid-item">
+                        <figure>
+                            <a href="product.html">
+                                <img src="assets/images/products/product-1.jpg">
+                            </a>
+                        </figure>                        
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <a href="#" class="partner">
-                        <img src="assets/images/products/product-4.jpg" alt="logo">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="partner">
-                        <img src="assets/images/products/product-4.jpg" alt="logo">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="partner">
-                        <img src="assets/images/products/product-4.jpg" alt="logo">
-                    </a>
-                </div>
-
-                <div class="col-md-3">
-                    <a href="#" class="partner">
-                        <img src="assets/images/products/product-4.jpg" alt="logo">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="partner">
-                        <img src="assets/images/products/product-4.jpg" alt="logo">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="partner">
-                        <img src="assets/images/products/product-4.jpg" alt="logo">
-                    </a>
-                </div>                        
-                <div class="col-md-3">
-                    <a href="#" class="partner">
-                        <img src="assets/images/products/product-4.jpg" alt="logo">
-                    </a>
-                </div>
+                <?php endfor;?>              
             </div>
-        </div>    
+        </div>
     </div>
+
+
+
+
 
 
 

@@ -110,8 +110,8 @@
                                 </div>
                                 
                                 <div class="offset-md-3 col-md-9">
-                                    <button type="reset" class="btn btn-danger mr-5">Reset</button>
-                                    <button type="submit" class="btn btn-primary">Create Account</button>
+                                    <button type="reset" class="btn btn-sm btn-danger mr-5">Reset</button>
+                                    <button type="submit" class="btn btn-sm btn-primary">Create Account</button>
                                 </div>
 
                                 <div class="offset-md-3 col-md-9">

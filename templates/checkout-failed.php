@@ -23,7 +23,7 @@
                     <div class="col-lg-12">
                         
                         <div class="text-section pb-5 mb-5">
-                            <div class="flex justify-center">
+                            <div class="flex justify-center mb-1">
                                 <i class="fas fa-exclamation-circle text-9xl text-center text-red-500"></i>
                             </div>
 

@@ -35,9 +35,11 @@
                                                     <img src="assets/images/products/product-4.jpg" alt="product">
                                                 </a>
                                             </figure>
-                                            <h2 class="product-title text-xl">
-                                                <a href="product.html">Phillips</a>
-                                            </h2>
+                                            <div class="product-name">
+                                                <h2 class="product-title text-xl">
+                                                    <a href="product.html">Phillips</a>
+                                                </h2>
+                                            </div>
                                         </td>
                                         <td>
                                             <div>
@@ -58,9 +60,11 @@
                                                     <img src="assets/images/products/product-3.jpg" alt="product">
                                                 </a>
                                             </figure>
-                                            <h2 class="product-title text-xl">
-                                                <a href="product.html">Optical Mouse</a>
-                                            </h2>
+                                            <div class="product-name">
+                                                <h2 class="product-title text-xl">
+                                                    <a href="product.html">Optical Mouse</a>
+                                                </h2>
+                                            </div>
                                         </td>
                                         <td>$8.90</td>
                                         <td>7</td>

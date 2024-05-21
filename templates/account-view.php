@@ -12,7 +12,12 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9 order-lg-last dashboard-content">
+                    
+                    <aside class="sidebar col-lg-3">
+                        <?php include 'user-menu-links.php';?>
+                    </aside>
+
+                    <div class="col-lg-9 dashboard-content">
                         <h2 class="step-title mb-2">Account Information</h2>
                         <table class="ratings-table mb-2">
                             <tbody>
@@ -57,14 +62,8 @@
                                     <td>USA</td>                                                                
                                 </tr>                                               
                             </tbody>
-                        </table>
-                    
-                    </div>
-
-                    <aside class="sidebar col-lg-3">
-                        <?php include 'user-menu-links.php';?>
-                    </aside>
-                    
+                        </table>                    
+                    </div>                                        
 
                 </div><!-- End .row -->
             </div><!-- End .container -->

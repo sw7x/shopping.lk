@@ -37,11 +37,11 @@
                                 </div>
                             </div> 
                             <div class="form-group row">
-                                <div class="offset-3 col-md-9">
-                                    <button type="reset" class="btn btn-danger mr-5">Reset</button>
-                                    <button type="submit" class="btn btn-primary">Login</button>
+                                <div class="offset-md-3 col-md-9">
+                                    <button type="reset" class="btn btn-sm btn-danger mr-5">Reset</button>
+                                    <button type="submit" class="btn  btn-sm btn-primary">Login</button>
                                 </div>
-                                <div class="offset-3 col-md-9 mt-3">
+                                <div class="offset-md-3 col-md-9 mt-3">
                                     <a href="#" class="forget-pass btn-link"> Forgot your password ?</a>
                                 </div>
                             </div>
