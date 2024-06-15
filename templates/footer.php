@@ -215,7 +215,7 @@
     <script src="assets/js/1plugins.min.js"></script>
 
     <!-- Main JS File -->
-    <script src="assets/js/1main.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

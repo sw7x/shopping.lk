@@ -27,32 +27,34 @@
                     <div class="package-list divide-line up-effect">
                         
                         <?php for ($i=0; $i < 12; $i++):?>                               
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 package-item">
-                            <figure>
-                                <a href="product.html">
-                                    <img src="assets/images/products/product-2.jpg">
-                                </a>
-                                <div class="package-label label-sale">
-                                    <div class="_old-price">$5.00 OFF</div>
-                                    <!-- <div class="_package-price">$10.00</div> -->
-                                </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                            <div class="package-item">
+                                <figure>
+                                    <a href="product.html">
+                                        <img src="assets/images/products/product-2.jpg">
+                                    </a>
+                                    <div class="package-label label-sale">
+                                        <div class="_old-price">$5.00 OFF</div>
+                                        <!-- <div class="_package-price">$10.00</div> -->
+                                    </div>
 
-                                <!-- <span class="package-label label-sale">27% OFF</span> -->
-                            </figure>
-                            <div class="package-details">
-                                <h2 class="package-title headline">
-                                    <a href="product.html">Product Short Name</a>
-                                </h2> 
-                                <!-- <p class="lead">6 Electronic Items Sold withing 9 months. Grab it soon or leave it</p>-->                                
-                                <div class="price-box">
-                                    <!-- <div class="old-price">$15.00</div>-->
-                                    <div class="package-price">$10.00</div>
-                                </div>
-                                <div class="package-action">
-                                    <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal">
-                                        <i class="icon-cart"></i>
-                                        <div>ADD TO CART</div>
-                                    </button>
+                                    <!-- <span class="package-label label-sale">27% OFF</span> -->
+                                </figure>
+                                <div class="package-details">
+                                    <h2 class="package-title headline">
+                                        <a href="product.html">Product Short Name</a>
+                                    </h2> 
+                                    <!-- <p class="lead">6 Electronic Items Sold withing 9 months. Grab it soon or leave it</p>-->                                
+                                    <div class="price-box">
+                                        <!-- <div class="old-price">$15.00</div>-->
+                                        <div class="package-price">$10.00</div>
+                                    </div>
+                                    <div class="package-action">
+                                        <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal">
+                                            <i class="icon-cart"></i>
+                                            <div>ADD TO CART</div>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

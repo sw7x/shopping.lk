@@ -1,0 +1,28 @@
+.feature_products_slider {
+	padding: 0px 3rem;
+}
+.feature_products_slider .slick-prev,
+.feature_products_slider .slick-next {
+	width: 50px;
+	height: 50px;
+	z-index: 9999;
+	color: #16a34a;
+	background: transparent;
+	top: 33%;
+}
+.feature_products_slider .slick-prev {
+	left: -3.2rem;
+}
+
+.feature_products_slider .slick-next {
+	right: -3.2rem;
+}
+
+.feature_products_slider .slick-prev:hover,
+.feature_products_slider .slick-prev:focus,
+.feature_products_slider .slick-next:hover,
+.feature_products_slider .slick-next:focus {
+	color: #8fc04e;
+	outline: none;
+	background: transparent;
+}

@@ -83,13 +83,14 @@ function stickyHeader(){
 
 
 
-
+// to expand collapse menu items in Mobile Menu
 $('.mobile-menu-toggler').on('click', function (e) {
     $('body').toggleClass('mmenu-active');
     $(this).toggleClass('active');
     e.preventDefault();
 });
 
+// to expand collapse menu items in Mobile Menu
 $('.mobile-menu-overlay, .mobile-menu-close').on('click', function (e) {
     $('body').removeClass('mmenu-active');
     $('.mobile-menu-toggler').removeClass('active');
@@ -97,7 +98,7 @@ $('.mobile-menu-overlay, .mobile-menu-close').on('click', function (e) {
     e.preventDefault();
 });
 
-
+// to expand collapse menu items in Mobile Menu
 $(window).resize(function(){
     var width   = window.innerWidth || document.documentElement.clientWidth;
     if (width >= 992 && $('body').hasClass('mmenu-active')) {
@@ -147,9 +148,20 @@ $('.mobile-menu').find('li').each(function () {
 });
 
 
+/*$('.mobile-menu').find('li').each(function () {
+    var $this = $(this);
+
+    if ($this.find('ul').length) {
+      $('<span/>', {
+        'class': 'mmenu-btn'
+    }).appendTo($this.children('a'));
+  }
+});
 
 
-// Mobile Menu Toggle
+*/
+
+// --------------to expand collapse menu items in Mobile Menu
 $('.mmenu-btn').on('click', function (e) {
     var $parent = $(this).closest('li'),
     $targetUl = $parent.find('ul').eq(0);
@@ -191,6 +203,9 @@ $('.sidebar-overlay').click(function (e) {
 
 $('.product-filter-btn').click(function (e) {
     //alert('aaa');
+    $(this).addClass('hhh');
+
+
     $(this).parent().closest('.sidebar-wrapper').find('.widget-wrapper').toggleClass('show');
     console.log($(this).parent());
 

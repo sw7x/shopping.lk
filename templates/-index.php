@@ -73,7 +73,7 @@
 
             <div class="row">
                 
-                <?php for ($i=0; $i < 5; $i++):?>
+                <?php for ($i=0; $i < 4; $i++):?>
                 <div class="featured-shopping-product col-12 col-sm-6 col-md-4 col-lg-3 col-xl-5col">
                     <figure>
                         <a href="product.html">
@@ -107,7 +107,7 @@
 
 
 
-                <?php for ($i=0; $i < 0; $i++):?>                   
+                <?php for ($i=0; $i < 1; $i++):?>                   
                 <div class="featured-shopping-product col-12 col-sm-6 col-md-4 col-lg-3 col-xl-5col">
                     <figure>
                         <a href="product.html">

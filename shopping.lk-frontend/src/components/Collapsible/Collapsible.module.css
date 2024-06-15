@@ -1,0 +1,95 @@
+.collapsible-card-edonec {
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+	transition: 0.3s;
+	margin-bottom: 2rem;
+	border: 1px solid #ddd;
+}
+
+.collapsible-card-edonec:hover {
+	/* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.collapsible-card-edonec .collapsible-header-wrapper-edonec {
+	cursor: pointer;
+}
+
+.collapsible-card-edonec .collapsible-header-wrapper-edonec .collapsible-header-edonec {
+	display: flex;
+	justify-content: space-between;
+	padding: 2px 20px 2px 20px;
+	border-bottom: 1px solid #dee2e6 !important;
+}
+
+.collapsible-header-edonec .title-text-edonec {
+	display: block;
+	font-size: 1.5rem;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+}
+
+.collapsible-header-edonec .collapsible-icon-button-edonec {
+	cursor: pointer;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: 0;
+	cursor: pointer;
+	color: #16a34a;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+.collapsible-header-edonec .collapsible-icon-button-edonec:focus {
+	outline: 0;
+}
+
+i.rotate-center-edonec {
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+i.rotate-center-edonec.down {
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+i.rotate-center-edonec.up {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+.collapsible-content-edonec {
+	overflow: hidden;
+	transition: height 0.2s ease-in-out;
+	/* border-bottom: 1px solid #dee2e6 !important; */
+	font-size: 1.3rem;
+}
+.collapsible-content-edonec .collapsible-content-padding-edonec {
+	padding: 20px 20px 20px 20px;
+}
+
+/* 
+	<div class='collapsible-card-edonec'>
+		<div class='collapsible-header-wrapper-edonec'>
+			<div class='collapsible-header-edonec'>
+				<div class='title-text-edonec'>Collapse header</div>
+				<button type='button' class='collapsible-icon-button-edonec'>
+					<i class='fa fa-chevron-down rotate-center-edonec down'></i>
+				</button>
+			</div>
+		</div>
+		<div class='collapsible-content-edonec'>
+			<div>
+				<div class='collapsible-content-padding-edonec'>
+					Consectetur adipiscing elit pellentesque habitant morbi tristique.
+					Pulvinar pellentesque habitant morbi tristique. Vel quam elementum
+					pulvinar etiam. Pulvinar pellentesque habitant morbi tristique senectus
+				</div>
+			</div>
+		</div>
+	</div> 
+*/

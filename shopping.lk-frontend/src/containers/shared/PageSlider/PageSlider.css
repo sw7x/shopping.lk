@@ -1,0 +1,24 @@
+.page-slider-container .slick-prev,
+.page-slider-container .slick-next {
+	width: 75px;
+	height: 75px;
+	z-index: 9999;
+	color: #16a34a;
+	background: transparent;
+}
+.page-slider-container .slick-prev {
+	left: 0rem;
+}
+
+.page-slider-container .slick-next {
+	right: 0rem;
+}
+
+.page-slider-container .slick-prev:hover,
+.page-slider-container .slick-prev:focus,
+.page-slider-container .slick-next:hover,
+.page-slider-container .slick-next:focus {
+	color: #8fc04e;
+	outline: none;
+	background: transparent;
+}

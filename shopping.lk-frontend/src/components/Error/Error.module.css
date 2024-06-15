@@ -1,0 +1,62 @@
+.error-msg {
+	font-size: 16px;
+	padding: 7px 15px;
+	color: #fff;
+	background-color: #ff0000d6;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: 2px;
+}
+.error-msg .heading {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 2px;
+	position: relative;
+}
+
+.error-msg .heading .icon {
+	display: inline-block;
+	margin-right: 1rem;
+	position: absolute;
+	bottom: 4px;
+}
+
+.error-msg .heading .title {
+	display: inline-block;
+	font-size: 2.5rem;
+	margin-left: 4rem;
+}
+
+.error-msg .seperator {
+	width: 100%;
+	border-top: 2px solid #fff;
+}
+.error-msg .message {
+	font-weight: 500;
+	margin-top: 5px;
+	font-size: 1.6rem;
+}
+
+.error-message-list {
+	position: relative;
+	padding: 0.75rem 1.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+	color: #cd0101;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+}
+.error-message-list .topic {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #cd0101;
+	line-height: 1rem;
+	margin-bottom: 1rem;
+	padding: 8px 0px;
+}
+.error-message-list ul {
+	margin-left: 2rem;
+	list-style: disc;
+	margin-bottom: 1rem;
+}

@@ -28,12 +28,16 @@
     
     <!-- Plugins CSS File -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
+    <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome-free/css/all.min.css">
+    
+    
+    
+    
     <!-- <link href="assets/css/tailwind.css" type="text/css" rel="stylesheet"> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome-free/css/all.min.css">
+
     <link rel="stylesheet" type="text/css" href="assets/css/custom-styles.css">
     <link rel="stylesheet" type="text/css" href="assets/css/custom-responsive-styles.css">
 

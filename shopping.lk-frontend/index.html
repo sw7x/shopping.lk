@@ -1,13 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="keywords" content="Shopping, Store, Online, Lanka" />
+		<meta name="description" content="shopping.lk - Sri Lanka's Online Shopping Store" />
+
+		<link rel="icon" href="/favicon.ico" />
+		<title>Shopping.lk - Shop Smart, Shop Online</title>
+
+		<script type="text/javascript">
+			WebFontConfig = {
+				google: {
+					families: [
+						'Open+Sans:300,400,600,700,800',
+						'Poppins:300,400,500,600,700',
+						'Segoe Script:300,400,500,600,700',
+					],
+				},
+			};
+			(function (d) {
+				var wf = d.createElement('script'),
+					s = d.scripts[0];
+				wf.src = '../src/assets/js/webfont.js';
+				wf.async = true;
+				s.parentNode.insertBefore(wf, s);
+			})(document);
+		</script>
+	</head>
+	<body>
+		<div id="root"></div>
+		<div id="modal-root"></div>
+
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
 </html>

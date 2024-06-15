@@ -1,0 +1,8 @@
+.modified-scroll-top {
+	background-color: #16a34a !important;
+	font-size: 20px;
+	font-weight: 700;
+}
+.modified-scroll-top:hover {
+	background-color: #6eb115 !important;
+}

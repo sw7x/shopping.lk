@@ -1,17 +1,10 @@
 <?php include 'header.php';?>
 
         <main class="main">
-            <nav aria-label="breadcrumb" class="breadcrumb-nav mb-0">
-                <div class="container">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
-                        <li class="breadcrumb-item"><a href="#">Category list</a></li>
-                    </ol>
-                </div><!-- End .container -->
-            </nav>
+            
 
             <div class="container products-body">
-                <div class="banner banner-cat mb-3" style="background-image: url('assets/images/banners/banner-fashion.jpg');">
+                <div class="banner banner-cat" style="background-image: url('assets/images/banners/banner-fashion.jpg');">
                     <div class="banner-content container offset-1">
                         <h2 class="banner-subtitle">check out over <span>200+</span></h2>
                         <h1 class="banner-title">
@@ -20,7 +13,16 @@
                         <a href="#" class="btn btn-primary">Shop Now</a>
                     </div><!-- End .banner-content -->
                 </div><!-- End .banner -->
-    
+                
+                <nav aria-label="breadcrumb" class="breadcrumb-nav mb-3">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">Category list</a></li>
+                        </ol>
+                    </div><!-- End .container -->
+                </nav>
+
                 <div class="row row-sm">
                     <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                         <div class="product-default">

@@ -1,48 +1,46 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+	"compilerOptions": {
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"skipLibCheck": true,
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
+		/* Bundler mode */
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-jsx",
 
-    /* Linting */
-    "strict": true,
-    "strictNullChecks": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
+		/* Linting */
+		"strict": true,
+		"strictNullChecks": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
 
-    "sourceMap": true,
-    "baseUrl": ".",
-    "paths": {
-      "@root/*": ["src/*"],
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      //"@utils/*": ["src/utils/*"],
-      "@layouts/*": ["src/layouts/*"],
-      //"@hooks/*": ["src/hooks/*"],
-      "@containers/*": ["src/containers/*"],
-      //"@services/*": ["src/services/*"],
-      "@shared/*": ["src/shared/*"],
+		"sourceMap": true,
+		"baseUrl": ".",
+		"paths": {
+			"@root/*": ["src/*"],
+			"@assets/*": ["src/assets/*"],
+			"@components/*": ["src/components/*"],
+			//"@utils/*": ["src/utils/*"],
+			"@layouts/*": ["src/layouts/*"],
+			//"@hooks/*": ["src/hooks/*"],
+			"@containers/*": ["src/containers/*"],
+			//"@services/*": ["src/services/*"],
+			"@shared/*": ["src/shared/*"],
 
-      "@store": ["src/store"], // for to store/index.ts
-      "@store/*": ["src/store/*"], // for sub folders inside store folder
+			"@store": ["src/store"], // for to store/index.ts
+			"@store/*": ["src/store/*"], // for sub folders inside store folder
 
-      "@context/*": ["src/context/*"]
-    },
-    "types": ["node"]
-  },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+			"@context/*": ["src/context/*"]
+		},
+		"types": ["node"]
+	},
+	"include": ["src"],
+	"references": [{ "path": "./tsconfig.node.json" }]
 }
-
-

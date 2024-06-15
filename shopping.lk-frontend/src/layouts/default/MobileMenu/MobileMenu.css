@@ -1,0 +1,22 @@
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.mobile-menu-container {
+	scrollbar-width: thin;
+	scrollbar-color: #16a32f #313036;
+	/* #1d1e20 */
+}
+
+/* Chrome, Edge, and Safari */
+.mobile-menu-container::-webkit-scrollbar {
+	width: 16px;
+}
+
+.mobile-menu-container::-webkit-scrollbar-track {
+	background: #e43c09;
+}
+
+.mobile-menu-container::-webkit-scrollbar-thumb {
+	background-color: #16a32f;
+	border-radius: 10px;
+	border: 3px solid #ffffff;
+}

@@ -357,7 +357,7 @@
                                     <a data-toggle="collapse" href="#widget-body-1" role="button" aria-expanded="true" aria-controls="widget-body-1">electronics</a>
                                 </h3>
 
-                                <div class="collapse show" id="widget-body-1">
+                                <div class="_collapse show" id="widget-body-1">
                                     <div class="widget-body">
                                         <ul class="cat-list">
                                             <li><a href="#">Smart TVs</a></li>
