@@ -3878,7 +3878,6 @@ a:focus {
 }
 /* TODO -delete -banner END*/
 
-
 /* TODO -delete breadcrumb START*/
 
 .breadcrumb-nav {
@@ -3923,8 +3922,6 @@ a:focus {
 }
 
 /* TODO -delete breadcrumb END*/
-
-
 
 .page-header {
 	padding: 2.5rem 0 5rem;
@@ -5797,6 +5794,7 @@ a:focus {
 	display: none;
 }
 
+/* ========pagination todo-delete ================ */
 .pagination {
 	border-radius: 0;
 	font-weight: 600;
@@ -5872,6 +5870,7 @@ a:focus {
 	border-color: #c1c3c5;
 	background-color: transparent;
 }
+/* ========================= */
 
 .toolbox-left {
 	display: -ms-flexbox;
@@ -10015,8 +10014,8 @@ tbody .product-col {
  */
 .owl-carousel .owl-item {
 	/**
-  	This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
-  	calculation of the height of the owl-item that breaks page layouts
+	This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+	calculation of the height of the owl-item that breaks page layouts
    */
 }
 .owl-carousel .owl-item .owl-lazy {
@@ -11394,8 +11393,3 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-
-
-
-
