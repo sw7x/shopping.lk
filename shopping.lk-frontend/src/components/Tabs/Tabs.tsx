@@ -1,99 +1,76 @@
-import React, { useState } from 'react';
-import { TabList, TabListPropsType } from './TabList';
-import { TabPanel, TabPanelPropsType } from './TabPanel';
-import { Tab } from './Tab';
+import React, { createContext, useContext, useState } from 'react';
 
-type TabsPropsType = {
-	//children: React.ReactNode;
+import {
+	Tab,
+	type TabPropsType,
+	TabPanel,
+	type TabPanelPropsType,
+	TabList,
+	type TabListPropsType,
+	TabPanelList,
+	type TabPanelListPropsType,
+} from '@components/Tabs';
 
-	children: React.ReactElement<TabPanelPropsType>[];
+type TabsContextType = {
+	selected: number;
+	setSelected: (index: number) => void;
 };
-export const Tabs: React.FC<TabsPropsType> = ({ children }) => {
+
+export const TabsContext = createContext<TabsContextType | undefined>(undefined);
+
+export type TabsPropsType = {
+	//children: React.ReactNode[];
+	children: [
+		React.ReactElement<TabListPropsType, typeof TabList>,
+		React.ReactElement<TabPanelListPropsType, typeof TabPanelList>,
+	];
+};
+
+type TabsComponentType = React.FC<TabsPropsType> & {
+	TabList: React.FC<TabListPropsType>;
+	Tab: React.FC<TabPropsType>;
+	TabPanelList: React.FC<TabPanelListPropsType>;
+	TabPanel: React.FC<TabPanelPropsType>;
+};
+
+export const Tabs: TabsComponentType = ({ children }) => {
 	const [selected, setSelected] = useState<number>(0);
-
-	//const dd = React.cloneElement(<TabList children={undefined} aaa={''} />, { aaa: 'selected' });
-
-	const handleChange = (event: React.MouseEvent<HTMLAnchorElement>, index: number) => {
-		setSelected(index);
-		event.preventDefault();
-	};
-
-	//const tabListElements: React.ReactElement<typeof TabList>[] = [];
-	//const tabPanelElements: React.ReactElement<typeof TabPanel>[] = [];
-
-	const tabListElements1: React.ReactElement<TabListPropsType>[] = [];
-	const tabPanelElements1: React.ReactElement<TabPanelPropsType>[] = [];
-	// Separate children into TabList and TabPanel components
-	//const tabListElements: React.ReactElement<typeof TabList>[] = [];
-	//const tabPanelElements: React.ReactElement<typeof TabPanel>[] = [];
-
-	//const tabPanelElements: ReturnType<TabPanel>[] = [];
-	//const tabPanelElements1: TabPanel<TabPanelPropsType>[] = [];
-	/* 
-	//children: ReactElement<TabPropsType>[];
-	children: React.ReactElement<typeof Tab> | React.ReactElement<typeof Tab>[];
-	
-	
-	*/
-	let tabPanelIndex = 0;
-	let tabListIndex = 0;
-	React.Children.forEach(children, (child) => {
-		if (React.isValidElement(child)) {
-			if (child.type === TabList) {
-				const TabListChild = child;
-				const childReactElemArr:
-					| React.ReactElement<typeof Tab>
-					| React.ReactElement<typeof Tab>[] = [];
-
-				React.Children.forEach(child, (TabListChildElem) => {
-					childReactElemArr.push(
-						React.cloneElement(TabListChildElem as React.ReactElement<typeof Tab>),
-					);
-				});
-
-				//child.children;
-
-				//const tabListProps: TabListPropsType = { aaa: true };
-				// Adjust according to actual prop names and types
-				tabListElements1.push(
-					React.cloneElement(child as React.ReactElement<TabListPropsType>, {
-						index: tabListIndex,
-						selected: selected,
-						children: childReactElemArr,
-					}),
-				);
-
-				tabListIndex++;
-			} else if (child.type === typeof TabPanel) {
-				let tabPanelIndex = 0;
-				//const TabPanelProps: TabPanelPropsType = { bbb: true };
-				// Adjust according to actual prop names and types
-				tabPanelElements1.push(
-					React.cloneElement(child as React.ReactElement<TabPanelPropsType>, {
-						selected: selected,
-						index: tabPanelIndex,
-						children: child.props.children,
-					}),
-				);
-
-				tabPanelIndex++;
-			} else {
-				throw new Error('Tabs children should be of type TabList or TabPanel');
-			}
-		} else {
-			throw new Error('inavlid children in Tabs');
-		}
-	});
 
 	return (
 		<div className='product-single-tabs'>
-			{children}
-			<>{tabListElements1}</>
-			{/* <TabList /> componenets */}
-			<div className='tab-content'>
-				<>{tabPanelElements1}</>
-				{/* <TabPanel /> componenets */}
-			</div>
+			<TabsContext.Provider value={{ selected, setSelected }}>
+				{children}
+			</TabsContext.Provider>
 		</div>
 	);
 };
+
+export const useTabsContext = () => {
+	const context = useContext(TabsContext);
+	if (!context) {
+		throw new Error('useTabsContext must be used within a Tabs component');
+	}
+	return context;
+};
+
+const _TabList = (props: TabListPropsType) => {
+	return <TabList>{props.children}</TabList>;
+};
+
+const _Tab = (props: TabPropsType) => {
+	return <Tab {...props}>{props.children}</Tab>;
+};
+
+const _TabPanelList = (props: TabPanelListPropsType) => {
+	return <TabPanelList>{props.children}</TabPanelList>;
+};
+
+const _TabPanel = (props: TabPanelPropsType) => {
+	return <TabPanel {...props}>{props.children}</TabPanel>;
+};
+
+// Attach the child components as static properties
+Tabs.TabList = _TabList;
+Tabs.Tab = _Tab;
+Tabs.TabPanelList = _TabPanelList;
+Tabs.TabPanel = _TabPanel;
