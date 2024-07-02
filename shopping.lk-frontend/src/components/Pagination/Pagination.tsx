@@ -73,7 +73,7 @@ export const Pagination: React.FC<PaginationProps> = ({
 			{paginationRange.map((pageNumber) => {
 				if (pageNumber === DOTS) {
 					return (
-						<li className={`${classes['page-item']}`} key={-1}>
+						<li className={`${classes['page-item']} ${classes['dots']}`} key={-1}>
 							<span className={classes['page-link']}>...</span>
 						</li>
 					);
