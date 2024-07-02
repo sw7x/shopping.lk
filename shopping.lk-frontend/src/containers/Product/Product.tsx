@@ -26,22 +26,12 @@ import product4Img from '@assets/images/products/zoom/product-4.jpg';
 import './Product.css';
 import Collapsible from '@components/Collapsible/Collapsible';
 import { Breadcrumb } from '@containers/shared/Breadcrumb';
+import { ViewStarRatings } from '@components/StarRatings';
+import { AddToCartQuantitySelector } from '@containers/shared/AddToCartQuantitySelector';
 
 // Define a function to import images dynamically
 
 const Product = () => {
-	const [count, setCount] = useState<number>(1);
-
-	const decreaseQuantity = () => {
-		setCount((prev) => {
-			if (prev - 1 < 0) return 0;
-			return prev - 1;
-		});
-	};
-
-	const increaseQuantity = () => {
-		setCount((prev) => prev + 1);
-	};
 	const productSliderSettings: Settings = {
 		customPaging: function (i: number) {
 			if (i == 0) {
@@ -177,8 +167,18 @@ const Product = () => {
 								<div className='col-lg-5 col-md-6'>
 									<div className='product-single-details'>
 										<div className='category-list'>
-											<a href='category.html' className='product-category'>
-												category
+											category :
+											<a
+												href='category.html'
+												className='product-category ml-2'
+											>
+												Head Phones
+											</a>
+										</div>
+										<div className='product-brand'>
+											BRAND :
+											<a className='ml-2' href=''>
+												Excepteur
 											</a>
 										</div>
 										<h1 className='product-title'>Silver SONY Headset</h1>
@@ -192,6 +192,16 @@ const Product = () => {
 											<span className='mr-2'>Sold Out</span>
 										</div>
 
+										<div className='d-flex align-items-center product-ratings-wrapper'>
+											<ViewStarRatings rating={9} fontSize={32} />
+											<span className='pt-3'>
+												<a href='#' className='rating-link'>
+													( 6 Reviews )
+												</a>
+											</span>
+										</div>
+
+										{/* 
 										<div className='ratings-container'>
 											<div className='product-ratings'>
 												<span
@@ -202,11 +212,12 @@ const Product = () => {
 											<a href='#' className='rating-link'>
 												( 6 Reviews )
 											</a>
-										</div>
+										</div> 
+										*/}
 
 										<div className='price-box'>
-											<span className='old-price'>$81.00</span>
-											<span className='product-price'>$101.00</span>
+											<div className='product-price'>$101.00</div>
+											<div className='old-price'>$81.00</div>
 										</div>
 
 										<div className='product-desc'>
@@ -268,6 +279,7 @@ const Product = () => {
 										</div>
 
 										<div className='product-action'>
+											{/* 
 											<div
 												className='flex mr-3 _product-single-qty'
 												style={{ height: '43px', margin: '0 1rem 1rem 0' }}
@@ -289,7 +301,9 @@ const Product = () => {
 												>
 													<PiPlus />
 												</button>
-											</div>
+											</div> 
+											*/}
+											<AddToCartQuantitySelector />
 
 											<a
 												href='cart.html'

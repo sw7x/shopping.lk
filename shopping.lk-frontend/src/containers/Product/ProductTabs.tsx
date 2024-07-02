@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import bodyShapeImg from '@assets/images/products/single/body-shape.png';
+import { StarRatingWidget } from '@root/components/StarRatings';
 
 function ProductTabs() {
 	const [selected, setSelected] = useState<number>(0);
@@ -220,168 +221,13 @@ function ProductTabs() {
 								<h3 className='text-uppercase heading-text-color font-weight-semibold'>
 									WRITE YOUR OWN REVIEW
 								</h3>
-								<p>How do you rate this product? *</p>
+								<p>How do you rate this product?</p>
 
-								<form action='#'>
-									<table className='ratings-table'>
-										<thead>
-											<tr>
-												<th>&nbsp;</th>
-												<th>1 star</th>
-												<th>2 stars</th>
-												<th>3 stars</th>
-												<th>4 stars</th>
-												<th>5 stars</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Quality</td>
-												<td>
-													<input
-														type='radio'
-														name='ratings[1]'
-														id='Quality_1'
-														value='1'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='ratings[1]'
-														id='Quality_2'
-														value='2'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='ratings[1]'
-														id='Quality_3'
-														value='3'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='ratings[1]'
-														id='Quality_4'
-														value='4'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='ratings[1]'
-														id='Quality_5'
-														value='5'
-														className='radio'
-													/>
-												</td>
-											</tr>
-											<tr>
-												<td>Value</td>
-												<td>
-													<input
-														type='radio'
-														name='value[1]'
-														id='Value_1'
-														value='1'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='value[1]'
-														id='Value_2'
-														value='2'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='value[1]'
-														id='Value_3'
-														value='3'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='value[1]'
-														id='Value_4'
-														value='4'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='value[1]'
-														id='Value_5'
-														value='5'
-														className='radio'
-													/>
-												</td>
-											</tr>
-											<tr>
-												<td>Price</td>
-												<td>
-													<input
-														type='radio'
-														name='price[1]'
-														id='Price_1'
-														value='1'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='price[1]'
-														id='Price_2'
-														value='2'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='price[1]'
-														id='Price_3'
-														value='3'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='price[1]'
-														id='Price_4'
-														value='4'
-														className='radio'
-													/>
-												</td>
-												<td>
-													<input
-														type='radio'
-														name='price[1]'
-														id='Price_5'
-														value='5'
-														className='radio'
-													/>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+								<div className='-ml-4'>
+									<StarRatingWidget fontSize={52} displayTextInfo={true} />
+								</div>
 
+								<form action='#' className='mt-2'>
 									<div className='form-group'>
 										<label>
 											Nickname <span className='required'>*</span>

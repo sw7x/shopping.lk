@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductFeatureItem from './ProductFeatureItem';
+import { ProductFeatureItem } from '@containers/shared/ProductFeatureItem';
 
 function ProductFeatureItemsSection() {
 	return (
@@ -19,7 +19,10 @@ function ProductFeatureItemsSection() {
 									key={index}
 									className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-5col'
 								>
-									<ProductFeatureItem />
+									<ProductFeatureItem
+										index={index}
+										isDeal={index === 3 ? true : false}
+									/>
 								</div>
 							);
 						})}
