@@ -1,0 +1,15 @@
+.product-qty-selector button {
+	font-weight: 700;
+}
+.product-qty-selector button:hover {
+	background: #7aa93c;
+	color: #fff;
+}
+
+.product-qty-selector button:focus {
+	outline: none;
+}
+.product-qty-selector input[type='text'] {
+	outline: none;
+	text-align: center;
+}

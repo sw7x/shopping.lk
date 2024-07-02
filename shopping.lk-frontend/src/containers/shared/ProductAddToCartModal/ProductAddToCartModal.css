@@ -1,0 +1,21 @@
+.modal-body .featured-horizontal-shopping-product {
+	margin-bottom: 0rem;
+	padding: 0rem 0rem;
+	line-height: 1.5;
+}
+
+/* 
+.modal-body .featured-horizontal-shopping-product figure img {
+	width: 100%;
+	margin: 0 auto; 
+}
+
+@media (min-width: 576px) {
+	.modal-body .featured-horizontal-shopping-product figure img {
+		width: 100%;
+	}
+}
+*/
+.modal-body .featured-horizontal-shopping-product .product-details {
+	padding: 0rem 0rem 0rem 2rem;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import defaultPageHeaderImg from '@assets/images/page-headers/default-header.png';
 
+import '@containers/shared/PageHeader/PageHeader.css';
+
 type PageHeaderProps = {
 	backgroundImage?: string;
 	title?: string;

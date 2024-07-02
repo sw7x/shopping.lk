@@ -1,0 +1,45 @@
+.modal-wapper {
+	z-index: 99999;
+}
+.modal-fade {
+	z-index: 9999;
+}
+
+.close-btn {
+	background-color: #16a34a;
+	font-size: 1.5rem;
+}
+
+.close-btn:hover {
+	background-color: #058534;
+	color: #fff;
+}
+.modal-wapper .modal-dialog {
+	background: #f1f3dc;
+}
+.modal-wapper .modal-header {
+	color: #f1f3dc;
+	background: #16a34a;
+	text-transform: uppercase;
+}
+.modal-wapper .modal-header .closeIcon {
+	color: rgb(226, 219, 219);
+	stroke-width: 2;
+}
+.modal-wapper .modal-header .closeIcon:hover {
+	color: #fff;
+}
+.modal-wapper .modal-footer {
+	height: unset;
+	justify-content: flex-end;
+}
+.modal-wapper .modal-content-wapper {
+	max-width: 85%;
+	transform: translateY(25%);
+}
+@media (min-width: 576px) {
+	.modal-wapper .modal-content-wapper {
+		max-width: 80rem;
+		transform: translateY(0%);
+	}
+}
