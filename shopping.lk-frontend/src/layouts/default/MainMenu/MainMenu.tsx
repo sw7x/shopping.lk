@@ -6,7 +6,7 @@ import { Menu } from '@layouts/default/MainMenu/Menu';
 import { useWindowSize } from '@root/shared/hooks/UseWindowSize';
 import { useScrollPosition } from '@root/shared/hooks/useScrollPosition';
 import { Tooltip } from '@components/Tooltip';
-
+import '@layouts/default/MainMenu/MainMenu.css';
 export const MainMenu = () => {
 	const { width } = useWindowSize();
 	const scrollHeight = useScrollPosition();

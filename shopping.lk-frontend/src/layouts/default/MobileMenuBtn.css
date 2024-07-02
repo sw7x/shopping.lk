@@ -1,0 +1,49 @@
+.header .mobile-menu-btn-section {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.header .mobile-menu-btn-section .mobile-menu-btn-wrapper {
+	/*display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;*/
+}
+
+.header .mobile-menu-btn-section .mobile-menu-btn-wrapper .mobile-menu-toggler {
+	border-radius: 50%;
+	border: 2px solid #16a34a;
+	/* padding: 1rem 1rem; */
+	padding: 1.25rem 1.25rem;
+	margin-left: 1.5rem;
+	margin-right: 0rem;
+	color: #16a34a;
+	background: transparent;
+	font-size: 2.1rem;
+	line-height: 1;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	cursor: pointer;
+	display: flex;
+}
+
+.header .mobile-menu-btn-section .mobile-menu-btn-wrapper .mobile-menu-toggler i::before {
+	margin: 0;
+}
+
+.header .mobile-menu-btn-section .mobile-menu-btn-wrapper .mobile-menu-toggler i.icon-menu::before {
+	content: '\e85d';
+}
+
+@media screen and (min-width: 992px) {
+	.header .mobile-menu-btn-section .mobile-menu-btn-wrapper .mobile-menu-toggler {
+		display: none;
+	}
+
+	.header .mobile-menu-btn-section {
+		padding-top: 0rem;
+		padding-bottom: 0rem;
+	}
+}

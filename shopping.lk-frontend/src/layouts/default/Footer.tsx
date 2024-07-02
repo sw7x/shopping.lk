@@ -2,6 +2,8 @@ import footerLogo from '@assets/images/logo-light.png';
 import paymentMethods from '@assets/images/payment-methods.png';
 import { Link } from 'react-router-dom';
 
+import '@layouts/default/Footer.css';
+
 export const Footer = () => {
 	return (
 		<>

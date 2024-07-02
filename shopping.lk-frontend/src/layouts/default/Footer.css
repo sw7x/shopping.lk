@@ -1,0 +1,22 @@
+footer.footer {
+	background-color: #1a2730;
+	color: #fff;
+}
+
+footer.footer .social-icon {
+	color: #fff;
+	background-color: #0b1014;
+}
+
+footer.footer .footer-bottom {
+	border-top: 1px solid #fff;
+}
+footer.footer .logo img {
+	margin: 0px auto;
+}
+
+@media screen and (min-width: 768px) {
+	footer.footer .logo img {
+		margin: auto;
+	}
+}

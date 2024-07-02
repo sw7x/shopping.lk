@@ -224,7 +224,7 @@ export const Menu = () => {
 						</li>
 
 						<li>
-							<NavLink to='/user/my-orders-list'>My Orders Llist</NavLink>
+							<NavLink to='/user/my-orders-list'>My Orders List</NavLink>
 						</li>
 						<li>
 							<NavLink to='/user/my-orders/123'>My Orders single</NavLink>

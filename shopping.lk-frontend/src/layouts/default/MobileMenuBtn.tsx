@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import '@layouts/default/MobileMenuBtn.css';
+
 type MobileMenuBtnProps = {
 	toggleMobileMenu: () => void;
 	showMobileMenu: boolean;

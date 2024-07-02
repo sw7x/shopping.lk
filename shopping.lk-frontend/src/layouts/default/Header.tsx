@@ -13,6 +13,9 @@ import { CartQuickMenu } from '@layouts/default/CartQuickMenu';
 import { AccountQuickMenu } from '@layouts/default/AccountQuickMenu';
 import { Link } from 'react-router-dom';
 import { Tooltip } from '@root/components/Tooltip';
+
+import '@layouts/default/Header.css';
+
 type HeaderProps = {
 	toggleMobileMenu: () => void;
 	showMobileMenu: boolean;
