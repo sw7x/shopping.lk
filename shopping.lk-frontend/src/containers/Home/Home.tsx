@@ -6,13 +6,17 @@ import product1Img from '@assets/images/products/product-1.jpg';
 import slider1Img from '@assets/images/slider/slide-1.jpg';
 import slider2Img from '@assets/images/slider/slide-2.jpg';
 import { PageSlider } from '@containers/shared/PageSlider';
+import { ProductCompactFeatureItem } from '@containers/shared/ProductCompactFeatureItem/ProductCompactFeatureItem';
+import { ProductFeatureItem } from '../shared/ProductFeatureItem/ProductFeatureItem';
+import { FeatureGrid } from '../shared/FeatureGrid/FeatureGrid';
 
 const Home = () => {
 	return (
 		<>
 			<PageSlider />
 
-			{/* <div className='home-slider-container'>
+			{/* 
+			<div className='home-slider-container'>
 				<div className='home-slider _owl-carousel'>
 					<div className='home-slide'>
 						<div className='slide-bg' data-src={slider1Img}></div>
@@ -46,7 +50,8 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
-			</div> */}
+			</div> 
+			*/}
 
 			<div className='info-boxes-container'>
 				<div className='container'>
@@ -89,98 +94,16 @@ const Home = () => {
 					</div>
 
 					<div className='row'>
-						{[...Array(3).keys()].map((key, index) => {
+						{[...Array(5).keys()].map((key, index) => {
 							return (
 								<div
 									key={index}
-									className='featured-shopping-product col-12 col-sm-6 col-md-4 col-lg-3 col-xl-5col'
+									className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-5col'
 								>
-									<figure>
-										<a href='product.html'>
-											<img src={product1Img} />
-										</a>
-										<div className='product-title-overlay'>
-											<h2 className='product-title'>
-												<a href='product.html'>Product Short Name</a>
-											</h2>
-										</div>
-									</figure>
-									<div className='product-details'>
-										<div className='ratings-container'>
-											<div className='product-ratings'>
-												<span
-													className='ratings'
-													style={{ width: '100%' }}
-												></span>
-											</div>
-										</div>
-										<div className='price-box'>
-											<span className='product-price'>$32.00</span>
-										</div>
-										<div className='product-action'>
-											<button
-												className='btn-icon btn-add-cart'
-												data-toggle='modal'
-												data-target='#addCartModal'
-											>
-												<i className='icon-cart'></i>ADD TO CART
-											</button>
-										</div>
-									</div>
-									<a
-										href='#'
-										className={`paction add-wishlist ${index == 1 ? 'added' : ''}`}
-										title='Add to Wishlist'
-									>
-										<span>Add to Wishlist</span>
-									</a>
-								</div>
-							);
-						})}
-
-						{[...Array(2).keys()].map((key, index) => {
-							return (
-								<div
-									key={index}
-									className='featured-shopping-product col-12 col-sm-6 col-md-4 col-lg-3 col-xl-5col'
-								>
-									<figure>
-										<a href='product.html'>
-											<img src={product1Img} />
-										</a>
-									</figure>
-									<div className='product-details'>
-										<div className='ratings-container'>
-											<div className='product-ratings'>
-												<span
-													className='ratings'
-													style={{ width: '100%' }}
-												></span>
-											</div>
-										</div>
-										<h2 className='product-title'>
-											<a href='product.html'>Product Short Name</a>
-										</h2>
-										<div className='price-box'>
-											<span className='product-price'>$32.00</span>
-										</div>
-										<div className='product-action'>
-											<button
-												className='btn-icon btn-add-cart'
-												data-toggle='modal'
-												data-target='#addCartModal'
-											>
-												<i className='icon-cart'></i>ADD TO CART
-											</button>
-										</div>
-									</div>
-									<a
-										href='#'
-										className={`paction add-wishlist ${index == 1 ? 'added' : ''}`}
-										title='Add to Wishlist'
-									>
-										<span>Add to Wishlist</span>
-									</a>
+									<ProductCompactFeatureItem
+										index={index}
+										isDeal={index === 3 ? true : false}
+									/>
 								</div>
 							);
 						})}
@@ -197,29 +120,20 @@ const Home = () => {
 						</div>
 					</div>
 
-					<div className='row row-sm featured-item-wrapper'>
-						{[...Array(3).keys()].map((key, index) => {
+					<FeatureGrid>
+						{[...Array(4).keys()].map((key, index) => {
 							return (
-								<div
+								<FeatureGrid.GridItem
 									key={index}
-									className={`col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 package-item ${index == 0 ? 'offset-xl-1' : ''}`}
-								>
-									<div className='product-default'>
-										<figure>
-											<a href='product.html'>
-												<img src={product1Img} />
-											</a>
-										</figure>
-										<div className='product-details'>
-											<h2 className=''>
-												<a href='product.html'>Product Short Name</a>
-											</h2>
-										</div>
-									</div>
-								</div>
+									className='col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3'
+									data={{
+										image: product1Img,
+										title: 'Product $hort Name',
+									}}
+								/>
 							);
 						})}
-					</div>
+					</FeatureGrid>
 				</div>
 			</div>
 
@@ -237,46 +151,12 @@ const Home = () => {
 							return (
 								<div
 									key={index}
-									className='featured-shopping-product col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2'
+									className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2'
 								>
-									<figure>
-										<a href='product.html'>
-											<img src={product1Img} />
-											{/* <img src="https://source.unsplash.com/random/600×600"> */}
-										</a>
-									</figure>
-									<div className='product-details'>
-										<div className='ratings-container'>
-											<div className='product-ratings'>
-												<span
-													className='ratings'
-													style={{ width: '100%' }}
-												></span>
-											</div>
-										</div>
-										<h2 className='product-title'>
-											<a href='product.html'>Product Short Name</a>
-										</h2>
-										<div className='price-box'>
-											<span className='product-price'>$32.00</span>
-										</div>
-										<div className='product-action'>
-											<button
-												className='btn-icon btn-add-cart'
-												data-toggle='modal'
-												data-target='#addCartModal'
-											>
-												<i className='icon-cart'></i>ADD TO CART
-											</button>
-										</div>
-									</div>
-									<a
-										href='#'
-										className="paction add-wishlist <?php if($i==1) echo 'added';?>"
-										title='Add to Wishlist'
-									>
-										<span>Add to Wishlist</span>
-									</a>
+									<ProductFeatureItem
+										index={index}
+										isDeal={index === 3 ? true : false}
+									/>
 								</div>
 							);
 						})}
@@ -298,49 +178,9 @@ const Home = () => {
 							return (
 								<div
 									key={index}
-									className='featured-shopping-product col-12 col-sm-6 col-md-4 col-lg-3 col-xl-5col'
+									className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-5col'
 								>
-									<figure>
-										<a href='product.html'>
-											<img src={product1Img} />
-										</a>
-									</figure>
-									<div className='product-details'>
-										<div className='ratings-container'>
-											<div className='product-ratings'>
-												<span
-													className='ratings'
-													style={{ width: '100%' }}
-												></span>
-											</div>
-										</div>
-										<h2 className='product-title'>
-											<a href='product.html'>Product Short Name</a>
-										</h2>
-										<div className='price-box'>
-											<span className='product-price'>$32.00</span>
-										</div>
-										<div className='product-action'>
-											<button
-												className='btn-icon btn-add-cart'
-												data-toggle='modal'
-												data-target='#addCartModal'
-											>
-												<i className='icon-cart'></i>ADD TO CART
-											</button>
-										</div>
-									</div>
-									<div className='label-group'>
-										<div className='product-label label-sale'>$ 5000 OFF</div>
-									</div>
-
-									<a
-										href='#'
-										className="paction add-wishlist <?php if($i==1) echo 'added';?>"
-										title='Add to Wishlist'
-									>
-										<span>Add to Wishlist</span>
-									</a>
+									<ProductFeatureItem index={index} isDeal={true} />
 								</div>
 							);
 						})}
@@ -362,45 +202,12 @@ const Home = () => {
 							return (
 								<div
 									key={index}
-									className='featured-shopping-product col-12 col-sm-6 col-md-4 col-lg-3 col-xl-5col'
+									className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-5col'
 								>
-									<figure>
-										<a href='product.html'>
-											<img src={product1Img} />
-										</a>
-									</figure>
-									<div className='product-details'>
-										<div className='ratings-container'>
-											<div className='product-ratings'>
-												<span
-													className='ratings'
-													style={{ width: '100%' }}
-												></span>
-											</div>
-										</div>
-										<h2 className='product-title'>
-											<a href='product.html'>Product Short Name</a>
-										</h2>
-										<div className='price-box'>
-											<span className='product-price'>$32.00</span>
-										</div>
-										<div className='product-action'>
-											<button
-												className='btn-icon btn-add-cart'
-												data-toggle='modal'
-												data-target='#addCartModal'
-											>
-												<i className='icon-cart'></i>ADD TO CART
-											</button>
-										</div>
-									</div>
-									<a
-										href='#'
-										className="paction add-wishlist <?php if($i==1) echo 'added';?>"
-										title='Add to Wishlist'
-									>
-										<span>Add to Wishlist</span>
-									</a>
+									<ProductFeatureItem
+										index={index}
+										isDeal={index === 3 ? true : false}
+									/>
 								</div>
 							);
 						})}
@@ -409,142 +216,139 @@ const Home = () => {
 			</div>
 
 			{/* Random */}
-			{/*  
-				<div className="featured-section">
-					<div className="container">
+			{/*
+			<div className='featured-section'>
+				<div className='container'>
+					<div className='row'>
+						<div className='col-12'>
+							<h2 className='subHeading text-center'>ffCategories</h2>
+						</div>
+					</div>
 
-						<div className="row">
-							<div className="col-12">
-								<h2 className="subHeading text-center">Categories</h2>
+					<div className='row row-sm'>
+						<div className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 offset-xl-1'>
+							<div className='product-default'>
+								<figure>
+									<a href='product.html'>
+										<img src={product1Img} />
+									</a>
+								</figure>
+								<div className='product-details'>
+									<h2 className=''>
+										<a href='product.html'>Product Short Name</a>
+									</h2>
+								</div>
 							</div>
 						</div>
 
-						<div className="row row-sm">
-
-							<div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 offset-xl-1">
-								<div className="product-default">
-									<figure>
-										<a href="product.html">
-											<img src="assets/images/products/product-1.jpg">
-										</a>
-									</figure>
-									<div className="product-details">                                
-										<h2 className="">
-											<a href="product.html">Product Short Name</a>
-										</h2>                                
-									</div>
+						<div className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2'>
+							<div className='product-default'>
+								<figure>
+									<a href='product.html'>
+										<img src={product1Img} />
+									</a>
+								</figure>
+								<div className='product-details'>
+									<h2 className='_product-title'>
+										<a href='product.html'>Product Short Name</a>
+									</h2>
 								</div>
 							</div>
+						</div>
 
-							<div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-								<div className="product-default">
-									<figure>
-										<a href="product.html">
-											<img src="assets/images/products/product-2.jpg">
-										</a>
-									</figure>
-									<div className="product-details">                                
-										<h2 className="_product-title">
-											<a href="product.html">Product Short Name</a>
-										</h2>                                
-									</div>
+						<div className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2'>
+							<div className='product-default'>
+								<figure>
+									<a href='product.html'>
+										<img src={product1Img} />
+									</a>
+								</figure>
+								<div className='product-details'>
+									<h2 className='_product-title'>
+										<a href='product.html'>Product Short Name</a>
+									</h2>
 								</div>
 							</div>
+						</div>
 
-							<div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-								<div className="product-default">
-									<figure>
-										<a href="product.html">
-											<img src="assets/images/products/product-3.jpg">
-										</a>
-									</figure>
-									<div className="product-details">                                
-										<h2 className="_product-title">
-											<a href="product.html">Product Short Name</a>
-										</h2>
-									</div>
+						<div className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2'>
+							<div className='product-default'>
+								<figure>
+									<a href='product.html'>
+										<img src={product1Img} />
+									</a>
+								</figure>
+								<div className='product-details'>
+									<h2 className='_product-title'>
+										<a href='product.html'>Product Short Name</a>
+									</h2>
 								</div>
 							</div>
+						</div>
 
-							<div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-								<div className="product-default">
-									<figure>
-										<a href="product.html">
-											<img src="assets/images/products/product-4.jpg">
-										</a>
-									</figure>
-									<div className="product-details">                                
-										<h2 className="_product-title">
-											<a href="product.html">Product Short Name</a>
-										</h2>
-									</div>
+						<div className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2'>
+							<div className='product-default'>
+								<figure>
+									<a href='product.html'>
+										<img src={product1Img} />
+									</a>
+								</figure>
+								<div className='product-details'>
+									<h2 className='_product-title'>
+										<a href='product.html'>Product Short Name</a>
+									</h2>
 								</div>
 							</div>
+						</div>
 
-							<div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-								<div className="product-default">
-									<figure>
-										<a href="product.html">
-											<img src="assets/images/products/product-5.jpg">
-										</a>
-									</figure>
-									<div className="product-details">                                
-										<h2 className="_product-title">
-											<a href="product.html">Product Short Name</a>
-										</h2>
-									</div>
+						<div className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 offset-xl-3'>
+							<div className='product-default'>
+								<figure>
+									<a href='product.html'>
+										<img src={product1Img} />
+									</a>
+								</figure>
+								<div className='product-details'>
+									<h2 className='_product-title'>
+										<a href='product.html'>Product Short Name</a>
+									</h2>
 								</div>
 							</div>
+						</div>
 
-							<div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 offset-xl-3">
-								<div className="product-default">
-									<figure>
-										<a href="product.html">
-											<img src="assets/images/products/product-6.jpg">
-										</a>
-									</figure>
-									<div className="product-details">                                
-										<h2 className="_product-title">
-											<a href="product.html">Product Short Name</a>
-										</h2>
-									</div>
+						<div className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 offset-md-2 offset-lg-0'>
+							<div className='product-default'>
+								<figure>
+									<a href='product.html'>
+										<img src={product1Img} />
+									</a>
+								</figure>
+								<div className='product-details'>
+									<h2 className='_product-title'>
+										<a href='product.html'>Product Short Name</a>
+									</h2>
 								</div>
 							</div>
+						</div>
 
-							<div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 offset-md-2 offset-lg-0">
-								<div className="product-default">
-									<figure>
-										<a href="product.html">
-											<img src="assets/images/products/product-7.jpg">
-										</a>
-									</figure>
-									<div className="product-details">                                
-										<h2 className="_product-title">
-											<a href="product.html">Product Short Name</a>
-										</h2>
-									</div>
+						<div className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2'>
+							<div className='product-default'>
+								<figure>
+									<a href='product.html'>
+										<img src={product1Img} />
+									</a>
+								</figure>
+								<div className='product-details'>
+									<h2 className='_product-title'>
+										<a href='product.html'>Product Short Name</a>
+									</h2>
 								</div>
 							</div>
-
-							<div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-								<div className="product-default">
-									<figure>
-										<a href="product.html">
-											<img src="assets/images/products/product-8.jpg">
-										</a>
-									</figure>
-									<div className="product-details">                                
-										<h2 className="_product-title">
-											<a href="product.html">Product Short Name</a>
-										</h2>                                
-									</div>
-								</div>
-							</div>
-
 						</div>
 					</div>
 				</div>
-    		*/}
+			</div>
+			*/}
 
 			<div className='featured-section'>
 				<div className='container'>
@@ -554,29 +358,20 @@ const Home = () => {
 						</div>
 					</div>
 
-					<div className='row row-sm featured-grid'>
+					<FeatureGrid>
 						{[...Array(12).keys()].map((key, index) => {
 							return (
-								<div
+								<FeatureGrid.GridItem
 									key={index}
 									className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2'
-								>
-									<div className='featured-grid-item'>
-										<figure>
-											<a href='product.html'>
-												<img src={product1Img} />
-											</a>
-										</figure>
-										<div className='grid-item-details'>
-											<h2 className='grid-item-title'>
-												<a href='product.html'>Product Short Name</a>
-											</h2>
-										</div>
-									</div>
-								</div>
+									data={{
+										image: product1Img,
+										title: 'Product Short Name',
+									}}
+								/>
 							);
 						})}
-					</div>
+					</FeatureGrid>
 				</div>
 			</div>
 
@@ -648,10 +443,10 @@ const Home = () => {
 			</div>
 
 			{/* Random x2 +  
-        brands that have higest [price x maximum avalable count] x2 + 
-        brands that have highest sold count x2
-        brands that have highest rating x2  
-	*/}
+				brands that have higest [price x maximum avalable count] x2 + 
+				brands that have highest sold count x2
+				brands that have highest rating x2  
+			*/}
 			<div className='featured-section featured-section bg-white'>
 				<div className='container'>
 					<div className='row'>
@@ -660,21 +455,51 @@ const Home = () => {
 						</div>
 					</div>
 
-					<div className='row row-sm featured-grid'>
+					<FeatureGrid>
 						{[...Array(8).keys()].map((key, index) => {
 							return (
-								<div key={index} className='col-12 col-sm-6 col-md-3'>
-									<div className='featured-grid-item'>
-										<figure>
-											<a href='product.html'>
-												<img src={product1Img} />
-											</a>
-										</figure>
-									</div>
-								</div>
+								<FeatureGrid.GridItem
+									key={index}
+									className='col-12 col-sm-6 col-md-3'
+									data={{
+										image: product1Img,
+									}}
+								/>
 							);
 						})}
-					</div>
+					</FeatureGrid>
+
+					{/* 
+					<FeatureGrid>
+						{[...Array(6).keys()].map((key, index) => {
+							return (
+								<FeatureGrid.GridItem
+									key={index}
+									className='col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2'
+									data={{
+										image: product1Img,
+										title: 'Product Short Name',
+									}}
+								/>
+							);
+						})}
+					</FeatureGrid>
+
+					<FeatureGrid>
+						{[...Array(6).keys()].map((key, index) => {
+							return (
+								<FeatureGrid.GridItem
+									key={index}
+									className='col-12 col-sm-6 col-md-3'
+									data={{
+										image: 'https://via.placeholder.com/300',
+										title: 'Product Short Name',
+									}}
+								/>
+							);
+						})}
+					</FeatureGrid> 
+					*/}
 				</div>
 			</div>
 

@@ -1,3 +1,50 @@
+/* brand-page-single-row  */
+.brand-page-single-row {
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	-ms-flex-align: center;
+	align-items: center;
+	/*    height: 700px;*/
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	color: #7b858a;
+	font-size: 1.4rem;
+	letter-spacing: 0.005em;
+	line-height: 1.92;
+}
+
+.brand-page-single-row h2 {
+	/*.margin-bottom: 2.8rem;
+    font-size: 4.5rem;
+    font-weight: 600;
+    letter-spacing: -.01em;*/
+}
+
+.brand-page-single-row p {
+	margin-bottom: 2rem;
+}
+
+.brand-page-single-row ul,
+.brand-page-single-row ol {
+	margin-bottom: 2rem;
+}
+
+.brand-page-single-row ul li,
+.brand-page-single-row ol li {
+	margin-bottom: 0.4rem;
+}
+
+.brand-page-single-row ul li i,
+.brand-page-single-row ol li i {
+	margin-right: 2rem;
+	color: #21293c;
+	font-size: 1.5rem;
+}
+
+/*  feature products */
 .feature_products_slider {
 	padding: 0px 3rem;
 }

@@ -1,10 +1,11 @@
 import React from 'react';
 import productImg from '@assets/images/products/product-1.jpg';
+import { ViewStarRatings } from '@components/StarRatings';
 
 export const PackageProductFeatureItem = () => {
 	return (
 		<>
-			<div className='featured-horizontal-shopping-product'>
+			<div className='package-featured-shopping-product'>
 				<figure>
 					<a href='product.html'>
 						<img src={productImg} />
@@ -19,11 +20,12 @@ export const PackageProductFeatureItem = () => {
 					<h2 className='product-title'>
 						<a href='product.html'>Product Short Name</a>
 					</h2>
-					<div className='ratings-container'>
+					{/* <div className='ratings-container'>
 						<div className='product-ratings'>
 							<span className='ratings' style={{ width: '100%' }}></span>
 						</div>
-					</div>
+					</div> */}
+					<ViewStarRatings rating={65} fontSize={32} />
 					<p className='product-description'>
 						Pellentesque habitant morbi tristique senectus et netus et malesuada fames
 						ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,

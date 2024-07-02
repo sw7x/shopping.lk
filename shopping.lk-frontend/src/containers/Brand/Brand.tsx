@@ -14,6 +14,8 @@ import brandSingleBannerImg from '@assets/images/banners/brand-single.png';
 import { PageHeader } from '@containers/shared/PageHeader';
 import { PageBanner } from '../shared/PageBanner';
 import { Breadcrumb } from '@containers/shared/Breadcrumb';
+import { ProductFeatureItem } from '@containers/shared/ProductFeatureItem/ProductFeatureItem';
+import '@containers/Brand/Brand.css';
 
 const PageSliderArrowRight = ({ currentSlide, slideCount = 0, ...props }: CustomArrowProps) => (
 	<BiChevronRight
@@ -132,10 +134,10 @@ const Brand = () => {
 			<div className='mb-5 mb-lg-6 mb-xl-7'></div>
 			<div className='product-single-container product-single-extended'>
 				<div className='container'>
-					<div className='product-single-details'>
+					<div className='_product-single-details'>
 						<div className='product-desc'>
 							<p>
-								Duis aute irure dolor in reprehenderit in voluptate velit esse
+								qqq Duis aute irure dolor in reprehenderit in voluptate velit esse
 								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
 								cupidatat non. Duis aute irure dolor in reprehenderit in voluptate
 								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
@@ -193,7 +195,16 @@ const Brand = () => {
 					<div className='_row feature_products_slider _px-5'>
 						<Slider {...slideSettings}>
 							{[...Array(15).keys()].map((key, index) => {
-								return <BrandFeatureProduct key={index} index={index} />;
+								//return <BrandFeatureProduct key={index} index={index} />;
+								return (
+									<div className='px-sm-3'>
+										<ProductFeatureItem
+											key={index}
+											index={index}
+											isDeal={index === 3 ? true : false}
+										/>
+									</div>
+								);
 							})}
 						</Slider>
 					</div>

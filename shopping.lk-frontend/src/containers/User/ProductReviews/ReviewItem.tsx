@@ -1,5 +1,6 @@
 import React from 'react';
 import productImg from '@assets/images/products/product-1.jpg';
+import { ViewStarRatings } from '@root/components/StarRatings';
 
 function ReviewItem() {
 	return (
@@ -35,9 +36,15 @@ function ReviewItem() {
 									ligula. elit. nostra, per inceptos himenaeos. Nulla nunc dui,
 									tristique in semper vel, congue sed ligula.
 								</p>
-								<div className='ratings-container'>
-									<div className='product-ratings'>
-										<span className='ratings' style={{ width: '100%' }}></span>
+								<div className='d-flex align-items-center'>
+									<div className='mt-1 mr-2 font-semibold'>Your Rating :</div>
+									<div>
+										<ViewStarRatings
+											rating={9}
+											fontSize={32}
+											displayTextInfo={true}
+										/>
+										{/* <span>(3 of 5)</span> */}
 									</div>
 								</div>
 								<a href='single.html' className='read-more'>

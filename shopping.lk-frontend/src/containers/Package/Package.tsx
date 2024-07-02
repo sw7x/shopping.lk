@@ -6,6 +6,8 @@ import packageSingleBannerImg from '@assets/images/banners/package-single.png';
 import { PageHeader } from '../shared/PageHeader';
 import { PageBanner } from '../shared/PageBanner';
 import { Breadcrumb } from '@containers/shared/Breadcrumb';
+
+import '@containers/Package/Package.css';
 const Package = () => {
 	return (
 		<>
@@ -17,8 +19,8 @@ const Package = () => {
 			<div className='container'>
 				<div className='package-single-row' style={{ height: 'unset' }}>
 					<div className='row'>
-						<div className='col-md-4'>
-							<img src={productImg} />
+						<div className='col-md-4 mb-2 mb-md-0'>
+							<img src={productImg} className='w-100' />
 							<div className='label-group'>
 								<div className='product-label label-sale'>$ 5000 OFF</div>
 							</div>
@@ -83,7 +85,7 @@ const Package = () => {
 					<div className='col-md-12'>
 						<h3 className='step-title mb-2'>Package Items</h3>
 
-						<div className='package-product-list row row-sm'>
+						<div className='_package-product-list row row-sm'>
 							{[...Array(7).keys()].map((key, index) => {
 								return (
 									<div key={index} className='col-12 col-sm-12  mb-1'>

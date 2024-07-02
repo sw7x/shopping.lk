@@ -4,6 +4,9 @@ import { CheckoutProcessSummary } from '@root/containers/Checkout/CheckoutProces
 import { CartItemRecord } from '@root/containers/Checkout/Cart/CartItemRecord';
 import { CouponForm } from '@root/containers/Checkout/Cart/CouponForm';
 import { Breadcrumb } from '@containers/shared/Breadcrumb';
+
+import '@containers/Checkout/Cart/Cart.css';
+
 export const Cart = () => {
 	return (
 		<>

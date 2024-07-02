@@ -1,0 +1,9 @@
+@media screen and (min-width: 1200px) {
+	.packages-featured-section .featured-item-wrapper .package-item {
+		margin-right: 5%;
+	}
+
+	.packages-featured-section .featured-item-wrapper .package-item:nth-child(3) {
+		margin-right: 0px;
+	}
+}

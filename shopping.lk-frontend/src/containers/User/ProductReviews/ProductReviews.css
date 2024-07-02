@@ -1,0 +1,52 @@
+.my-reviews {
+	padding-bottom: 1.6rem;
+}
+.my-reviews .entry:last-of-type .entry-body {
+	border-bottom: 0px solid #ddd;
+}
+.my-reviews .entry-date {
+	text-align: center;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+	position: absolute;
+	top: 5px;
+	z-index: 9999;
+	right: 15px;
+	width: 85px;
+	float: none;
+	margin-right: 0px;
+}
+.my-reviews .entry-content .entry-meta {
+	margin-top: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.my-reviews .entry-content p {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-bottom: 1rem;
+}
+
+.my-reviews .entry-content .ratings-container {
+	margin: 0 0 10px 10px;
+}
+
+@media (min-width: 576px) {
+	.my-reviews .entry-date {
+		position: static;
+		width: 45px;
+		float: left;
+		margin-right: 10px;
+	}
+	.my-reviews .entry-content .entry-meta {
+		margin-top: 0rem;
+		padding-left: 0rem;
+		padding-right: 0rem;
+	}
+	.my-reviews .entry-content p {
+		padding-left: 0rem;
+		padding-right: 0rem;
+	}
+	.my-reviews .entry-content .ratings-container {
+		margin: 0 0 10px 0px;
+	}
+}

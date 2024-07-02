@@ -4,6 +4,9 @@ import { UsedCouponRecord } from './UsedCouponRecord';
 import { DiscountDetails } from '../DiscountDetails';
 import { OrderItemRecord } from './OrderItemRecord';
 import { Breadcrumb } from '@containers/shared/Breadcrumb';
+
+import '@containers/Checkout/Order/Order.css';
+
 const Order = () => {
 	return (
 		<>

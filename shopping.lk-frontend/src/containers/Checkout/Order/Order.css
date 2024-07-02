@@ -1,0 +1,100 @@
+/* ====== base template styles ========= */
+table.table-cart tr th,
+table.table-cart tr td {
+	vertical-align: middle;
+}
+table.table-cart tr th:not(.product-col),
+table.table-cart tr td:not(.product-col) {
+	text-align: center;
+}
+table.table-cart tr th {
+	padding: 2.4rem 1.5rem 1.2rem;
+	border: 0;
+	font-weight: 600;
+}
+table.table-cart tr td {
+	padding: 2rem 1.5rem;
+	border-top: 1px solid #ccc;
+}
+table.table-cart tr td.product-col {
+	padding: 2rem 0.8rem 1.8rem 0;
+}
+table.table-cart tr.product-action-row td {
+	padding: 0 0 2.2rem;
+	border: 0;
+}
+table.table-cart .product-title {
+	margin-bottom: 0;
+}
+table.table-cart tfoot td {
+	padding: 2rem 0 1rem;
+}
+table.table-cart tfoot .btn {
+	padding: 0.85rem 2rem;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 0;
+	text-transform: initial;
+}
+table.table-cart tfoot .btn + .btn {
+	margin-left: 1rem;
+}
+table.table-cart .bootstrap-touchspin.input-group {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* ====== custom styles ========= */
+table.table-cart tr.product-row {
+	display: inline-table;
+}
+
+table.table-cart tr.product-row td.product-col {
+	display: flex;
+}
+table.table-cart tr.product-row td.product-col .product-image-container {
+	width: 100%;
+	max-width: none;
+}
+
+table.table-cart tr.product-row td.product-col .product-name {
+	text-align: center;
+	max-width: 180px;
+	padding: 1rem 0.5rem;
+}
+
+table.table-cart tfoot tr {
+	display: table-row;
+}
+
+table.table-cart tfoot {
+	display: table-footer-group;
+}
+
+table.table-cart tfoot .btn {
+	margin-top: 0rem !important;
+}
+
+@media (min-width: 480px) {
+	table.table-cart tr.product-row td.product-col .product-image-container {
+		max-width: 400px;
+	}
+}
+
+@media (min-width: 576px) {
+	table.table-cart tr.product-row td.product-col .product-image-container {
+		max-width: 300px;
+	}
+}
+
+@media (min-width: 768px) {
+	table.table-cart tr.product-row {
+		display: table-row;
+	}
+	table.table-cart tr.product-row td.product-col .product-image-container {
+		max-width: 180px;
+	}
+
+	table.table-cart tr.product-row td.product-col {
+		display: block;
+	}
+}

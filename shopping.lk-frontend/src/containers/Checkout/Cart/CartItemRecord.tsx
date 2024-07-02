@@ -1,21 +1,9 @@
 import React, { useState } from 'react';
 import productImg from '@assets/images/products/product-1.jpg';
 import { PiMinus, PiPlus } from 'react-icons/pi';
+import { AddToCartQuantitySelector } from '@containers/shared/AddToCartQuantitySelector';
 
 export const CartItemRecord = () => {
-	const [count, setCount] = useState<number>(1);
-
-	const decreaseQuantity = () => {
-		setCount((prev) => {
-			if (prev - 1 <= 1) return 1;
-			return prev - 1;
-		});
-	};
-
-	const increaseQuantity = () => {
-		setCount((prev) => prev + 1);
-	};
-
 	return (
 		<>
 			<tr className='product-row'>
@@ -38,22 +26,8 @@ export const CartItemRecord = () => {
 					</div>
 				</td>
 				<td>
-					<div className='flex mr-3'>
-						<button
-							className='border mt-4 pt-3 pb-3 pr-6 pl-6'
-							onClick={decreaseQuantity}
-						>
-							<PiMinus />
-						</button>
-
-						<span className='border mt-4 pt-3 pb-3 pr-6 pl-6 count'>{count}</span>
-
-						<button
-							className='border mt-4 pt-3 pb-3 pr-6 pl-6'
-							onClick={increaseQuantity}
-						>
-							<PiPlus />
-						</button>
+					<div className='inline-block'>
+						<AddToCartQuantitySelector />
 					</div>
 				</td>
 				<td>$1.00</td>
