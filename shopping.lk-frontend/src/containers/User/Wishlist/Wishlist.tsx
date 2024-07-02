@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { UserMenu } from '../UserMenu';
 import { WishListItem } from './WishListItem';
 import { Breadcrumb } from '@containers/shared/Breadcrumb';
+import { Pagination } from '@components/Pagination';
+import { ProductFeatrureHorItem } from '@containers/shared/ProductFeatrureHorItem';
+
 const Wishlist = () => {
+	const [currentPage, setCurrentPage] = useState(1);
+
 	return (
 		<>
 			<Breadcrumb />
@@ -59,51 +64,19 @@ const Wishlist = () => {
 
 						<div className='wishlist-wrapper row row-sm'>
 							{[...Array(10).keys()].map((key, index) => {
+								//return <ProductFeatrureHorItem key={index} index={index} />;
 								return <WishListItem key={index} index={index} />;
 							})}
 						</div>
 
 						<nav className='toolbox toolbox-pagination'>
-							<ul className='pagination'>
-								<li className='page-item disabled'>
-									<a className='page-link page-link-btn' href='#'>
-										<i className='icon-angle-left'></i>
-									</a>
-								</li>
-								<li className='page-item active'>
-									<a className='page-link' href='#'>
-										1 <span className='sr-only'>(current)</span>
-									</a>
-								</li>
-								<li className='page-item'>
-									<a className='page-link' href='#'>
-										2
-									</a>
-								</li>
-								<li className='page-item'>
-									<a className='page-link' href='#'>
-										3
-									</a>
-								</li>
-								<li className='page-item'>
-									<a className='page-link' href='#'>
-										4
-									</a>
-								</li>
-								<li className='page-item'>
-									<a className='page-link' href='#'>
-										5
-									</a>
-								</li>
-								<li className='page-item'>
-									<span className='page-link'>...</span>
-								</li>
-								<li className='page-item'>
-									<a className='page-link page-link-btn' href='#'>
-										<i className='icon-angle-right'></i>
-									</a>
-								</li>
-							</ul>
+							<Pagination
+								currentPage={1}
+								totalCount={150}
+								pageSize={10}
+								onPageChange={(page) => setCurrentPage(page)}
+								siblingCount={2}
+							/>
 						</nav>
 					</div>
 				</div>
