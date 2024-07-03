@@ -1,17 +1,13 @@
 import React from 'react';
-import { BrandFeatureProduct } from '@containers/Brand/BrandFeatureProduct';
 import brandBgImg from '@assets/images/products/single/extended/bg-3.jpg';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import productImg from '@assets/images/products/product-1.jpg';
 
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import type { CustomArrowProps, Settings } from 'react-slick';
 import './Brand.css';
-import banner4Img from '@assets/images/banner4.png';
 import brandSingleBannerImg from '@assets/images/banners/brand-single.png';
-import { PageHeader } from '@containers/shared/PageHeader';
 import { PageBanner } from '../shared/PageBanner';
 import { Breadcrumb } from '@containers/shared/Breadcrumb';
 import { ProductFeatureItem } from '@containers/shared/ProductFeatureItem/ProductFeatureItem';
@@ -195,7 +191,6 @@ const Brand = () => {
 					<div className='_row feature_products_slider _px-5'>
 						<Slider {...slideSettings}>
 							{[...Array(15).keys()].map((key, index) => {
-								//return <BrandFeatureProduct key={index} index={index} />;
 								return (
 									<div className='px-sm-3'>
 										<ProductFeatureItem

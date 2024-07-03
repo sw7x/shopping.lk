@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-//import bannerImg from '@assets/images/banners/banner-fashion.jpg';
-//import { CategoryFeatureItem } from '@containers/CategoryList/CategoryFeatureItem';
 import { PageBanner } from '../shared/PageBanner';
 import categoryListBannerImg from '@assets/images/banners/category-list.png';
 import { Breadcrumb } from '@containers/shared/Breadcrumb';
@@ -36,18 +34,6 @@ const CategoryList = () => {
 						);
 					})}
 				</FeatureGrid>
-
-				{/* 
-				<div className='row row-sm'>
-					{[...Array(12).keys()].map((key, index) => {
-						return (
-							<div key={index} className='col-12 col-sm-6 col-md-4 col-xl-3'>
-								<CategoryFeatureItem />
-							</div>
-						);
-					})}
-				</div>
-				*/}
 
 				<nav className='toolbox toolbox-pagination'>
 					<Pagination
