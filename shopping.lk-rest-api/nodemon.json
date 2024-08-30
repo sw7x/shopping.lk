@@ -1,0 +1,14 @@
+{
+	"watch": ["src/**/*.ts", "config/**/*.ts", "public/**/*"],
+	"ext": "ts,js,json",
+	"ignore": ["tests/**/*.ts", "npm_scripts", "database", "dist"],
+	"exec": "npx ts-node -r tsconfig-paths/register server.ts",
+	"env": {},
+	"delay": "1000",
+	"restartable": "rs",
+	"verbose": true,
+	"execMap": {
+		"ts": "ts-node",
+		"js": "node"
+	}
+}

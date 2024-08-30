@@ -1,0 +1,12 @@
+{
+	"port": "PORT",
+
+	"jwt": {
+		"algorithm": "JWT_ALGORITHM"
+	},
+	"debug": {
+		"__name": "DEBUG",
+		"__format": "json"
+	},
+	"susa7": "SUSA"
+}

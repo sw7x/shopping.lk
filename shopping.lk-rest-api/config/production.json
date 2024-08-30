@@ -1,0 +1,38 @@
+{
+	"name": "shopping.lk-rest-api",
+	"port": 5001,
+	"debug777": false,
+	"database": {
+		"db": "test-db",
+		"username": "user",
+		"password": "pass",
+		"dialect": "sqlite",
+		"host": "./dev.sqlite",
+		"logging": true
+	},
+	"allowedOrigins": ["https://www.yoursite.com", "http://127.0.0.1:5500", "http://localhost:3500"],
+	"jwt": {
+		"expiresIn": "1d",
+		"secret": "aaaa",
+		"algorithm": "HS256",
+		"key": "aaaa"
+	},
+	"x-api": {
+		"key": "aaaa",
+		"secret": "aaaa",
+		"etc": "cccc-parentfolde-production"
+	},
+	"smtp": {
+		"host": "smtp.mailtrap.io",
+		"port": 587,
+		"user": "aaaa",
+		"pass": "aaaa",
+		"from": "example@example.com"
+	},
+	"session": {
+		"secret": "aaaa",
+		"expiresIn": "1d",
+		"cookieName": "sid"
+	},
+	"xxx": "xxx-prod__"
+}

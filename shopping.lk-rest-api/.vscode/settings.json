@@ -1,0 +1,98 @@
+{
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.fixAll.stylelint": "explicit"
+
+	},
+
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,		
+	},
+
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+	},
+	
+	//jsonc aka "JSON with comments", used by VSCode
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+	},
+
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+	},
+
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+	},
+
+	"[less]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+	},
+
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+	},
+
+
+	/* 
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+	},
+
+
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+	}, 
+	*/
+
+	// Use tabs instead of spaces in Prettier
+	"prettier.useTabs": true,
+
+	// Set tab width to 4 spaces
+	"prettier.tabWidth": 4,
+
+	
+	//If you don't have a Prettier config file, Prettier will not run with this setting enabled.
+	"prettier.requireConfig": true,
+
+	//"editor.defaultFormatter": "esbenp.prettier-vscode",
+	
+	
+	//"eslint.format.enable": false,
+    //"eslint.alwaysShowStatus": true, //ESLint status (such as errors and linting status) is always shown in the VSCode status bar
+	
+		
+	// Optional: Disable conflicting VSCode formatter if needed
+	"editor.formatOnPaste": false,//This setting applies formatting on save for all file types
+	"editor.formatOnSave": false, //This setting applies formatting on paste for all file types
+	
+
+
+	"css.validate": false,
+	"less.validate": false,
+	"scss.validate": false,
+
+
+
+
+
+}

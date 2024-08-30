@@ -1,0 +1,22 @@
+// Special typescript project file, used by eslint only.
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"allowJs": true,
+		"types": ["jest"]
+	},
+	"include": [
+		// repeated from base config's "include" setting
+		"src",
+		"config",
+		"server.ts",
+
+		// these are the eslint-only inclusions
+		"eslint.config.mjs",
+		"jest.config.ts",
+		"database",
+		"npm_scripts",
+		"tests"
+	],
+	"exclude": ["node_modules", "dist", "bin", "logs"]
+}

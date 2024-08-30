@@ -1,0 +1,6 @@
+"scripts": {
+  "start": "node scripts/start-dev.js",
+  "build": "node scripts/build.js",
+  "test": "node scripts/test.js",
+  "lint": "node scripts/lint.js"
+}

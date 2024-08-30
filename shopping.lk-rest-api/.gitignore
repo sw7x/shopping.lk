@@ -1,0 +1,39 @@
+# dependancies
+/node_modules
+
+# production
+/dist
+
+# OS specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+#misc
+.eslintcache
+
+#environment-specific
+.env
+.env.*
+
+#vscode  - ignore user-specific files but track shared workspace settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+
+
+#debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+#testing
+coverage/
+
+#logs
+/logs/*
+#To ignore any other general log files.
+*.log
