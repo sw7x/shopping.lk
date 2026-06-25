@@ -1,6 +1,6 @@
 {
 	"name": "shopping.lk-rest-api",
-	"port": 5001,
+	"port": 5002,
 	"debug777": false,
 	"database": {
 		"db": "test-db",

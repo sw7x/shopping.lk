@@ -1,3 +1,4 @@
+/*
 import { red, blue, yellow } from 'colorette';
 
 export const colorizeLogLevel = (level: string): string => {
@@ -11,4 +12,21 @@ export const colorizeLogLevel = (level: string): string => {
 		default:
 			return level;
 	}
+};
+*/
+
+import { red, blue, yellow, green, gray, magenta } from 'colorette';
+
+export const colorizeLogLevel = (level: string): string => {
+	const levelMap = {
+		ERROR: red,
+		WARN: yellow,
+		INFO: blue,
+		DEBUG: green,
+		TRACE: gray,
+		VERBOSE: magenta,
+	};
+
+	const colorFn = levelMap[level as keyof typeof levelMap] || ((text: string) => text);
+	return colorFn(level);
 };

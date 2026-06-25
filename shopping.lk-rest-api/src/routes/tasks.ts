@@ -11,7 +11,7 @@ router.put("/:taskId", authenticationMiddleware, bodyParserMiddleware, TaskContr
 router.delete("/", loggingMiddleware, authenticationMiddleware, TaskController.deleteTasks());
  */
 
-import taskController from '@root/src/controllers/taskController';
+import taskController from '@root/src/controllers/task.controller';
 // Define user routes
 
 router.get('/', taskController.taskList);

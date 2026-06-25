@@ -38,13 +38,12 @@ export { router };
 */
 
 import { Router, Request, Response } from 'express';
-import postController from '@root/src/controllers/postController';
+import postController from '@root/src/controllers/post.controller';
 
 const router = Router();
 
 // Define user routes
-router.get('/', postController.postList);
+router.route('/').get(postController.postList).post(postController.postCreate);
 router.get('/single', postController.postSingle);
-router.post('/', postController.postCreate);
 
 export default router;

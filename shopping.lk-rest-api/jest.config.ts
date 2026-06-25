@@ -36,6 +36,7 @@ const config: JestConfigWithTsJest = {
 			tsconfig: '<rootDir>/tsconfig.jest.json',
 		},
 	}, */
+	testPathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/node_modules/'],
 };
 
 export default config;

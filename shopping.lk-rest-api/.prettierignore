@@ -5,3 +5,10 @@ README.md
 logs
 bin
 .vscode
+
+
+
+*.env
+.env
+.env.*
+eslint.config.mjs

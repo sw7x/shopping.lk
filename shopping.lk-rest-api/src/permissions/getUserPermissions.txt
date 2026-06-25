@@ -1,0 +1,31 @@
+const { Ability, AbilityBuilder } = require('@casl/ability');
+const Permission = require('./models/Permission');
+
+/*
+// Function to retrieve and apply permissions for a user
+async function getUserPermissions1(userId) {
+	const userPermissions = await Permission.findOne({ userId }).lean();
+
+	if (!userPermissions) {
+		throw new Error('No permissions found for this user');
+	}
+
+	// Build CASL Ability from the permissions
+	const ability = new Ability(userPermissions.permissions);
+	return ability;
+}
+
+// Example usage: Check if a user can update an article
+async function checkUserPermissions(userId, article) {
+	const ability = await getUserPermissions(userId);
+
+	// Check if the user can 'update' an 'Article'
+	if (ability.can('update', 'Article', { authorId: userId })) {
+		console.log('User can update the article');
+	} else {
+		console.log('User is not allowed to update the article');
+	}
+}
+
+checkUserPermissions('64db6e7b12345678abc12345', { authorId: '64db6e7b12345678abc12345' });
+*/

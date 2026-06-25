@@ -3,18 +3,91 @@
 	// Hover to view descriptions of existing attributes.
 	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
-	"configurations": [
+	"configurations": [		
 		{
-			"type": "node",
-			"request": "launch",
-			"name": "Launch Program",
+			"name": "Attach to Chrome",
+			"port": 9222,
+			"request": "attach",
+			"type": "chrome",
+			"webRoot": "${workspaceFolder}"
+		},
+
+		{
+			"name": "Attach",
+			"port": 9229,
+			"request": "attach",
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"program": "${file}",
-			"outFiles": [
-				"${workspaceFolder}/**/*.js"
-			]
+			"type": "node"
+		},
+		{
+			"name": "Debug jest test",	
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceFolder}/node_modules/.bin/jest",					
+			"args": [
+				"--runInBand",
+				"--detectOpenHandles",
+				"--verbose",
+				"--debug"
+			],
+			/* "runtimeArgs": [
+				"--inspect-brk",
+				"${workspaceFolder}/node_modules/.bin/jest",
+				"--runInBand",
+				"--detectOpenHandles",
+				"--verbose",
+				//"-r", "ts-node/register", 
+				//"-r", "tsconfig-paths/register"
+			], 
+			*/
+			"console": "integratedTerminal",
+			//"internalConsoleOptions": "neverOpen",
+      		//"disableOptimisticBPs": true,
+			//"port":9229
+			"windows": {
+				"program": "${workspaceFolder}/node_modules/jest/bin/jest"
+			}			
+		},
+		{
+			"name": "Attach by Process ID",
+			"processId": "${command:PickProcess}",
+			"request": "attach",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"type": "node",			
+			//"port": 5001, // Default port for Node.js debugging
+			"restart": true,
+			"sourceMaps": true,			
+			//"outFiles": ["${workspaceFolder}/dist/**/*.js"], // Adjust as neede			
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Debug node-typescript",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			//"program": "${file}",
+			"program": "${workspaceFolder}/server.ts",
+			"sourceMaps": true,
+			"resolveSourceMapLocations": [
+				"${workspaceFolder}/**",
+				"!**/node_modules/**"
+			],
+			"runtimeArgs": [
+				"-r", "ts-node/register", 
+				"-r", "tsconfig-paths/register"
+			],
+			"console": "integratedTerminal",
+			"cwd": "${workspaceFolder}",
+			"outFiles": ["${workspaceFolder}/dist/**/*.js", "${workspaceFolder}/dist/**/*.js.map"],
+			"env": { 
+				"NODE_ENV": "development", 
+				"PORT": "6666" 
+			}
 		}
 	]
 }

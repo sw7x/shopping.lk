@@ -22,5 +22,11 @@ export const fileLogFormat = format.printf(({ level, message, timestamp, meta = 
 		meta: logMeta,
 	};
 
-	return JSON.stringify(logData, null, 4);
+	//return JSON.stringify(logData, null, 4);
+
+	// Line 4: Using JSON.stringify with 4 spaces - fine for development but...
+	// In production, this creates larger files
+	const isProduction = process.env.NODE_ENV === 'production';
+	const indent = isProduction ? 0 : 4;
+	return JSON.stringify(logData, null, indent);
 });

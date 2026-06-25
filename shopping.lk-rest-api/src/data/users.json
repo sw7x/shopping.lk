@@ -1,0 +1,37 @@
+[
+	{
+		"email": "super-admin@gmail.com",
+		"role": "super-admin",
+		"username": "super-admin"
+	},
+	{
+		"email": "admin@gmail.com",
+		"role": "admin",
+		"username": "admin"
+	},
+	{
+		"email": "admin1@gmail.com",
+		"role": "admin",
+		"username": "admin1"
+	},
+	{
+		"email": "user1@gmail.com",
+		"role": "user",
+		"username": "user1"
+	},
+	{
+		"email": "manager1@gmail.com",
+		"role": "manager",
+		"username": "manager1"
+	},
+	{
+		"email": "user2@gmail.com",
+		"role": "user",
+		"username": "user2"
+	},
+	{
+		"email": "manager2@gmail.com",
+		"role": "manager",
+		"username": "manager2"
+	}
+]

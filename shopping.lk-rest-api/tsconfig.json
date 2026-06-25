@@ -25,11 +25,14 @@
 		// "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
 		/* Modules */
-		"module": "node16" /* Specify what module code is generated. */,
+		"module": "Node16" /* Specify what module code is generated. */,
 		"rootDir": "." /* Specify the root folder within your source files. */,
 
-		"moduleResolution": "node16" /* Specify how TypeScript looks up a file from a given module specifier. */,
-		"baseUrl": "." /* Specify the base directory to resolve non-relative module names. */,
+		//"moduleResolution": "node16"
+		"moduleResolution": "Node16" /* Specify how TypeScript looks up a file from a given module specifier. */,
+
+		//"baseUrl": "." /* Specify the base directory to resolve non-relative module names. */,
+		"ignoreDeprecations": "5.0",
 		"paths": {
 			"@root/*": ["./*"],
 			"@src/*": ["./src/*"]
@@ -56,6 +59,7 @@
 
 		// "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
 		// "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
+		"typeRoots": ["./node_modules/@types"],
 		// "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
 		// "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
 		// "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */
@@ -77,7 +81,7 @@
 		// "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
 		// "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
 		"sourceMap": true /* Create source map files for emitted JavaScript files. */,
-		//"inlineSourceMap": true /* Include sourcemap files inside the emitted JavaScript. */,
+		"inlineSourceMap": false /* Include sourcemap files inside the emitted JavaScript. */,
 		// "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
 		"outDir": "./dist" /* Specify an output folder for all emitted files. */,
 		"removeComments": true /* Disable emitting comments. */,
@@ -86,7 +90,7 @@
 		// "downlevelIteration": true,                       /* Emit more compliant, but verbose and less performant JavaScript for iteration. */
 		// "sourceRoot": "",                                 /* Specify the root path for debuggers to find the reference source code. */
 		// "mapRoot": "",                                    /* Specify the location where debugger should locate map files instead of generated locations. */
-		// "inlineSources": true,                            /* Include source code in the sourcemaps inside the emitted JavaScript. */
+		"inlineSources": true /* Include source code in the sourcemaps inside the emitted JavaScript. */,
 		// "emitBOM": true,                                  /* Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files. */
 		// "newLine": "crlf",                                /* Set the newline character for emitting files. */
 		// "stripInternal": true,                            /* Disable emitting declarations that have '@internal' in their JSDoc comments. */
@@ -127,8 +131,18 @@
 
 		/* Completeness */
 		// "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-		"skipLibCheck": true /* Skip type checking all .d.ts files. */
+		"skipLibCheck": true /* Skip type checking all .d.ts files. */,
+		"types": ["node", "jest"]
 	},
-	"include": ["src", "server.ts", "tests", "npm_scripts", "config", "database"],
+	//"include": ["src", "server.ts", "tests", "npm_scripts", "config", "database", "migrate.config.ts"],
+	"include": [
+		"src/**/*", // All files in src folder and subfolders
+		"server.ts", // Specific file in root
+		"tests/**/*", // All files in tests folder and subfolders
+		"npm_scripts/**/*", // All files in npm_scripts folder
+		"config/**/*", // All files in config folder
+		"database/**/*", // All files in database folder
+		"migrate.config.ts" // Specific config file in root
+	],
 	"exclude": ["node_modules", "dist", "bin", "logs", "public", "coverage", ".vscode"]
 }

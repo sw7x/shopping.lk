@@ -16,7 +16,8 @@
 		"jest.config.ts",
 		"database",
 		"npm_scripts",
-		"tests"
+		"tests",
+		"migrate.config.ts"
 	],
 	"exclude": ["node_modules", "dist", "bin", "logs"]
 }

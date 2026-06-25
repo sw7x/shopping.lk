@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import movieController from '@root/src/controllers/movieController';
+import movieController from '@root/src/controllers/movie.controller';
 const router = Router();
 
 // Define user routes

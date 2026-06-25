@@ -1,4 +1,5 @@
 export function sum(a: number, b: number): number {
+	console.log('a:', a, 'b:', b);
 	return a + b;
 }
 export function subtraction(a: number, b: number): number {

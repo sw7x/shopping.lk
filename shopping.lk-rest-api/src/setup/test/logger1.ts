@@ -1,16 +1,15 @@
 import util from 'util';
-import 'winston-mongodb';
+import { MongoDBTransportInstance } from 'winston-mongodb';
 import { createLogger, format, transports } from 'winston';
 import { ConsoleTransportInstance, FileTransportInstance } from 'winston/lib/winston/transports';
 import config from 'config';
 import { EAppEnvironments } from '@src/shared/constants/appEnvironments';
 import path from 'path';
 import { red, blue, yellow, green, magenta } from 'colorette';
-import * as sourceMapSupport from 'source-map-support';
-import { MongoDBTransportInstance } from 'winston-mongodb';
+//import * as sourceMapSupport from 'source-map-support';
 
 // Enable source map support for better stack traces
-sourceMapSupport.install();
+//sourceMapSupport.install();
 
 const AppEnv = config.util.getEnv('NODE_ENV');
 

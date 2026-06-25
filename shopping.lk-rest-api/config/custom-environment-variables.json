@@ -1,6 +1,4 @@
 {
-	"port": "PORT",
-
 	"jwt": {
 		"algorithm": "JWT_ALGORITHM"
 	},
@@ -8,5 +6,8 @@
 		"__name": "DEBUG",
 		"__format": "json"
 	},
-	"susa7": "SUSA"
+	"susa7": "SUSA",
+	"DB_URL": "DB_STRING",
+	"DEFAULT_ADMIN_PASSWORD": "DEFAULT_ADMIN_PASS",
+	"DEFAULT_USER_PASSWORD": "DEFAULT_USER_PASS"
 }

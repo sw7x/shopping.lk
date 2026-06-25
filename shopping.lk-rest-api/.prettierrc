@@ -5,9 +5,11 @@
 	"bracketSpacing": true,
 	"bracketSameLine": false,
 	"arrowParens": "always",
-	"printWidth": 150,
+	"printWidth": 120,
 	"singleAttributePerLine": false,
 	"jsxSingleQuote": true,
 	"singleQuote": true,
-	"endOfLine": "auto"
+	"endOfLine": "auto",
+	"trailingComma": "all",
+	"embeddedLanguageFormatting": "auto"
 }

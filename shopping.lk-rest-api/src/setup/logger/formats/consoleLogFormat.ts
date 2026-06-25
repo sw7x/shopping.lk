@@ -9,7 +9,14 @@ export const consoleLogFormat = format.printf(({ level, message, timestamp, meta
 
 	const formattedTimestamp = green(timestamp as string);
 	const logMessage = message;
-	const formattedMeta = util.inspect(meta, { showHidden: false, depth: null, colors: true });
+
+	//const formattedMeta = util.inspect(meta, { showHidden: false, depth: null, colors: true });
+	const formattedMeta = util.inspect(meta, {
+		showHidden: false,
+		depth: 7, // Limit depth to prevent performance issues
+		colors: true,
+		maxArrayLength: 100, // Limit array output
+	});
 
 	return `${coloredLevel} [${formattedTimestamp}] ${logMessage}\n${magenta('META')} ${formattedMeta}\n`;
 });

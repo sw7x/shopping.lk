@@ -2,5 +2,6 @@
 	"name": "shopping.lk-rest-api",
 	"googleMap": {
 		"key": "yourGoogleMapsAPIKey1"
-	}
+	},
+	"vvv": "jjj"
 }

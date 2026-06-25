@@ -1,0 +1,82 @@
+{
+	"super-admin": [
+		{
+			"action": "read",
+			"subject": "Post"
+		},
+		{
+			"action": "delete",
+			"subject": "Post"
+		},
+		{
+			"action": "update",
+			"subject": "Post"
+		},
+		{
+			"action": "create",
+			"subject": "Post"
+		}
+	],
+
+	"admin": [
+		{
+			"action": "read",
+			"subject": "Post"
+		},
+		{
+			"action": "delete",
+			"subject": "Post"
+		},
+		{
+			"action": "update",
+			"subject": "Post"
+		},
+		{
+			"action": "create",
+			"subject": "Post"
+		}
+	],
+
+	"manager": [
+		{
+			"action": "read",
+			"subject": "Post"
+		},
+		{
+			"action": "update",
+			"subject": "Post",
+			"conditions": { "published": true }
+		},
+		{
+			"action": "create",
+			"subject": "Post"
+		},
+		{
+			"action": "delete",
+			"subject": "Post",
+			"conditions": { "published": true }
+		}
+	],
+
+	"user": [
+		{
+			"action": "read",
+			"subject": "Post"
+		},
+		{			
+			"action": "delete",
+			"subject": "Post",
+			"fields":["name","age"],
+			"conditions": { "published": true },
+			"inverted": true,
+			"reason": "You have no permission to delete this post"
+		}
+	]
+}
+
+
+
+
+
+
+

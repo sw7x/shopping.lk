@@ -2,7 +2,7 @@ import os from 'node:os';
 //import config from "../config/config";
 
 export const getSystemHealth = () => {
-	throw new Error('getSystemHealth error');
+	//throw new Error('getSystemHealth error');
 	return {
 		cpuUsage: os.loadavg(),
 		totalMemory: `${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`,

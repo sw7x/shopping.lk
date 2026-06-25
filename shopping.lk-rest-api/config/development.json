@@ -1,6 +1,6 @@
 {
 	"port": 4999,
-	"debug777": true,
+	"debug": true,
 	"devx": "devy",
 	"database": {
 		"db": "test-db",
@@ -34,5 +34,7 @@
 		"expiresIn": "1d",
 		"cookieName": "sid"
 	},
-	"xxx": "xxx-dev"
+	"xxx": "xxx-dev",
+	"zzz1": "zzz123",
+	"c222": "c222-val"
 }

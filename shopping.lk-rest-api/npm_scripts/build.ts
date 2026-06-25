@@ -13,41 +13,55 @@ import shell from 'shelljs';
 import buildPackageJson from '@root/npm_scripts/build-package-json';
 import buildPm2Config from '@root/npm_scripts/build-pm2-config';
 
-// Remove the 'dist' directory
-shell.rm('-rf', 'dist');
+(async () => {
+	const start = Date.now();
 
-// Create the 'dist' directory
-shell.mkdir('-p', 'dist');
+	// Remove the 'dist' directory
+	shell.rm('-rf', 'dist');
 
-// Copy necessary files and folders to 'dist'
-shell.cp('-r', 'config', 'dist/config');
-shell.cp('-r', 'public', 'dist/public');
-shell.cp('-r', 'bin', 'dist/bin');
-shell.cp('.env', 'dist/.env');
+	// Create the 'dist' directory
+	shell.mkdir('-p', 'dist');
 
-//shell.cp('package.json', 'dist/package.json');
-//shell.cp('package-lock.json', 'dist/package-lock.json');
+	// Copy necessary files and folders to 'dist'
+	//shell.cp('-r', 'config', 'dist/config');
+	//shell.cp('-r', 'public', 'dist/public');
+	//shell.cp('-r', 'bin', 'dist/bin');
+	//shell.cp('.env', 'dist/.env');
 
-// Build the package.json file for production
-buildPackageJson()
-	.then(() => {
-		console.log('created dist/package.json for production');
-	})
-	.catch((err: Error) => {
-		console.log('Error:', err.message);
-	});
+	await Promise.all([
+		shell.cp('-r', 'config', 'dist/config'),
+		shell.cp('-r', 'public', 'dist/public'),
+		shell.cp('-r', 'bin', 'dist/bin'),
+		shell.cp('.env', 'dist/.env'),
+	]);
 
-// Build the pm2 config file for production
-buildPm2Config()
-	.then(() => {
-		console.log('created PM2 configuration file in dist/ecosystem.config.js for production');
-	})
-	.catch((err: Error) => {
-		console.log('Error:', err.message);
-	});
+	//shell.cp('package.json', 'dist/package.json');
+	//shell.cp('package-lock.json', 'dist/package-lock.json');
 
-// Run the TypeScript compiler with production configuration, with absolute paths
-if (shell.exec('tspc -p tsconfig.prod.json').code !== 0) {
-	shell.echo('Error: TypeScript compilation failed');
-	shell.exit(1);
-}
+	// Build the package.json file for production
+	buildPackageJson()
+		.then(() => {
+			console.log('created dist/package.json for production');
+		})
+		.catch((err: Error) => {
+			console.log('Error:', err.message);
+		});
+
+	// Build the pm2 config file for production
+	buildPm2Config()
+		.then(() => {
+			console.log('created PM2 configuration file in dist/ecosystem.config.js for production');
+		})
+		.catch((err: Error) => {
+			console.log('Error:', err.message);
+		});
+
+	// Run the TypeScript compiler with production configuration, with absolute paths
+	if (shell.exec('tspc -p tsconfig.prod.json').code !== 0) {
+		shell.echo('Error: TypeScript compilation failed');
+		shell.exit(1);
+	}
+
+	shell.cp('-r', 'src/views', 'dist/src/views');
+	console.log(`Build completed in ${Date.now() - start}ms`);
+})();

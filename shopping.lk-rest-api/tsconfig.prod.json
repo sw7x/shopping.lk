@@ -1,4 +1,12 @@
 {
-	"extends": "./tsconfig",
-	"exclude": ["tests", "npm_scripts", "config", "database"]
+	"extends": "./tsconfig.json",
+	"exclude": [
+		"npm_scripts",
+		"config",
+		"database",
+		"migrate.config.ts",
+		"tests",
+		"**/*.test.ts", // exclude test files
+		"**/*.spec.ts" // exclude spec files
+	]
 }

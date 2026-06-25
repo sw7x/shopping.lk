@@ -2,7 +2,6 @@
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "explicit",
 		"source.fixAll.stylelint": "explicit"
-
 	},
 
 	"[javascript]": {
@@ -82,17 +81,22 @@
 	
 		
 	// Optional: Disable conflicting VSCode formatter if needed
-	"editor.formatOnPaste": false,//This setting applies formatting on save for all file types
-	"editor.formatOnSave": false, //This setting applies formatting on paste for all file types
+	//"editor.formatOnPaste": false,//This setting applies formatting on save for all file types
+	//"editor.formatOnSave": false, //This setting applies formatting on paste for all file types
 	
 
 
 	"css.validate": false,
 	"less.validate": false,
 	"scss.validate": false,
+	
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
 
 
 
 
+	
 
 }

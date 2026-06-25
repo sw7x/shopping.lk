@@ -1,0 +1,21 @@
+const Permission = require('./models/Permission'); // Import the Permission model
+
+// Function to store permissions for a user
+async function storePermissions(userId: any) {
+	const permissions = [
+		{ subject: 'Article', action: 'read' },
+		{ subject: 'Article', action: 'update', fields: ['title', 'content'], conditions: { authorId: userId } },
+		{ subject: 'Article', action: 'delete', conditions: { authorId: userId } },
+	];
+
+	const permissionDoc = new Permission({
+		userId,
+		permissions,
+	});
+
+	await permissionDoc.save();
+	console.log('Permissions stored successfully');
+}
+
+// Example usage: Store permissions for a specific user
+storePermissions('64db6e7b12345678abc12345');

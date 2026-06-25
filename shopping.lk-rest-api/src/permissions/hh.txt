@@ -1,0 +1,47 @@
+import { AbilityBuilder, Ability, AnyAbility, PureAbility, Subject } from '@casl/ability';
+
+// Define ability types
+type Actions = 'read' | 'update' | 'delete';
+type Subjects = 'Article' | { authorId: number }; // Define subjects (including types with properties like authorId)
+
+// Define ability function to generate rules based on the user
+function defineAbilitiesFor(user: { id: number; role: string }): PureAbility<[Actions, Subjects]> {
+	const { can, cannot, build } = new AbilityBuilder<PureAbility<[Actions, Subjects]>>(Ability);
+
+	// Define the user's abilities based on their role/permissions
+	can('read', 'Article'); // User can read any article
+	can('update', 'Article', { authorId: user.id }); // User can update their own articles
+	cannot('delete', 'Article'); // User cannot delete any article
+
+	return build(); // Return the built ability object
+}
+
+// Generic checkPermission function that accepts ability as a parameter
+function checkPermission(
+	ability: PureAbility<[Actions, Subjects]>,
+	action: Actions,
+	subject: Subject, // The resource we are checking (e.g., 'Article')
+	conditions?: any, // Optional conditions to check against
+): boolean {
+	// Use the CASL can() method to check permissions
+	//return ability.can(action, subject, conditions);
+	return false
+}
+
+// Example usage
+const user = { id: 1, role: 'author' };
+const ability = defineAbilitiesFor(user);
+
+// Checking permissions with the provided ability
+
+// Check if the user can read an article
+console.log(checkPermission(ability, 'read', 'Article')); // true (can read any article)
+
+// Check if the user can update their own article
+console.log(checkPermission(ability, 'update', 'Article', { authorId: 1 })); // true (can update their own article)
+
+// Check if the user can update another user's article
+console.log(checkPermission(ability, 'update', 'Article', { authorId: 2 })); // false (cannot update another user's article)
+
+// Check if the user can delete an article
+console.log(checkPermission(ability, 'delete', 'Article')); // false (cannot delete any article)
