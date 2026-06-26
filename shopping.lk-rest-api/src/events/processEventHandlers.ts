@@ -1,4 +1,4 @@
-import {gracefulShutdownDb} from '@src/setup/db';
+import { gracefulShutdownDb } from '@src/setup/db';
 import logger from '../setup/logger';
 
 const processEventHandlers = {
@@ -9,9 +9,9 @@ const processEventHandlers = {
 			//logger.error('Unhandled Rejection at:', { promise, reason });
 			//throw reason;
 			//process.exit(1);
-			
+
 			// give Winston time to flush, then exit
-    		setTimeout(() => process.exit(1), 1000);
+			setTimeout(() => process.exit(1), 1000);
 		});
 	},
 
@@ -24,9 +24,9 @@ const processEventHandlers = {
 			//console.error('= Uncaught Exception =: ', err);
 			//await db.gracefulShutdownDb('uncaughtException');
 			//process.exit(1);
-			
+
 			// give Winston time to flush, then exit
-    		setTimeout(() => process.exit(1), 1000);
+			setTimeout(() => process.exit(1), 1000);
 		});
 	},
 

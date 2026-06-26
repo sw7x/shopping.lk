@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
-import BaseError from '@src/shared/errors/BaseError';
-import HttpError from '@root/src/shared/errors/HttpStatusError';
-import AuthorizationError from '@src/shared/errors/AuthorizationError';
-import ExternalServiceError from '../shared/errors/ExternalServiceError';
-import ServerError from '../shared/errors/http/ServerError';
+import BaseError from '@src/errors/BaseError';
+import HttpError from '@src/errors/HttpStatusError';
+import AuthorizationError from '@src/errors/AuthorizationError';
+import ExternalServiceError from '@src/errors/ExternalServiceError';
+import ServerError from '@src/errors/http/ServerError';
 
 const postList = (req: Request, res: Response): void => {
 	/* 	try {

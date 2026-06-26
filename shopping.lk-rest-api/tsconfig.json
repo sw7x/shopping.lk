@@ -134,12 +134,12 @@
 		"skipLibCheck": true /* Skip type checking all .d.ts files. */,
 		"types": ["node", "jest"]
 	},
-	//"include": ["src", "server.ts", "tests", "npm_scripts", "config", "database", "migrate.config.ts"],
+	//"include": ["src", "server.ts", "tests", "npm-scripts", "config", "database", "migrate.config.ts"],
 	"include": [
 		"src/**/*", // All files in src folder and subfolders
 		"server.ts", // Specific file in root
 		"tests/**/*", // All files in tests folder and subfolders
-		"npm_scripts/**/*", // All files in npm_scripts folder
+		"npm-scripts/**/*", // All files in npm-scripts folder
 		"config/**/*", // All files in config folder
 		"database/**/*", // All files in database folder
 		"migrate.config.ts" // Specific config file in root

@@ -1,95 +1,77 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import path from 'node:path';
-//import util from 'node:util';
-
-/*import colors from 'colors';
-
-colors.setTheme({
-	silly: 'rainbow',
-	input: 'grey',
-	verbose: 'cyan',
-	prompt: 'grey',
-	info: 'green',
-	data: 'grey',
-	help: 'cyan',
-	warn: 'yellow',
-	debug: 'blue',
-	error: 'red',
-});*/
-
-import processEventHandlers from '@root/src/events/processEventHandlers'; // Import the processerror handlers
-
 import dotenv from 'dotenv';
 
 // Load .env file relative to compiled output
 // Environment variables must be loaded BEFORE config module is imported
 dotenv.config({ path: path.resolve(__dirname, '.env') });
+//console.log('-- path -- ' + path.resolve(__dirname, '.env'));
 
 // Set config directory relative to compiled output Prevents config from looking in wrong location after build
 // By default, node-config looks for a config folder in the current working directory (where you run node from).
 // But after building/compiling, your config files directory path get relative to to running server.js
 process.env['NODE_CONFIG_DIR'] = path.resolve(__dirname, './config');
 
+/* ============================================
+These modules are loaded with require() instead of static import because
+static imports are hoisted and execute before any code runs — including
+dotenv.config(). require() runs in place, guaranteeing env vars are set
+before config singleton initializes and caches them.
+=============================================*/
+
+//import { gracefulShutdownDb, connectToDatabase } from '@src/setup/db';
+const { gracefulShutdownDb, connectToDatabase } = require('@src/setup/db');
+
+const logger = require('@src/setup/logger').default;
+const { createGracefulShutdown } = require('@src/setup/graceful-shutdown');
+
+/*
 //ts-node automatically handles source maps without needing the source-map-support package or Node.js flags
 import sourceMapSupport from 'source-map-support';
 if (process.env.NODE_ENV !== 'production' || process.env.DEBUG === 'true') {
 	console.log('Enabling source-map-support for better debugging...');
 	sourceMapSupport.install();
 }
+*/
 
+//import { connectToDatabase } from '@src/setup/db';
+import { initMongoRateLimiters } from '@src/setup/rateLimiter';
 
-// Add process event handlers
-processEventHandlers.uncaughtException();
-processEventHandlers.unhandledRejection();
-//processEventHandlers.SIGINT();
+async function bootstrap() {
+	// 1. Connect to DB before anything else
+	const connection = await connectToDatabase();
 
+	// 2. Initialize rate limiters with the connection
+	initMongoRateLimiters(connection);
 
+	// 3. NOW import and start the app (which registers routes)
+	const app = require('@src/app').default;
 
+	const PORT = process.env.PORT || 3000;
+	const ENV = process.env.NODE_ENV || 'development';
 
-import logger from '@src/setup/logger';
+	const server: ReturnType<typeof app.listen> = app.listen(PORT, () => {
+		console.log(`Server is running Environment : ${ENV}`);
+		console.log(`Server is running at port: ${PORT}`);
+		logger.info('Server is running!');
+	});
 
-//throw new Error('Async error - Something went wrong!');
-	
+	const { registerShutdownHandlers } = createGracefulShutdown({
+		server,
+		timeout: 30000, // 30 seconds
+		verbose: true,
+		cleanup: async () => {
+			await gracefulShutdownDb();
+		},
+	});
 
+	// Register all shutdown handlers
+	registerShutdownHandlers();
 
+	console.log('✅ Server setup complete');
+}
 
-
-
-/*	
-process.on('uncaughtException', (err: Error) => {
-	console.log('====================222 proces = uncaughtException =');
-
-	//logger.error('Uncaught Exception:', { message: err.message, stack: err.stack });
-	//logger.error('Uncaught Exception: ', err);
-	//console.error('= Uncaught Exception =: ', err);
-	//await db.gracefulShutdownDb('uncaughtException');
+bootstrap().catch((err) => {
+	logger.error('Failed to start server:', err);
 	process.exit(1);
 });
-*/	
-
-
-
-import app from '@src/app';
-
-const PORT = process.env.PORT || 3000;
-const ENV = process.env.NODE_ENV || 'development';
-
-app.listen(PORT, () => {
-	//console.log("config.name: ", config.get("name"));
-	//console.log(`config.name: ${config.get("name")}`);
-	//console.log(`config.port : ${config.get("port")}`);
-	console.log(`Server is running Environment : ${ENV}`);
-	console.log(`Server is running at port: ${PORT}`);
-
-	logger.error('This is an error message!');
-	logger.warn('This is a warning message!');
-	logger.info('This is an info message!');
-	logger.http('This is an http message!');
-	logger.verbose('This is a verbose message!');
-	logger.debug('==This is a debug message!');
-	logger.silly('This is an silly message!'); //----
-});
-
-
-
-
-//console.log('____END of server.ts____');

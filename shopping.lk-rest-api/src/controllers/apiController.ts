@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import responseMessages from '@src/shared/constants/responseMessages';
-import httpError from '@src/shared/http/httpError';
-import httpResponse from '@src/shared/http/httpResponse';
+import httpError from '@src/http/httpError';
+import httpResponse from '@src/http/httpResponse';
 import fs from 'fs';
 import status from 'http-status-codes';
 

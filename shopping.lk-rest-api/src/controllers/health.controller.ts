@@ -37,6 +37,8 @@ const healthCheck = (req: Request, res: Response) => {
 };
 
 const config2 = (req: Request, res: Response, next: NextFunction) => {
+
+	console.log('susa7: @@@@@' + config.get('susa7'));
 	res.send(`config2 : ${config.get('x-api.etc')}`);
 };
 

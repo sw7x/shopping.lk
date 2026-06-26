@@ -2,14 +2,14 @@ import { Request, Response, NextFunction } from 'express';
 import mongoose, { ObjectId } from 'mongoose';
 //import { User, type PopulatedUserDocumentType } from '@src/models';
 import User, { type PopulatedUserDocumentType } from '@src/models/user.model';
-import { RolesType } from '../shared/types/roles.types';
+import { RolesType } from '@src/types/roles.types';
 //import User from '@src/models/user.model';
 import bcrypt from 'bcrypt';
 import RoleModel from '@src/models/role.model';
-import httpResponse from '@root/src/shared/http/httpResponse';
+import httpResponse from '@root/src/http/httpResponse';
 import responseMessages from '../shared/constants/responseMessages';
-import httpError from '../shared/http/httpError';
-import ServerError from '../shared/errors/http/ServerError';
+import httpError from '@src/http/httpError';
+import ServerError from '@src/errors/http/ServerError';
 import c from 'config';
 import { MongoQuery } from '@casl/ability';
 import { mongoAbilityRuleType, PermissionsFieldType } from '../permissions/types/Permission.Types';
@@ -102,7 +102,7 @@ const readRecord2 = async (req: Request, res: Response, next: NextFunction) => {
 
 		console.dir('compactPermissionsArr - ', compactPermissionsArr);
 
-		const abilitySet: any = [];
+		const abilitySet: PermissionsFieldType[] = [];
 
 		compactPermissionsArr.forEach((value) => {
 			const currentRule = value.rule;

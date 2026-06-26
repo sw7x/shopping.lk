@@ -7,7 +7,7 @@
 	"description": "",
 	"main": "server.js",
 	"scripts": {
-		"build": "ts-node -r tsconfig-paths/register npm_scripts/build.ts",
+		"build": "ts-node -r tsconfig-paths/register npm-scripts/build.ts",
 		"start": "cross-env NODE_ENV=production DEBUG=false node dist/server.js",
 		"test": "cross-env NODE_ENV=testing jest",
 		"test:watch": "cross-env NODE_ENV=testing jest --watch",
@@ -21,12 +21,12 @@
 		"lint:fix": "eslint --fix",
 		"format:check": "prettier . --check --ignore-unknown || true && stylelint \"public/**/*.{css,scss}\"",
 		"format:fix": "prettier . --write --ignore-unknown || true && stylelint \"public/**/*.{css,scss}\" --fix",
-		"migrate:new": "ts-node npm_scripts/migrate.ts new",
-		"migrate:up": "ts-node npm_scripts/migrate.ts up",
-		"migrate:status": "ts-node npm_scripts/migrate.ts status",
-		"migrate:down-all": "ts-node npm_scripts/migrate.ts down --all",
-		"migrate:down-last": "ts-node npm_scripts/migrate.ts down --last",
-		"seed": "ts-node -r tsconfig-paths/register npm_scripts/seed.ts"
+		"migrate:new": "ts-node npm-scripts/migrate.ts new",
+		"migrate:up": "ts-node npm-scripts/migrate.ts up",
+		"migrate:status": "ts-node npm-scripts/migrate.ts status",
+		"migrate:down-all": "ts-node npm-scripts/migrate.ts down --all",
+		"migrate:down-last": "ts-node npm-scripts/migrate.ts down --last",
+		"seed": "ts-node -r tsconfig-paths/register npm-scripts/seed.ts"
 	},
 	"keywords": [],
 	"author": "",

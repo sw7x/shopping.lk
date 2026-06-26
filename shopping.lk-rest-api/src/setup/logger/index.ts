@@ -91,15 +91,15 @@ if (isDevelopment) {
 	}
 }
 
+//5. MongoDB transport (optional - commented out)
 /*
-5. MongoDB transport (optional - commented out)
-if (config.get('database.enableLogging') === true) {
-    try {
-        const mongoDBTransporter = loggerTransportFactory.createMongoDBTransport();
-        addTransportSafely(mongoDBTransporter, 'MongoDB transport');
-    } catch (error) {
-        console.error('Failed to create MongoDB transport:', error);
-    }
+if (config.get('database.logging') === true) {
+	try {
+		const mongoDBTransporter = loggerTransportFactory.createMongoDBTransport();
+		addTransportSafely(mongoDBTransporter, 'MongoDB transport');
+	} catch (error) {
+		console.error('Failed to create MongoDB transport:', error);
+	}
 }
 */
 
@@ -184,8 +184,8 @@ const gracefulShutdown = () => {
 };
 
 // Handle process termination
-process.on('SIGTERM', gracefulShutdown);
-process.on('SIGINT', gracefulShutdown);
+//process.on('SIGTERM', gracefulShutdown);
+//process.on('SIGINT', gracefulShutdown);
 
 export default logger;
 

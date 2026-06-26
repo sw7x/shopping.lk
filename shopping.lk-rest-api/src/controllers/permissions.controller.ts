@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import mongoose, { ObjectId } from 'mongoose';
 //import { User, type PopulatedUserDocumentType } from '@src/models';
 import User, { type PopulatedUserDocumentType } from '@src/models/user.model';
-import { RolesType } from '../shared/types/roles.types';
+import { RolesType } from '@src/types/roles.types';
 //import User from '@src/models/user.model';
 import bcrypt from 'bcrypt';
 import RoleModel from '@src/models/role.model';

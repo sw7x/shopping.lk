@@ -164,42 +164,36 @@ const login0 = (req: Request, res: Response, next: NextFunction) => {
 	const { email, password } = req.body;
 	res.send(req.body);
 
-
 	// Proceed with your login logic using sanitized email and password
-	
+
 	//console.log('email:', email);
 	//console.log('password:', password);
 	//res.send('Login form submitted');
 };
 
-
-
-
-
 const login = (req: Request, res: Response, next: NextFunction) => {
-    console.log('=== LOGIN CONTROLLER ===');
-    console.log('Request body:', req.body);
-    console.log('Content-Type:', req.headers['content-type']);
-    
-    const { email, password } = req.body;
-    
-    // Validate
-    if (!email || !password) {
-        return res.status(400).json({
-            success: false,
-            message: 'Email and password are required',
-            receivedBody: req.body // This will show you what was received
-        });
-    }
-    
-    // Your login logic
-    res.json({
-        success: true,
-        message: 'Login successful',
-        data: { email, password }
-    });
-};
+	console.log('=== LOGIN CONTROLLER ===');
+	console.log('Request body:', req.body);
+	console.log('Content-Type:', req.headers['content-type']);
 
+	const { email, password } = req.body;
+
+	// Validate
+	if (!email || !password) {
+		return res.status(400).json({
+			success: false,
+			message: 'Email and password are required',
+			receivedBody: req.body, // This will show you what was received
+		});
+	}
+
+	// Your login logic
+	res.json({
+		success: true,
+		message: 'Login successful',
+		data: { email, password },
+	});
+};
 
 const form = (req: Request, res: Response, next: NextFunction) => {
 	let body = '';

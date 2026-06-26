@@ -1,6 +1,6 @@
 {
 	"jwt": {
-		"algorithm": "JWT_ALGORITHM"
+		"algorithm1": "JWT_ALGORITHM"
 	},
 	"debug": {
 		"__name": "DEBUG",

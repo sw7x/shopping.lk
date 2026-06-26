@@ -1,1 +1,1 @@
-export * from '@root/src/shared/constants/responseMessages';
+export { default } from '@root/src/shared/constants/responseMessages';
