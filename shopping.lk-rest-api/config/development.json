@@ -7,7 +7,7 @@
 		"username": "user",
 		"password": "pass",
 		"dialect": "sqlite",
-		"host": "mongodb+srv://susanthawarnapura:WC5ZIsGjvDinvFz2@cluster0.4dk2y.mongodb.net/shoppingDb?retryWrites=true&w=majority&appName=Cluster0",
+		"host": "mongodb://localhost/project",
 		"logging": true
 	},
 	"allowedOrigins": ["https://www.yoursite.com", "http://localhost:3001"],

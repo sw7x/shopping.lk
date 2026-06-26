@@ -14,11 +14,9 @@ export const connectToDatabase = async (): Promise<Connection> => {
 		//const mongoURL = 'mongodb://user:password@mongo:27017/project?authSource=admin'
 
 		//TODO:Use environment variable for MongoDB connection string
-		const mongoURL =
-			'mongodb+srv://susanthawarnapura:WC5ZIsGjvDinvFz2@cluster0.4dk2y.mongodb.net/shoppingDb?retryWrites=true&w=majority&appName=Cluster0';
 
 		//const mongoURL = `${process.env.MONGODB_URL}/${DB_NAME}`;
-		const mongoUri = config.get<string>('database.host');
+		const mongoUri = config.get<string>('database.url');
 
 		// Connect to MongoDB
 		const connection = await mongoose.connect(mongoUri);

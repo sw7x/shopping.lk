@@ -9,7 +9,8 @@
 			"port": 9222,
 			"request": "attach",
 			"type": "chrome",
-			"webRoot": "${workspaceFolder}"
+			"webRoot": "${workspaceFolder}",
+			"restart":true
 		},
 
 		{
@@ -19,7 +20,8 @@
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"type": "node"
+			"type": "node",			
+			"restart":true
 		},
 		{
 			"name": "Debug jest test",	

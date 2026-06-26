@@ -156,6 +156,9 @@ app.get('/debug-info', (req: Request, res: Response, next: NextFunction) => {
 });
 
 app.get('/config1', (req: Request, res: Response, next: NextFunction) => {
+	const mongoUri = config.get<string>('database.url');
+	console.log(mongoUri);
+
 	//res.send('config susa7 :' + config.get('susa7'));
 	const allowedOrigins = config.get('allowedOrigins');
 	console.log(allowedOrigins);

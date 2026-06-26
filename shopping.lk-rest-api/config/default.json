@@ -5,6 +5,8 @@
 	},
 	"vvv": "jjj",
 	"app-key-7": "your-app-key-7",
-	"susa7": ""
-
+	"susa7": "",
+	"database": {
+		"url": ""
+	}
 }

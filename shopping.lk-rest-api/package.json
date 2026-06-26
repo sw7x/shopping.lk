@@ -25,8 +25,7 @@
 		"migrate:up": "ts-node npm-scripts/migrate.ts up",
 		"migrate:status": "ts-node npm-scripts/migrate.ts status",
 		"migrate:down-all": "ts-node npm-scripts/migrate.ts down --all",
-		"migrate:down-last": "ts-node npm-scripts/migrate.ts down --last",
-		"seed": "ts-node -r tsconfig-paths/register npm-scripts/seed.ts"
+		"migrate:down-last": "ts-node npm-scripts/migrate.ts down --last"
 	},
 	"keywords": [],
 	"author": "",

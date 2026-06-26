@@ -1,7 +1,7 @@
 import { Db, MongoClient, type ObjectId } from 'mongodb';
 import { MigrationInterface } from 'mongo-migrate-ts';
 import bcrypt from 'bcrypt';
-import usersJson from '../../src/data/users.json';
+import usersJson from '@src/data/users.json';
 import config from 'config';
 import { recordExists } from '@root/src/shared/utils/mongoDb';
 //import { type MongoQuery, type ClaimRawRule, type SubjectRawRule } from '@casl/ability';

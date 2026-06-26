@@ -1,10 +1,10 @@
 import { Db, MongoClient } from 'mongodb';
 import { MigrationInterface } from 'mongo-migrate-ts';
-import rolesJson from '../../src/data/roles.json';
-import defPermissions from '../../src/data/role.default-permissions.json';
-import { recordExists } from '@root/src/shared/utils/mongoDb';
+import rolesJson from '@src/data/roles.json';
+import defPermissions from '@src/data/role.default-permissions.json';
+import { recordExists } from '@src/shared/utils/mongoDb';
 import { type MongoQuery, type ClaimRawRule, type SubjectRawRule } from '@casl/ability';
-import { type RolesType } from '@root/src/shared/types/roles.types';
+import { type RolesType } from '@root/src/types/roles.types';
 import { type PermissionsType, type PermissionsFieldType } from '@root/src/permissions/types/Permission.Types';
 
 type RoleSeedRec = {

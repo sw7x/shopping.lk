@@ -62,7 +62,7 @@ function executeMigrationScript(): Promise<string> {
 
 		// for commands  = mongo-migrate new , mongo-migrate new -n migration_filename
 		if (inputCommand === 'new') {
-			//scriptCommand = option === undefined ? `migrate ${inputCommand}` : `migrate ${inputCommand} -n ${option}`;
+			//scriptCommand = (option === undefined) ? `migrate ${inputCommand}` : `migrate ${inputCommand} -n ${option}`;
 			scriptCommand = `${inputCommand}${option ? ` -n ${option}` : ''}`;
 		}
 
