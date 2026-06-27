@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import BaseError from '@src/errors/BaseError';
-import HttpError from '@src/errors/HttpStatusError';
-import AuthorizationError from '@src/errors/AuthorizationError';
-import ExternalServiceError from '@src/errors/ExternalServiceError';
-import ServerError from '@src/errors/http/ServerError';
+import HttpError from '@root/src/errors/custom-errors/HttpStatusError';
+import AuthorizationError from '@root/src/errors/custom-errors/AuthorizationError';
+import ExternalServiceError from '@root/src/errors/custom-errors/ExternalServiceError';
+import ServerError from '@src/errors/custom-errors/http/ServerError';
 
 const postList = (req: Request, res: Response): void => {
 	/* 	try {

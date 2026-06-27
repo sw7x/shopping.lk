@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import HttpStatusError from '@src/errors/HttpStatusError';
+import HttpStatusError from '@root/src/errors/custom-errors/HttpStatusError';
 
 export const ALLOWED_FOLDERS = ['profile', 'product', 'document', 'avatar', 'banner', 'general'] as const;
 

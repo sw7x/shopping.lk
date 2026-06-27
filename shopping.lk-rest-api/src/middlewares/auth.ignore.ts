@@ -1,0 +1,135 @@
+// @ts-nocheck
+import jwt from 'jsonwebtoken';
+import { Request, Response, NextFunction } from 'express';
+import { User, IUserDocument } from '@src/models/user.model.js';
+import HttpStatusError from '@src/errors/HttpStatusError';
+import { asyncHandler } from '@src/shared/utils/asyncHandler.js';
+
+// Extend Express Request type to include user
+/* 
+declare global {
+	namespace Express {
+		interface Request {
+			user?: any;
+		}
+	}
+} 
+*/
+// ✅ Use module augmentation instead of namespace
+declare module 'express' {
+	interface Request {
+		user?: IUserDocument;
+	}
+}
+/**
+ * Authentication Middleware
+ * Verifies JWT token from either cookie or Authorization header
+ * Attaches user object to request if authentication succeeds
+ */
+export const verifyJWT = asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
+	try {
+		// Extract token from multiple sources
+		let token: string | undefined;
+
+		// Priority 1: Check cookies (for web apps)
+		if (req.cookies?.accessToken) {
+			token = req.cookies.accessToken;
+		}
+		// Priority 2: Check Authorization header (for mobile/API clients)
+		else if (req.headers.authorization) {
+			const authHeader = req.headers.authorization;
+			const [type, extractedToken] = authHeader.split(' ');
+
+			if (type === 'Bearer' && extractedToken) {
+				token = extractedToken;
+			}
+		}
+
+		if (!token) {
+			throw new HttpStatusError('Authentication required. Please provide a valid token.', 401);
+		}
+
+		// Verify JWT token
+		let decodedToken: any;
+		try {
+			decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET || 'your-secret-key');
+		} catch (jwtError) {
+			// Handle specific JWT errors
+			if (jwtError instanceof jwt.TokenExpiredError) {
+				throw new HttpStatusError('Token has expired. Please login again.', 401);
+			}
+			if (jwtError instanceof jwt.JsonWebTokenError) {
+				throw new HttpStatusError('Invalid token. Please login again.', 401);
+			}
+			throw new HttpStatusError('Authentication failed. Please login again.', 401);
+		}
+
+		// Find user from database
+		const user = await User.findById(decodedToken?._id || decodedToken?.id)
+			.select('-password -refreshToken -__v')
+			.lean();
+
+		if (!user) {
+			throw new HttpStatusError('User not found. Please login again.', 401);
+		}
+
+		// Check if user is active (optional)
+		if (user.isActive === false) {
+			throw new HttpStatusError('Account is deactivated. Please contact support.', 403);
+		}
+
+		// Attach user to request
+		req.user = user;
+		next();
+	} catch (error) {
+		// If error is already HttpStatusError, rethrow it
+		if (error instanceof HttpStatusError) {
+			throw error;
+		}
+
+		// Otherwise, wrap it in HttpStatusError
+		throw new HttpStatusError(error instanceof Error ? error.message : 'Authentication failed', 401);
+	}
+});
+
+/**
+ * Optional: Role-based authorization middleware
+ * Use after verifyJWT to restrict access based on user roles
+ */
+export const authorizeRoles = (...allowedRoles: string[]) => {
+	return asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
+		if (!req.user) {
+			throw new HttpStatusError('Authentication required', 401);
+		}
+
+		const userRole = req.user.role || 'user';
+
+		if (!allowedRoles.includes(userRole)) {
+			throw new HttpStatusError(`Access denied. Required roles: ${allowedRoles.join(', ')}`, 403);
+		}
+
+		next();
+	});
+};
+
+/**
+ * Optional: Permission-based authorization middleware
+ * Use after verifyJWT to restrict access based on specific permissions
+ */
+export const authorizePermissions = (...allowedPermissions: string[]) => {
+	return asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
+		if (!req.user) {
+			throw new HttpStatusError('Authentication required', 401);
+		}
+
+		// Check if user has any of the required permissions
+		const userPermissions = req.user.permissions || [];
+		const hasPermission = allowedPermissions.some((permission) => userPermissions.includes(permission));
+
+		if (!hasPermission) {
+			throw new HttpStatusError('Insufficient permissions', 403);
+		}
+
+		next();
+	});
+};

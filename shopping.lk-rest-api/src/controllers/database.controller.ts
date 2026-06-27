@@ -9,7 +9,7 @@ import RoleModel from '@src/models/role.model';
 import httpResponse from '@root/src/http/httpResponse';
 import responseMessages from '../shared/constants/responseMessages';
 import httpError from '@src/http/httpError';
-import ServerError from '@src/errors/http/ServerError';
+import ServerError from '@src/errors/custom-errors/http/ServerError';
 import c from 'config';
 import { MongoQuery } from '@casl/ability';
 import { mongoAbilityRuleType, PermissionsFieldType } from '../permissions/types/Permission.Types';
