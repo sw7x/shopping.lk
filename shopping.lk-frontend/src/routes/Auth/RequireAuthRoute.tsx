@@ -1,6 +1,6 @@
 import { useLocation, Navigate, Outlet } from 'react-router-dom';
 
-export const RequireAuth = () => {
+export const RequireAuthRoute = () => {
 	const auth = false; // determine if authorized, from context or however you're doing it
 	const location = useLocation();
 

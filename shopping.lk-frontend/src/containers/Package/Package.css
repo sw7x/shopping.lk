@@ -19,11 +19,12 @@
 /*=== package-single-row ===*/
 .package-single-row ul li,
 .package-single-row ol li {
-	margin-bottom: 0.4rem;
+	margin-bottom: 0.5rem;
 	color: #7b858a;
-	font-size: 1.4rem;
+	font-size: 2.5rem;
 	letter-spacing: 0.005em;
-	line-height: 1.92;
+	line-height: 1.5;
+	font-weight: 600;
 }
 
 .package-single-row ul li i,
@@ -71,15 +72,23 @@
 	border-top: 10px solid #0f7334;
 	border-left: 10px solid transparent;
 }
-.package-single-row .add-cart {
+.package-single-row .buy-btn {
 	color: #333;
+	padding: 0.4rem 0rem;
 }
-.package-single-row .add-cart::before {
-	content: '\e80c';
+.package-single-row .buy-btn div {
+	font:
+		1.75rem 'Oswald',
+		sans-serif;
+	margin-left: 0.5rem;
+	line-height: 1;
+}
+.package-single-row .buy-btn::before {
+	content: '\e879';
 	margin-right: 5px;
 }
 
-.package-single-row .add-cart:hover {
+.package-single-row .buy-btn:hover {
 	color: #fff;
 	background-color: #16a34a;
 	border: 1px solid #16a34a;

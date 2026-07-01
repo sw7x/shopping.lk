@@ -9,6 +9,8 @@ import { Tabs } from '@components/Tabs';
 import { TblData } from '@components/AdminTable/AdminTable-Data';
 
 import { useTest } from '@shared/hooks/useTest';
+import { ViewStarRatings } from '@root/components/StarRatings';
+import { StarRatingWidget } from '@root/components/StarRatings';
 
 const Test = () => {
 	const { char, setChar, int, setInt, randStrHandler } = useTest('aa', 5);
@@ -63,6 +65,16 @@ const Test = () => {
 
 	return (
 		<>
+			{/*<StarRatings rating={50} fontSize={40} />  */}
+			{[...Array(10).keys()].map((key, index) => {
+				return (
+					<>
+						<ViewStarRatings rating={index} fontSize={40} displayTextInfo={true} />
+						<br />
+					</>
+				);
+			})}
+			<StarRatingWidget fontSize={40} /> {/* */}
 			<div onClick={aaa} className='border w-50'>
 				onClick
 			</div>
@@ -71,9 +83,7 @@ const Test = () => {
 			</div>
 			<div>char - {char}</div>
 			<div>int - {int}</div>
-
 			<PageHeader title='Test' />
-
 			<Breadcrumb />
 			<div className='history-section'>
 				<div className='container'>
@@ -96,7 +106,6 @@ const Test = () => {
 					<br />
 				</div>
 			</div>
-
 			<div className='history-section'>
 				<div className='container'>
 					<Tabs>
@@ -235,7 +244,6 @@ const Test = () => {
 					</Tabs>
 				</div>
 			</div>
-
 			<div className='features-section'>
 				<div className='container'>
 					<h2 className='subtitle'>OUR FEATURES</h2>

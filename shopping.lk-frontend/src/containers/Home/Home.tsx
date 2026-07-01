@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import promoBgImg from '@assets/images/promo-bg.jpg';
 import product1Img from '@assets/images/products/product-1.jpg';
@@ -9,11 +9,65 @@ import { PageSlider } from '@containers/shared/PageSlider';
 import { ProductCompactFeatureItem } from '@containers/shared/ProductCompactFeatureItem/ProductCompactFeatureItem';
 import { ProductFeatureItem } from '../shared/ProductFeatureItem/ProductFeatureItem';
 import { FeatureGrid } from '../shared/FeatureGrid/FeatureGrid';
+import axios, { CancelTokenSource } from 'axios';
+
+
+
+
+
 
 const Home = () => {
+	
+	const [str, setStr] = useState('===');
+
+	
+	const fetchData = async (ApiReq: CancelTokenSource) => {
+
+		try {
+			
+			let response = await axios.get(`http://localhost:4999/debug-info`, {
+				cancelToken: ApiReq.token,
+				headers: {
+					'Content-Type': 'application/json',
+					//'Content-Type': 'text/plain',
+					//Authorization: `Bearer hh`,
+				},
+				//withCredentials: true,
+			});			
+			
+			console.log(response);			
+			console.log('====Response====');	
+			setStr(JSON.stringify(response.data, null, 2));		
+		} catch (error) {
+			console.log(error);
+
+			if (axios.isAxiosError(error)) {
+				console.log('Request canceled', error.message);
+			}
+		}
+	};
+
+	useEffect(() => {
+		const ApiReq = axios.CancelToken.source();
+		fetchData(ApiReq);
+		
+
+
+
+		return () => {
+			console.log('Cledan Up');
+			ApiReq.cancel();
+		};
+	}, []);
+	
+	
+	
+	
 	return (
 		<>
 			<PageSlider />
+			{str}
+			{/*}
 
 			{/* 
 			<div className='home-slider-container'>

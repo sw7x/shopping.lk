@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const OrderDetailItem = () => {
+type OrderDetailItemProps = {
+	index?: number;
+};
+
+export const OrderDetailItem: React.FC<OrderDetailItemProps> = ({ index = 0 }) => {
 	return (
 		<>
 			<div className='entry col-12'>
@@ -30,6 +34,12 @@ export const OrderDetailItem = () => {
 							<div className='subtitle mb-1'>
 								<span className=''>
 									<i className='icon-cart'></i>QTY : 5 Items
+								</span>
+							</div>
+							<div className='subtitle mb-1'>
+								<span className=''>
+									<i className='icon-tag'></i>Order Type :{' '}
+									{index % 2 == 0 ? 'Pre-Packaged' : 'Customized'}
 								</span>
 							</div>
 						</div>

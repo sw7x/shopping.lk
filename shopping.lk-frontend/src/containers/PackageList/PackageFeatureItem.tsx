@@ -23,12 +23,12 @@ export const PackageFeatureItem = () => {
 					</div>
 					<div className='package-action'>
 						<button
-							className='btn-icon btn-add-cart'
+							className='btn-icon btn-buy'
 							data-toggle='modal'
 							data-target='#addCartModal'
 						>
-							<i className='icon-cart'></i>
-							<div>ADD TO CART</div>
+							<i className='icon-us-dollar'></i>
+							<div>Buy Now</div>
 						</button>
 					</div>
 				</div>

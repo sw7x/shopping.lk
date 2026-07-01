@@ -346,10 +346,20 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ closeMobileMenu }) => {
 								</li>
 								<li>
 									<NavLink
-										to='/my-orders/123'
+										to='/user/my-orders/123'
 										onClick={(event) => goToLink(event, '/user/my-orders/123')}
 									>
 										My Orders single
+									</NavLink>
+								</li>
+								<li>
+									<NavLink
+										to='/user/my-orders/pakage-123'
+										onClick={(event) =>
+											goToLink(event, '/user/my-orders/pakage-123')
+										}
+									>
+										Pakage123 Order single
 									</NavLink>
 								</li>
 								<li>

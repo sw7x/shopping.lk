@@ -146,7 +146,7 @@ export const Menu = () => {
 									<NavLink to='/user/previously-buy'>Previously Buy</NavLink>
 								</li>
 								<li>
-									<NavLink to='/user/my-reviews '>My Reviews</NavLink>
+									<NavLink to='/user/my-reviews'>My Reviews</NavLink>
 								</li>
 								<li>
 									<NavLink to='/user/wishlist'>My Wishlist</NavLink>
@@ -157,6 +157,11 @@ export const Menu = () => {
 								</li>
 								<li>
 									<NavLink to='/user/my-orders/123'>My Orders single</NavLink>
+								</li>
+								<li>
+									<NavLink to='/user/my-orders/pakage-123'>
+										Pakage123 Order single
+									</NavLink>
 								</li>
 							</ul>
 						</li>
@@ -217,7 +222,7 @@ export const Menu = () => {
 							<NavLink to='/user/previously-buy'>Previously Buy</NavLink>
 						</li>
 						<li>
-							<NavLink to='/user/my-reviews '>My Reviews</NavLink>
+							<NavLink to='/user/my-reviews'>My Reviews</NavLink>
 						</li>
 						<li>
 							<NavLink to='/user/wishlist'>My Wishlist</NavLink>
@@ -228,6 +233,11 @@ export const Menu = () => {
 						</li>
 						<li>
 							<NavLink to='/user/my-orders/123'>My Orders single</NavLink>
+						</li>
+						<li>
+							<NavLink to='/user/my-orders/pakage-123'>
+								Pakage123 Order single
+							</NavLink>
 						</li>
 						<li>
 							<NavLink to='/change-password'>Change Password</NavLink>

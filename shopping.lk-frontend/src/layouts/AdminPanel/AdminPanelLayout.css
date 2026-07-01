@@ -1,0 +1,24 @@
+/* resetting css */
+.admin-panel-wrapper {
+	position: relative;
+}
+
+.admin-panel-wrapper button:focus {
+	outline: none;
+}
+
+.admin-panel-wrapper a:hover,
+.admin-panel-wrapper a:focus {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* custom styles */
+.shopping_lk_admin_layout .ant-layout-sider-trigger {
+	background-color: #fff;
+	position: sticky;
+}
+.shopping_lk_admin_layout .ant-layout-sider-trigger .ant-btn {
+	font-size: 24px;
+	bottom: 17px;
+}

@@ -1,5 +1,12 @@
 import { ReactNode } from 'react';
 
-export const Main = ({ children }: { children: ReactNode }) => {
-	return <main className='main'>{children}</main>;
+type MainProps = {
+	children: ReactNode;
+	className?: string;
+};
+
+export const Main: React.FC<MainProps> = ({ children, className = '' }) => {
+	return (
+		<main className={`main ${className !== '' ? ' ' + className : className}`}>{children}</main>
+	);
 };

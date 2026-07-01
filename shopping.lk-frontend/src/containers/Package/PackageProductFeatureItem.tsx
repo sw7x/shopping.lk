@@ -1,6 +1,7 @@
 import React from 'react';
 import productImg from '@assets/images/products/product-1.jpg';
 import { ViewStarRatings } from '@components/StarRatings';
+import { ToolTipInfoCircle } from '@root/components/Tooltip';
 
 export const PackageProductFeatureItem = () => {
 	return (
@@ -13,8 +14,28 @@ export const PackageProductFeatureItem = () => {
 				</figure>
 				<div className='product-details'>
 					<div className='category-list'>
+						category :
+						<a href='category.html' className='product-category ml-2'>
+							Head Phones
+						</a>
+					</div>
+					<div className='product-brand'>
+						BRAND :
+						<a className='ml-2' href=''>
+							Excepteur
+						</a>
+					</div>
+
+					<div className='category-list'>
+						category :
 						<a href='category.html' className='product-category'>
 							category
+						</a>
+					</div>
+					<div className='category-list'>
+						BRAND :
+						<a href='category.html' className='product-category'>
+							BRAND
 						</a>
 					</div>
 					<h2 className='product-title'>
@@ -33,8 +54,11 @@ export const PackageProductFeatureItem = () => {
 						ultricies mi vitae est. Mauris placerat eleifend leo.
 					</p>
 					<div className='price-box'>
-						<div className='product-price'>Item Price : $15.00</div>
-						<div className='mt-1 product-price'>QTY : 22</div>
+						<div className='mb-2 product-price'>QTY : 22</div>
+						<div className='product-price'>
+							Bundle Cost : $15.00
+							<ToolTipInfoCircle text='Bundle Cost may vary based on available stock.' />
+						</div>
 					</div>
 				</div>
 			</div>

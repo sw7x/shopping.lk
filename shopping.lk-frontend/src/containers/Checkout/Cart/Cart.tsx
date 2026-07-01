@@ -33,15 +33,20 @@ export const Cart = () => {
 								<thead>
 									<tr>
 										<th className='product-col'>Product</th>
-										<th className='price-col'>Price</th>
 										<th className='qty-col'>Qty</th>
-										<th>Shipping Cost</th>
+										<th className='price-col'>
+											Price,
+											<br /> Shipping
+										</th>
+
+										<th>Discount</th>
 										<th>Subtotal</th>
 									</tr>
 								</thead>
 								<tbody>
-									<CartItemRecord />
-									<CartItemRecord />
+									<CartItemRecord index={0} />
+									<CartItemRecord index={1} />
+									<CartItemRecord index={2} />
 								</tbody>
 
 								<tfoot>

@@ -108,7 +108,7 @@ const Register = () => {
 							</div>
 
 							<div className='form-group row required-field'>
-								<label className='col-md-3'>Gender</label>
+								<label className='col-md-3'>Country</label>
 								<div className='col-md-9 _select-custom'>
 									<select className='form-control' name='gender'>
 										<option value='USA'>United States</option>

@@ -21,16 +21,23 @@ import { Modal } from '@root/components/Modal';
 import banner4Img from '@assets/images/banner4.png';
 import { PageHeader } from './shared/PageHeader';
 import { Breadcrumb } from '@containers/shared/Breadcrumb';
+import { ProductAddToCartModal } from './shared/ProductAddToCartModal/ProductAddToCartModal';
+import { ProductFeatrureHorItem } from './shared/ProductFeatrureHorItem';
 
 const Faq = () => {
 	const [currentPage, setCurrentPage] = useState(0);
 
 	const [openModal, setOpenModal] = useState(false);
+	const [openProductAddToCartModal, setOpenProductAddToCartModal] = useState(false);
+
 	const toggeleModal = () => {
 		//alert();
 		setOpenModal(true);
 	};
-
+	const toggeleProductAddToCartModal = () => {
+		//alert();
+		setOpenProductAddToCartModal(true);
+	};
 	const faqData = [
 		{
 			question: 'What are accordion components?',
@@ -61,9 +68,7 @@ const Faq = () => {
 	return (
 		<>
 			<PageHeader title='FAQ' subtitle='Frequently Asked Questions' />
-
 			<Breadcrumb />
-
 			<Modal isOpen={openModal} onClose={() => setOpenModal(false)} title='Modal Header'>
 				<p className=''>
 					I always 111 felt like I could do anything. That’s the main thing people are
@@ -71,7 +76,25 @@ const Faq = () => {
 					their perception of themselves. If you're taught you can’t do anything, you
 					won’t do anything. I was taught I could do everything.
 				</p>
-			</Modal>
+			</Modal>{' '}
+			<ProductAddToCartModal
+				isOpen={openProductAddToCartModal}
+				onClose={() => setOpenProductAddToCartModal(false)}
+				title='Add To Cart'
+			/>
+			<button
+				className='btn btn-primary'
+				onClick={toggeleProductAddToCartModal}
+				/* onClick={() => {
+					if (document) {
+						(document.getElementById('my_modal_1') as HTMLFormElement).showModal();
+					}
+				}} */
+			>
+				open modal ggg
+			</button>
+			<br />
+			<br />
 			<button
 				className='btn btn-primary'
 				onClick={toggeleModal}

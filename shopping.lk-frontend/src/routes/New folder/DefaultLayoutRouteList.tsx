@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
-import { DefaultLayout } from '@layouts/default/DefaultLayout';
+import { Route, Routes, Navigate, Outlet } from 'react-router-dom';
+import { DefaultLayout } from '@layouts/default';
 
 /* 
 import CategoryManage from '@containers/CategoryManage';
@@ -62,7 +62,8 @@ const Home = lazy(() => import('@containers/Home'));
 */
 
 const Home = lazy(() =>
-	wait(10000).then(() =>
+	wait(10).then(() =>
+		//wait(10000).then(() =>
 		import('@containers/Home').then((module) => {
 			//return { default: module.Home };
 			return module;
@@ -124,6 +125,39 @@ const Test = lazy(() => import('@containers/Test'));
 const Wishlist = lazy(() => import('@containers/User/Wishlist'));
 
 //<Suspense fallback={<ProcessingAnimation style={{ minHeight: '50vh' }} />}>
+
+/*  */
+/*  */
+/*  */
+import { ErrorComponent } from '@refinedev/antd';
+import { NavigateToResource } from '@refinedev/react-router-v6';
+
+
+import { RefineContext } from '@root/layouts/AdminPanel/RefineContext';
+import { AdminPanelRouteList } from './AdminPanelRouteList';
+import { AdminPanelLayout } from '@layouts/AdminPanel';
+import {
+	ProductCreate,
+	ProductShow,
+	ProductEdit,
+	ProductList,
+} from '@root/containers/Admin/Products';
+import { CustomComponenet } from '@root/containers/Admin/CustomComponenet';
+import { PostList, PostShow, PostEdit, PostCreate } from '@root/containers/Admin/Posts';
+import { AdminDashboard } from '@root/containers/Admin/AdminDashboard';
+import { ThreadCreate, ThreadEdit, ThreadList, ThreadShow } from '@root/containers/Admin/Threads';
+
+
+
+
+
+
+
+
+
+/*  */
+/*  */
+/*  */
 
 export const DefaultLayoutRouteList = () => {
 	return (
@@ -461,7 +495,51 @@ export const DefaultLayoutRouteList = () => {
 				*/}
 				<Route path='/403' element={<UnAuthorized />} />
 				<Route path='/404' element={<Page404 />} />
+				{/* 
+				<Route
+					path='/admin'
+					element={
+						<RefineContext>
+							<Outlet />
+						</RefineContext>
+					}
+				>
+					<Route index element={<NavigateToResource />} />
+					<Route path='products' element={<ProductList />} />
+					<Route path='*' element={<ErrorComponent />} />
+				</Route>
+				*/}
 				<Route path='*' element={<Navigate to='/404' replace={true} />} />
+			</Route>
+
+			<Route path='/admin' element={<AdminPanelLayout />}>
+				{/* <Route index element={<NavigateToResource resource='Posts' />} /> */}
+				<Route index element={<AdminDashboard />} />
+				<Route path='cc' element={<CustomComponenet />} />
+				<Route path='products'>
+					<Route index element={<ProductList />} />
+					<Route path='create' element={<ProductCreate />} />
+					<Route path='edit/:id' element={<ProductEdit />} />
+					<Route path='show/:id' element={<ProductShow />} />
+				</Route>
+				<Route path='products_assign' element={<>products_assign</>} />
+				<Route path='posts'>
+					<Route index element={<PostList />} />
+					<Route path='create' element={<PostCreate />} />
+					<Route path='edit/:id' element={<PostEdit />} />
+					<Route path='show/:id' element={<PostShow />} />
+				</Route>
+				<Route path='contact' element={<>admin contact page</>} />
+
+				<Route path='threads'>
+					<Route index element={<ThreadList />} />
+					<Route path='create' element={<ThreadCreate />} />
+					<Route path='edit/:id' element={<ThreadEdit />} />
+					<Route path='show/:id' element={<ThreadShow />} />
+				</Route>
+
+				<Route path='*' element={<ErrorComponent />} />
+				{/*<Route path='*' element={<>ffff</>} />*/}
 			</Route>
 		</Routes>
 	);

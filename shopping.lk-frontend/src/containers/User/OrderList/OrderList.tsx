@@ -54,7 +54,7 @@ const OrderList = () => {
 
 						<div className='product-intro row row-sm'>
 							{[...Array(6).keys()].map((key, index) => {
-								return <OrderDetailItem key={index} />;
+								return <OrderDetailItem key={index} index={index} />;
 							})}
 						</div>
 

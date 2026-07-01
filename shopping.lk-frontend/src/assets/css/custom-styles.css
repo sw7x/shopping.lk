@@ -127,7 +127,7 @@ body:not(.loaded) > *:not(.loading-overlay) {
 /* ===== product-single-details ======*/
 
 .sold-count {
-	font-size: 1.6rem;
+	font-size: 1.75rem;
 	letter-spacing: 0.005em;
 	font-weight: 600;
 	color: #4a505e;

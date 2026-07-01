@@ -22,15 +22,20 @@ const Order = () => {
 								<thead>
 									<tr>
 										<th className='product-col'>Product</th>
-										<th className='price-col'>Price</th>
 										<th className='qty-col'>Qty</th>
-										<th>Shipping Cost</th>
+										<th className='price-col'>
+											Price,
+											<br /> Shipping
+										</th>
+
+										<th>Discount</th>
 										<th>Subtotal</th>
 									</tr>
 								</thead>
 								<tbody>
-									<OrderItemRecord />
-									<OrderItemRecord />
+									<OrderItemRecord index={0} />
+									<OrderItemRecord index={1} />
+									<OrderItemRecord index={2} />
 								</tbody>
 
 								<tfoot>

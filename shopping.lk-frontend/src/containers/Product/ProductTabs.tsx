@@ -39,7 +39,7 @@ function ProductTabs() {
 							aria-selected={selected == 1}
 							onClick={(event) => handleChange(event, 1)}
 						>
-							Size Guide
+							Product Details
 						</a>
 					</li>
 					<li className='nav-item'>
@@ -53,7 +53,7 @@ function ProductTabs() {
 							aria-selected={selected == 2}
 							onClick={(event) => handleChange(event, 2)}
 						>
-							Tags
+							Shipping
 						</a>
 					</li>
 					<li className='nav-item'>
@@ -183,8 +183,16 @@ function ProductTabs() {
 						aria-labelledby='product-tab-tags'
 					>
 						<div className='product-tags-content'>
-							<form action='#'>
-								<h4>Add Your Tags:</h4>
+							<h4>Deliver to All island of Srilanka:</h4>
+							<div className='text-section mb-1'>
+								<p className='lead'>
+									for each item delivery cost is RS 100.00 only
+								</p>
+							</div>
+
+							{/* <form action='#'>
+								
+								<h2>Deliver to All island of Srilanka:</h2>
 								<div className='form-group'>
 									<input
 										type='text'
@@ -197,10 +205,7 @@ function ProductTabs() {
 										value='Add Tags'
 									/>
 								</div>
-							</form>
-							<p className='note'>
-								Use spaces to separate tags. Use single quotes (') for phrases.
-							</p>
+							</form> */}
 						</div>
 					</div>
 
@@ -228,7 +233,7 @@ function ProductTabs() {
 								</div>
 
 								<form action='#' className='mt-2'>
-									<div className='form-group'>
+									{/* <div className='form-group'>
 										<label>
 											Nickname <span className='required'>*</span>
 										</label>
@@ -237,7 +242,7 @@ function ProductTabs() {
 											className='form-control form-control-sm'
 											required
 										/>
-									</div>
+									</div> */}
 									<div className='form-group'>
 										<label>
 											Summary of Your Review{' '}
@@ -266,6 +271,37 @@ function ProductTabs() {
 										value='Submit Review'
 									/>
 								</form>
+
+								<div className='border mt-2 bg-yellow-500 px-5 py-3 text-black'>
+									<div>
+										<h4 className='text-4xl mb-2'>Your rating is: 2</h4>
+									</div>
+
+									<div>
+										<h4 className='text-4xl mb-1'>Your Review</h4>
+										<div className='mb-1'>
+											<h4 className='text-3xl'>headcing of the review</h4>
+										</div>
+										<div className='text-section mb-1'>
+											<p className='lead'>
+												Duis aute irure dolor in reprehenderit in voluptate
+												velit esse cillum dolore eu fugiat nulla pariatur.
+												Excepteur sint occaecat cupidatat non.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div className='border mt-5 px-3 py-3'>
+									review list
+									<div className='border mt-2'>review 1</div>
+									<div className='border mt-2'>review 1</div>
+									<div className='border mt-2'>review 1</div>
+									<div className='border mt-2'>review 1</div>
+									<div className='border mt-2'>review 1</div>
+									<div className='border mt-2'>review 1</div>
+									<div className='border mt-2'>review 1</div>
+								</div>
 							</div>
 						</div>
 					</div>

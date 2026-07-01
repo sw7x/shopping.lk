@@ -4,6 +4,7 @@ import '@containers/shared/ProductFeatrureHorItem/ProductFeatrureHorItem.css';
 import { ViewStarRatings } from '@components/StarRatings';
 import { PiMinus, PiPlus } from 'react-icons/pi';
 import { AddToCartQuantitySelector } from '@containers/shared/AddToCartQuantitySelector';
+import { ToolTipInfoCircle } from '@root/components/Tooltip';
 
 type ProductFeatrureHorItemProps = {
 	index?: number;
@@ -49,7 +50,6 @@ export const ProductFeatrureHorItem: React.FC<ProductFeatrureHorItemProps> = ({
 							Excepteur
 						</a>
 					</div>
-
 					{/* <div className='ratings-container'>
 						<div className='product-ratings'>
 							<span className='ratings' style={{ width: '100%' }}></span>
@@ -64,15 +64,23 @@ export const ProductFeatrureHorItem: React.FC<ProductFeatrureHorItemProps> = ({
 					</p>
 					<div className='price-box'>
 						<div className='product-price'>$20.00</div>
-						{isDeal && <div className='old-price'>$15.00</div>}
+						{isDeal && (
+							<>
+								<div className='old-price'>$15.00</div>
+								<ToolTipInfoCircle text='Original pricing may vary based on available stock.' />
+							</>
+						)}
 					</div>
-					<div className='product-action'>
-						<AddToCartQuantitySelector />
 
-						<a href='cart.html' className='paction add-cart' title='Add to Cart'>
-							<span>Add to Cart</span>
-						</a>
-					</div>
+					{!isWishListItem && (
+						<div className='product-action'>
+							<AddToCartQuantitySelector />
+
+							<a href='cart.html' className='paction add-cart' title='Add to Cart'>
+								<span>Add to Cart</span>
+							</a>
+						</div>
+					)}
 				</div>
 
 				{isDeal && (

@@ -23,10 +23,7 @@ const DailyDeals = () => {
 							{[...Array(6).keys()].map((key, index) => {
 								return (
 									<div className='col-12 col-sm-12 mb-2' key={index}>
-										<ProductFeatrureHorItem
-											index={index}
-											isDeal={index === 3 ? true : false}
-										/>
+										<ProductFeatrureHorItem index={index} isDeal={true} />
 									</div>
 								);
 							})}

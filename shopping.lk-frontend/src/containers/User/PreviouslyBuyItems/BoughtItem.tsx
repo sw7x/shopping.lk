@@ -33,6 +33,7 @@ export const BoughtItem = () => {
 									tristique in semper vel, congue sed ligula.
 								</p>
 								<div className='text-xl font-bold mt-1'>Price : $15.00</div>
+								<div className='text-xl font-bold mt-1'>Quantity : 5</div>
 							</div>
 						</div>
 					</div>

@@ -7256,13 +7256,15 @@ a:focus {
 	font-weight: 700;
 }
 .product-single-details .product-price {
-	font-size: 2.4rem;
+	font-size: 2.5rem;
 	font-weight: 700;
 	color: #7aa93c;
+	line-height: 1.2;
 }
 .product-single-details .old-price {
-	font-size: 1.6rem;
+	font-size: 2rem;
 	font-weight: 600;
+	line-height: 1;
 }
 .product-single-details .old-price + .product-price {
 	margin-left: 1rem;
@@ -8303,15 +8305,15 @@ a:focus {
 	.product-single-extended .paction {
 		height: 50px;
 	}
-	.product-single-extended .paction.add-cart {
-		min-width: 156px;
+	.product-single-extended .paction.buy-btn {
+		width: 150px;
 		height: auto;
 		margin-left: 1.8rem;
 	}
-	.product-single-extended .paction.add-cart::before {
+	.product-single-extended .paction.buy-btn::before {
 		font-size: 2rem;
 	}
-	.product-single-extended .paction.add-cart span {
+	.product-single-extended .paction.buy-btn span {
 		font-size: 1.6rem;
 	}
 }

@@ -187,9 +187,16 @@ const Product = () => {
 											<span>/</span>
 											<span className='ml-2'>Available : 60</span>
 										</div>
+										<div className='sold-count'>
+											<span className='mr-2'>Sold : 120</span>
+											<span>/</span>
+											<span className='ml-2'>Sold Out</span>
+										</div>
 
 										<div className='sold-count'>
-											<span className='mr-2'>Sold Out</span>
+											<span className='mr-2 text-2xl text-black'>
+												Same priced items in stocks: 6
+											</span>
 										</div>
 
 										<div className='d-flex align-items-center product-ratings-wrapper'>
@@ -220,17 +227,19 @@ const Product = () => {
 											<div className='old-price'>$81.00</div>
 										</div>
 
+										{/* 
 										<div className='product-desc'>
 											<p>
 												Duis aute irure dolor in reprehenderit in voluptate
 												velit esse cillum dolore eu fugiat nulla pariatur.
 												Excepteur sint occaecat cupidatat non.
 											</p>
-										</div>
+										</div> 
+										*/}
 
 										<div className='product-filters-container'>
 											<div className='product-single-filter'>
-												<label>Colors:</label>
+												<label>---Colors:</label>
 												<ul className='config-swatch-list'>
 													<li className='active'>
 														<a
@@ -258,9 +267,8 @@ const Product = () => {
 													</li>
 												</ul>
 											</div>
-
 											<div className='product-single-filter'>
-												<label>Sizes:</label>
+												<label>---Sizes:</label>
 												<ul className='config-size-list'>
 													<li className='active'>
 														<a href='#'>S</a>
@@ -276,6 +284,11 @@ const Product = () => {
 													</li>
 												</ul>
 											</div>
+											<span className='divider text-2xl text-red-600'>
+												//todo - filters make non clickable
+											</span>
+											<br />
+											<br />
 										</div>
 
 										<div className='product-action'>
@@ -330,7 +343,7 @@ const Product = () => {
 
 					<aside className='sidebar-product col-lg-3 padding-left-lg mobile-sidebar'>
 						<div className='sidebar-wrapper'>
-							<Collapsible open header='electronics'>
+							<Collapsible open header='SONY'>
 								<ul className='cat-list'>
 									<li>
 										<a href='#'>Smart TVs</a>
@@ -382,13 +395,15 @@ const Product = () => {
 								</ul>
 							</div>
 
+							{/* 
 							<div className='widget widget-banner'>
 								<div className='banner banner-image'>
 									<a href='#'>
 										<img src={bannerSidebarImg} alt='Banner Desc' />
 									</a>
 								</div>
-							</div>
+							</div> 
+							*/}
 						</div>
 					</aside>
 				</div>

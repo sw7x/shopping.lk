@@ -206,7 +206,7 @@
     opacity: 1; 
 }*/
 
-.package-list .package-item .btn-add-cart {
+.package-list .package-item .btn-buy {
 	display: flex;
 	align-items: center;
 	background-color: white;
@@ -215,9 +215,9 @@
 	border-right-color: rgb(221, 221, 221);
 	border-bottom-color: rgb(221, 221, 221);
 	border-left-color: rgb(221, 221, 221);
-	padding: 0 1rem;
+	padding: 0.25rem 1.5rem;
 	font:
-		1.4rem 'Oswald',
+		1.5rem 'Oswald',
 		sans-serif;
 	line-height: normal;
 	line-height: 32px;
@@ -225,7 +225,17 @@
 	cursor: pointer;
 	transition: all 0.25s ease;
 }
+.package-list .package-item .btn-buy:hover {
+	background-color: #13b118;
+	color: #fff;
+	border-color: #13b118;
+}
+.package-list .package-item .btn-buy:focus {
+	outline: none;
+}
 
-.package-list .package-item .btn-add-cart i {
+.package-list .package-item .btn-buy i {
 	margin-right: 5px;
+	font-size: 2rem;
+	font-weight: bold;
 }
