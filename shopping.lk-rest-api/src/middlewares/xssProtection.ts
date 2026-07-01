@@ -39,4 +39,6 @@ export default (req: Request, res: Response, next: NextFunction): void => {
 		// if (req.body.bio) req.body.bio = purify.sanitize(req.body.bio);
 	}
 	next();
+
+	console.log('xxs protection applied') // this execute after the route execution is finished
 };

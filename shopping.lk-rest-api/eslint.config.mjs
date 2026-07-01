@@ -168,8 +168,8 @@ export default [
 			//disable rule because to use rules in import plugin
 			'n/no-missing-import':'off',
 			'n/no-missing-require':'off',			
-			//'n/no-extraneous-import':'off',
-			//'n/no-extraneous-require':'off',			
+			'n/no-extraneous-import':'off',
+			'n/no-extraneous-require':'off',			
 
 			/*= eslint-plugin-import Rules =*/
 			"import/no-unresolved": "error",

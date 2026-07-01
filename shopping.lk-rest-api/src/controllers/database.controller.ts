@@ -5,7 +5,7 @@ import User, { type PopulatedUserDocumentType } from '@src/models/user.model';
 import { RolesType } from '@src/types/roles.types';
 //import User from '@src/models/user.model';
 import bcrypt from 'bcrypt';
-import RoleModel from '@src/models/role.model';
+import RoleModel, { Role } from '@src/models/role.model';
 import httpResponse from '@root/src/http/httpResponse';
 import responseMessages from '../shared/constants/responseMessages';
 import httpError from '@src/http/httpError';
@@ -238,6 +238,80 @@ const listRecords = (req: Request, res: Response) => {
 		});
 };
 
+const dbTest = async (req: Request, res: Response) => {
+	console.log('ssss');
+	const role = await Role.findOne({ name: 'manager' });
+
+	if (!role) {
+		throw new Error('Role not found');
+	}
+
+	const newUser = new User({
+		email: 'susa.war4@example.com',
+		age: 34,
+		username: 'susa.war4',
+		password: 'aaaaa1',
+		role: role._id,
+	});
+
+	newUser
+		.save()
+		.then(() => {
+			console.log('user created');
+			res.send('created user');
+		})
+		.catch((err) => {
+			console.error('Error:', err);
+			res.send('failed to create user');
+		});
+};
+
+const dbDeleteTest = async (req: Request, res: Response) => {
+	const user = await User.findById('6a455de4185782ad819f0974');
+	if(user){
+
+		user.password = 'ddd';
+
+
+		user
+			.save()
+			.then(() => {
+				console.log('1user created');
+				res.send('1created user');
+			})
+			.catch((err) => {
+				console.error('1Error:', err);
+				res.send('1failed to create user');
+			});/**/
+
+
+		console.log('User found:', user);
+	}
+
+
+
+	/*
+	if (!user) {
+		res.send('User not found');
+		return;
+	} else {
+		console.log('User found:', user);
+
+		//await User.deleteById('6a43d219dbefca8bd2fe6dc9');
+		await user
+			.forceDelete()
+			.then(() => {
+				console.log('user created');
+				res.send('created user');
+			})
+			.catch((err) => {
+				console.error('Error:', err);
+				res.send('failed to create user');
+			});
+	}
+	*/
+};
+
 export default {
 	index,
 	createCollection,
@@ -247,4 +321,6 @@ export default {
 	readRecord2,
 	updateRecord,
 	listRecords,
+	dbTest,
+	dbDeleteTest,
 };

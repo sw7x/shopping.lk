@@ -6,8 +6,7 @@ import rolesJson from '@root/src/data/roles.json';
 import { collectionExists, recordExists } from '@root/src/shared/utils/mongoDb';
 import config from 'config';
 
-const mongoUri =
-	'mongodb+srv://susanthawarnapura:WC5ZIsGjvDinvFz2@cluster0.4dk2y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const mongoUri = config.get<string>('database.url');
 const dbName = 'shoppingDb';
 const collectionName = 'roles'; // Change this to your collection name
 //const seedFilePath = path.resolve(__dirname, '../../src/data/users.json');

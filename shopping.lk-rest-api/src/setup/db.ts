@@ -12,17 +12,22 @@ export const connectToDatabase = async (): Promise<Connection> => {
 	try {
 		//const mongoURL = 'mongodb://localhost/project';
 		//const mongoURL = 'mongodb://user:password@mongo:27017/project?authSource=admin'
-
-		//TODO:Use environment variable for MongoDB connection string
-
 		//const mongoURL = `${process.env.MONGODB_URL}/${DB_NAME}`;
+
 		const mongoUri = config.get<string>('database.url');
 
-		// Connect to MongoDB
+		// Setup once events for first-time connection
+		mongoose.connection.once('connected', () => {
+			logger.info('✅ MongoDB connected successfully');
+		});
+
+		mongoose.connection.once('error', (error) => {
+			logger.error('🔥 MongoDB connection error:', error);
+		});
+
+		logger.info('🔄 Connecting to MongoDB..');
+
 		const connection = await mongoose.connect(mongoUri);
-
-		logger.info('✅ MongoDB connected successfully');
-
 		return connection.connection;
 	} catch (error) {
 		logger.error('❌ MongoDB connection error:', error);

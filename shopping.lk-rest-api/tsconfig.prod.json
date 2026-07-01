@@ -1,5 +1,15 @@
 {
 	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		// Override noEmit to false (allow file generation)
+		"noEmit": false,
+
+		// Disable allowImportingTsExtensions (since we're not using .ts imports in production)
+		"allowImportingTsExtensions": false,
+
+		// Ensure outDir is set for production
+		"outDir": "./dist"
+	},
 	"exclude": [
 		"npm-scripts",
 		"config",

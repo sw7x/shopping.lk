@@ -41,6 +41,7 @@ import { createRateLimiterMiddleware } from '@src/middlewares/rateLimiterMiddlew
 import fileUploadRoutes from '@src/routes/file-upload.routes';
 import videoController from '@src/controllers/video.controller';
 import caslController from '@src/controllers/casl.controller';
+import dbController from '@src/controllers/database.controller';
 
 /*
 // Enable compression only in production
@@ -233,6 +234,9 @@ app.get('/rate-limiter-status', (req, res) => {
 		},
 	});
 });
+
+app.get('/db-test', dbController.dbTest);
+app.get('/db-delete-test', dbController.dbDeleteTest);
 
 // 404 Handler
 app.all('*', pageNotFoundErrorHandler);

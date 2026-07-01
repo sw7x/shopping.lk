@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken';
 import tokenModel from '../models/token.model';
 import { Types } from 'mongoose';
 import { BadRequest, Unauthorized, NotFound } from '../helpers/handle.error';
-import { RequestAuth } from '@src/middlewares/auth';
+import { RequestAuth } from '@root/src/middlewares/auth.ignore';
 import logger from '@src/setup/logger'; // Assuming you have a logger
 
 interface TokenPayload {
